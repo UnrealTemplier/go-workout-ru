@@ -216,17 +216,17 @@
 | **87** | Оркестрация распределенных процессов (Durable Execution) на Temporal.io | `87. Оркестрация распределенных процессов (Durable Execution) на Temporal.io.md` | `chapter87.html` | 50 | ✅ Готово (50/50) |
 | **88** | Потоковая обработка данных в реальном времени (Stream Processing) | `88. Потоковая обработка данных в реальном времени (Stream Processing).md` | `chapter88.html` | 30 | ✅ Готово (30/30) |
 | **89** | Хаос-инженерия и нагрузочное тестирование на Go | `89. Хаос-инженерия и нагрузочное тестирование на Go.md` | `chapter89.html` | 30 | ✅ Готово (30/30) |
-| **90** | Контракт-ориентированные API-шлюзы: gRPC-Gateway, gRPC-Web и OpenAPI | `90. Контракт-ориентированные API-шлюзы: gRPC-Gateway, gRPC-Web и OpenAPI.md` | `chapter90.html` | 30 | ✅ Готово (30/30) |
+| **90** | Контракт-ориентированные API-шлюзы: gRPC-Gateway, gRPC-Web и OpenAPI | `90. Контракт-ориентированные API-шлюзы. gRPC-Gateway, gRPC-Web и OpenAPI.md` | `chapter90.html` | 30 | ✅ Готово (30/30) |
 | **91** | Разработка собственных Kubernetes Operators и CRD на Go | `91. Разработка собственных Kubernetes Operators и CRD на Go.md` | `chapter91.html` | 45 | ✅ Готово (45/45) |
-| **92** | Расширяемость систем: Plugins, IPC и WebAssembly (Wazero) | `92. Расширяемость систем: Plugins, IPC и WebAssembly (Wazero).md` | `chapter92.html` | 30 | ✅ Готово (30/30) |
+| **92** | Расширяемость систем: Plugins, IPC и WebAssembly (Wazero) | `92. Расширяемость систем. Plugins, IPC и WebAssembly (Wazero).md` | `chapter92.html` | 30 | ✅ Готово (30/30) |
 | **93** | Высокопроизводительные API Gateway и Reverse Proxy на чистом Go | `93. Высокопроизводительные API Gateway и Reverse Proxy на чистом Go.md` | `chapter93.html` | 30 | ✅ Готово (30/30) |
-| **94** | Enterprise Release Engineering: Feature Flags, динамический конфиг и Canary Routing | `94. Enterprise Release Engineering: Feature Flags, динамический конфиг и Canary Routing.md` | `chapter94.html` | 30 | ✅ Готово (30/30) |
+| **94** | Enterprise Release Engineering: Feature Flags, динамический конфиг и Canary Routing | `94. Enterprise Release Engineering. Feature Flags, динамический конфиг и Canary Routing.md` | `chapter94.html` | 30 | ✅ Готово (30/30) |
 | **95** | Распределенная координация и хранилище метаданных etcd v3 | `95. Распределенная координация и хранилище метаданных etcd v3.md` | `chapter95.html` | 30 | ✅ Готово (30/30) |
 | **96** | Zero-Downtime миграции баз данных и паттерн Expand-Contract на Go | `96. Zero-Downtime миграции баз данных и паттерн Expand-Contract на Go.md` | `chapter96.html` | 30 | ✅ Готово (30/30) |
 | **97** | Time-Series СУБД, сжатие Gorilla и IoT-телеметрия на Go | `97. Time-Series СУБД, сжатие Gorilla и IoT-телеметрия на Go.md` | `chapter97.html` | 30 | ✅ Готово (30/30) |
-| **98** | Архитектурный контроль: Разработка корпоративных линтеров для golangci-lint | `98. Архитектурный контроль: Разработка корпоративных линтеров для golangci-lint.md` | `chapter98.html` | 30 | ✅ Готово (30/30) |
+| **98** | Архитектурный контроль: Разработка корпоративных линтеров для golangci-lint | `98. Архитектурный контроль. Разработка корпоративных линтеров для golangci-lint.md` | `chapter98.html` | 30 | ✅ Готово (30/30) |
 | **99** | Интеграция с ИИ, LLM-оркестрация и векторный поиск на Go | `99. Интеграция с ИИ, LLM-оркестрация и векторный поиск на Go.md` | `chapter99.html` | 45 | ✅ Готово (45/45) |
-| **100** | Архитектурный Capstone: Проектирование и сквозной запуск отказоустойчивой HighLoad-платформы | `100. Архитектурный Capstone: Проектирование и сквозной запуск отказоустойчивой HighLoad-платформы.md` | `chapter100.html` | 50 | ✅ Готово (50/50) |
+| **100** | Архитектурный Capstone: Проектирование и сквозной запуск отказоустойчивой HighLoad-платформы | `100. Архитектурный Capstone. Проектирование и сквозной запуск отказоустойчивой HighLoad-платформы.md` | `chapter100.html` | 50 | ✅ Готово (50/50) |
 
 ---
 
