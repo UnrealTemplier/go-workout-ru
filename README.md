@@ -25,10 +25,10 @@ go-workout/
 │   └── 100. Архитектурный Capstone...md
 ├── dist/                             # Скомпилированный статический веб-сайт курса
 │   ├── index.html                    # Главный портал курса, специализации и поиск
-│   ├── chapter1.html                 # Глава 01 (91 упр.)
-│   ├── chapter2.html                 # Глава 02 (25 упр.)
+│   ├── 001-pakety-i-moduli.html      # Глава 01 (91 упр.)
+│   ├── 002-kompilyatsiya-sborka-i-zapusk.html # Глава 02 (25 упр.)
 │   ├── ...
-│   ├── chapter100.html               # Глава 100 (50 упр.)
+│   ├── 100-arhitekturnyy-capstone-...html     # Глава 100 (50 упр.)
 │   ├── favicon.ico                   # Иконка портала (ICO)
 │   └── favicon.svg                   # Векторный логотип Go (SVG)
 ├── builder/                          # Ядро сборки, данные и утилиты аудита

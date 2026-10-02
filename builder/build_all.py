@@ -367,106 +367,106 @@ def build_sidebar(chapters, active_chapter_num, current_exercises):
         title = ch['title']
         
         status_map = {
-            1: ('chapter1.html', '91/91'),
-            2: ('chapter2.html', '25/25'),
-            3: ('chapter3.html', '65/65'),
-            4: ('chapter4.html', '111/111'),
-            5: ('chapter5.html', '64/64'),
-            6: ('chapter6.html', '64/64'),
-            7: ('chapter7.html', '32/32'),
-            8: ('chapter8.html', '74/74'),
-            9: ('chapter9.html', '62/62'),
-            10: ('chapter10.html', '100/100'),
-            11: ('chapter11.html', '49/49'),
-            12: ('chapter12.html', '67/67'),
-            13: ('chapter13.html', '71/71'),
-            14: ('chapter14.html', '77/77'),
-            15: ('chapter15.html', '127/127'),
-            16: ('chapter16.html', '131/131'),
-            17: ('chapter17.html', '58/58'),
-            18: ('chapter18.html', '100/100'),
-            19: ('chapter19.html', '84/84'),
-            20: ('chapter20.html', '124/124'),
-            21: ('chapter21.html', '95/95'),
-            22: ('chapter22.html', '52/52'),
-            23: ('chapter23.html', '132/132'),
-            24: ('chapter24.html', '63/63'),
-            25: ('chapter25.html', '45/45'),
-            26: ('chapter26.html', '158/158'),
-            27: ('chapter27.html', '163/163'),
-            28: ('chapter28.html', '115/115'),
-            29: ('chapter29.html', '96/96'),
-            30: ('chapter30.html', '107/107'),
-            31: ('chapter31.html', '120/120'),
-            32: ('chapter32.html', '189/189'),
-            33: ('chapter33.html', '89/89'),
-            34: ('chapter34.html', '78/78'),
-            35: ('chapter35.html', '78/78'),
-            36: ('chapter36.html', '130/130'),
-            37: ('chapter37.html', '88/88'),
-            38: ('chapter38.html', '77/77'),
-            39: ('chapter39.html', f'{len(ch39_exercises)}/{len(ch39_exercises)}'),
-            40: ('chapter40.html', f'{len(ch40_exercises)}/{len(ch40_exercises)}'),
-            41: ('chapter41.html', f'{len(ch41_exercises)}/{len(ch41_exercises)}'),
-            42: ('chapter42.html', f'{len(ch42_exercises)}/{len(ch42_exercises)}'),
-            43: ('chapter43.html', f'{len(ch43_exercises)}/{len(ch43_exercises)}'),
-            44: ('chapter44.html', f'{len(ch44_exercises)}/{len(ch44_exercises)}'),
-            45: ('chapter45.html', f'{len(ch45_exercises)}/{len(ch45_exercises)}'),
-            46: ('chapter46.html', f'{len(ch46_exercises)}/{len(ch46_exercises)}'),
-            47: ('chapter47.html', f'{len(ch47_exercises)}/{len(ch47_exercises)}'),
-            48: ('chapter48.html', f'{len(ch48_exercises)}/{len(ch48_exercises)}'),
-            49: ('chapter49.html', f'{len(ch49_exercises)}/{len(ch49_exercises)}'),
-            50: ('chapter50.html', f'{len(ch50_exercises)}/{len(ch50_exercises)}'),
-            51: ('chapter51.html', f'{len(ch51_exercises)}/{len(ch51_exercises)}'),
-            52: ('chapter52.html', f'{len(ch52_exercises)}/{len(ch52_exercises)}'),
-            53: ('chapter53.html', f'{len(ch53_exercises)}/{len(ch53_exercises)}'),
-            54: ('chapter54.html', f'{len(ch54_exercises)}/{len(ch54_exercises)}'),
-            55: ('chapter55.html', f'{len(ch55_exercises)}/{len(ch55_exercises)}'),
-            56: ('chapter56.html', f'{len(ch56_exercises)}/{len(ch56_exercises)}'),
-            57: ('chapter57.html', f'{len(ch57_exercises)}/{len(ch57_exercises)}'),
-            58: ('chapter58.html', f'{len(ch58_exercises)}/{len(ch58_exercises)}'),
-            59: ('chapter59.html', f'{len(ch59_exercises)}/{len(ch59_exercises)}'),
-            60: ('chapter60.html', f'{len(ch60_exercises)}/{len(ch60_exercises)}'),
-            61: ('chapter61.html', f'{len(ch61_exercises)}/{len(ch61_exercises)}'),
-            62: ('chapter62.html', f'{len(ch62_exercises)}/{len(ch62_exercises)}'),
-            63: ('chapter63.html', f'{len(ch63_exercises)}/{len(ch63_exercises)}'),
-            64: ('chapter64.html', f'{len(ch64_exercises)}/{len(ch64_exercises)}'),
-            65: ('chapter65.html', f'{len(ch65_exercises)}/{len(ch65_exercises)}'),
-            66: ('chapter66.html', f'{len(ch66_exercises)}/{len(ch66_exercises)}'),
-            67: ('chapter67.html', f'{len(ch67_exercises)}/{len(ch67_exercises)}'),
-            68: ('chapter68.html', f'{len(ch68_exercises)}/{len(ch68_exercises)}'),
-            69: ('chapter69.html', f'{len(ch69_exercises)}/{len(ch69_exercises)}'),
-            70: ('chapter70.html', f'{len(ch70_exercises)}/{len(ch70_exercises)}'),
-            71: ('chapter71.html', f'{len(ch71_exercises)}/{len(ch71_exercises)}'),
-            72: ('chapter72.html', f'{len(ch72_exercises)}/{len(ch72_exercises)}'),
-            73: ('chapter73.html', f'{len(ch73_exercises)}/{len(ch73_exercises)}'),
-            74: ('chapter74.html', f'{len(ch74_exercises)}/{len(ch74_exercises)}'),
-            75: ('chapter75.html', f'{len(ch75_exercises)}/{len(ch75_exercises)}'),
-            76: ('chapter76.html', f'{len(ch76_exercises)}/{len(ch76_exercises)}'),
-            77: ('chapter77.html', f'{len(ch77_exercises)}/{len(ch77_exercises)}'),
-            78: ('chapter78.html', f'{len(ch78_exercises)}/{len(ch78_exercises)}'),
-            79: ('chapter79.html', f'{len(ch79_exercises)}/{len(ch79_exercises)}'),
-            80: ('chapter80.html', f'{len(ch80_exercises)}/{len(ch80_exercises)}'),
-            81: ('chapter81.html', f'{len(ch81_exercises)}/{len(ch81_exercises)}'),
-            82: ('chapter82.html', f'{len(ch82_exercises)}/{len(ch82_exercises)}'),
-            83: ('chapter83.html', f'{len(ch83_exercises)}/{len(ch83_exercises)}'),
-            84: ('chapter84.html', f'{len(ch84_exercises)}/{len(ch84_exercises)}'),
-            85: ('chapter85.html', f'{len(ch85_exercises)}/{len(ch85_exercises)}'),
-            86: ('chapter86.html', f'{len(ch86_exercises)}/{len(ch86_exercises)}'),
-            87: ('chapter87.html', f'{len(ch87_exercises)}/{len(ch87_exercises)}'),
-            88: ('chapter88.html', f'{len(ch88_exercises)}/{len(ch88_exercises)}'),
-            89: ('chapter89.html', f'{len(ch89_exercises)}/{len(ch89_exercises)}'),
-            90: ('chapter90.html', f'{len(ch90_exercises)}/{len(ch90_exercises)}'),
-            91: ('chapter91.html', f'{len(ch91_exercises)}/{len(ch91_exercises)}'),
-            92: ('chapter92.html', f'{len(ch92_exercises)}/{len(ch92_exercises)}'),
-            93: ('chapter93.html', f'{len(ch93_exercises)}/{len(ch93_exercises)}'),
-            94: ('chapter94.html', f'{len(ch94_exercises)}/{len(ch94_exercises)}'),
-            95: ('chapter95.html', f'{len(ch95_exercises)}/{len(ch95_exercises)}'),
-            96: ('chapter96.html', f'{len(ch96_exercises)}/{len(ch96_exercises)}'),
-            97: ('chapter97.html', f'{len(ch97_exercises)}/{len(ch97_exercises)}'),
-            98: ('chapter98.html', f'{len(ch98_exercises)}/{len(ch98_exercises)}'),
-            99: ('chapter99.html', f'{len(ch99_exercises)}/{len(ch99_exercises)}'),
-            100: ('chapter100.html', f'{len(ch100_exercises)}/{len(ch100_exercises)}'),
+            1: ('001-pakety-i-moduli.html', '91/91'),
+            2: ('002-kompilyatsiya-sborka-i-zapusk.html', '25/25'),
+            3: ('003-paket-fmt-i-konsolnyy-vvod-vyvod.html', '65/65'),
+            4: ('004-bazovye-tipy-peremennye-i-konstanty.html', '111/111'),
+            5: ('005-uslovnye-konstruktsii.html', '64/64'),
+            6: ('006-tsikly.html', '64/64'),
+            7: ('007-massivy.html', '32/32'),
+            8: ('008-slaysy.html', '74/74'),
+            9: ('009-mapy.html', '62/62'),
+            10: ('010-funktsii.html', '100/100'),
+            11: ('011-ukazateli.html', '49/49'),
+            12: ('012-peredacha-argumentov.html', '67/67'),
+            13: ('013-struktury.html', '71/71'),
+            14: ('014-interfeysy.html', '77/77'),
+            15: ('015-oop-v-go.html', '127/127'),
+            16: ('016-dzheneriki.html', '131/131'),
+            17: ('017-obrabotka-oshibok.html', '58/58'),
+            18: ('018-rabota-s-faylami.html', '100/100'),
+            19: ('019-logirovanie.html', '84/84'),
+            20: ('020-gorutiny-i-sinkhronizatsiya.html', '124/124'),
+            21: ('021-kanaly-i-select.html', '95/95'),
+            22: ('022-paket-context.html', '52/52'),
+            23: ('023-patterny-i-kaverznye-sluchai-konkurentnosti.html', '132/132'),
+            24: ('024-nizkourovnevaya-set-tcp-i-udp.html', '63/63'),
+            25: ('025-http-klient.html', '45/45'),
+            26: ('026-http-server-rest-api-i-middleware.html', '158/158'),
+            27: ('027-relyatsionnye-bazy-dannykh-sql-i-postgresql.html', '163/163'),
+            28: ('028-bazy-dannykh-nosql-i-keshirovanie-redis.html', '115/115'),
+            29: ('029-modulnoe-testirovanie-unit-testing-i-assertions.html', '96/96'),
+            30: ('030-mokirovanie-i-integratsionnoe-testirovanie.html', '107/107'),
+            31: ('031-benchmarki-fazzing-i-prodvinutye-metody-testirovaniya.html', '120/120'),
+            32: ('032-protocol-buffers-i-grpc.html', '189/189'),
+            33: ('033-mikroservisnaya-arkhitektura-i-patterny.html', '89/89'),
+            34: ('034-graphql.html', '78/78'),
+            35: ('035-websockets-i-real-time.html', '78/78'),
+            36: ('036-rabbitmq.html', '130/130'),
+            37: ('037-apache-kafka.html', '88/88'),
+            38: ('038-nats-i-nats-jetstream.html', '77/77'),
+            39: ('039-metriki-i-monitoring-prometheus.html', f'{len(ch39_exercises)}/{len(ch39_exercises)}'),
+            40: ('040-raspredelennaya-trassirovka-opentelemetry.html', f'{len(ch40_exercises)}/{len(ch40_exercises)}'),
+            41: ('041-profilirovanie-i-rantaym-diagnostika.html', f'{len(ch41_exercises)}/{len(ch41_exercises)}'),
+            42: ('042-proektirovanie-chistoy-arkhitektury-i-ddd.html', f'{len(ch42_exercises)}/{len(ch42_exercises)}'),
+            43: ('043-shablony-proektirovaniya-raspredelennykh-i-enterprise-sistem.html', f'{len(ch43_exercises)}/{len(ch43_exercises)}'),
+            44: ('044-proektirovanie-vysokonagruzhennykh-i-otkazoustoychivykh-sistem.html', f'{len(ch44_exercises)}/{len(ch44_exercises)}'),
+            45: ('045-konteynerizatsiya-i-docker.html', f'{len(ch45_exercises)}/{len(ch45_exercises)}'),
+            46: ('046-avtomatizatsiya-ci-cd.html', f'{len(ch46_exercises)}/{len(ch46_exercises)}'),
+            47: ('047-orkestratsiya-v-kubernetes.html', f'{len(ch47_exercises)}/{len(ch47_exercises)}'),
+            48: ('048-planirovshchik-gmp.html', f'{len(ch48_exercises)}/{len(ch48_exercises)}'),
+            49: ('049-allokator-kuchi-i-upravlenie-pamyatyu.html', f'{len(ch49_exercises)}/{len(ch49_exercises)}'),
+            50: ('050-garbage-collector-i-tyuning-pamyati.html', f'{len(ch50_exercises)}/{len(ch50_exercises)}'),
+            51: ('051-rabota-s-unsafe-i-nizkourovnevoy-pamyatyu.html', f'{len(ch51_exercises)}/{len(ch51_exercises)}'),
+            52: ('052-integratsiya-s-c-kodom-cherez-cgo.html', f'{len(ch52_exercises)}/{len(ch52_exercises)}'),
+            53: ('053-sistemnye-vyzovy-i-vzaimodeystvie-s-os.html', f'{len(ch53_exercises)}/{len(ch53_exercises)}'),
+            54: ('054-prodvinutaya-refleksiya-reflect.html', f'{len(ch54_exercises)}/{len(ch54_exercises)}'),
+            55: ('055-analiz-ast-i-staticheskiy-analiz-koda.html', f'{len(ch55_exercises)}/{len(ch55_exercises)}'),
+            56: ('056-kodogeneratsiya-i-shablonizatsiya.html', f'{len(ch56_exercises)}/{len(ch56_exercises)}'),
+            57: ('057-simmetrichnoe-i-asimmetrichnoe-shifrovanie.html', f'{len(ch57_exercises)}/{len(ch57_exercises)}'),
+            58: ('058-kheshirovanie-paroley-i-kriptograficheskaya-stoykost.html', f'{len(ch58_exercises)}/{len(ch58_exercises)}'),
+            59: ('059-tokeny-autentifikatsii-i-avtorizatsiya.html', f'{len(ch59_exercises)}/{len(ch59_exercises)}'),
+            60: ('060-bezopasnost-veb-prilozheniy-i-zashchita-api.html', f'{len(ch60_exercises)}/{len(ch60_exercises)}'),
+            61: ('061-dokumentoorientirovannaya-baza-dannykh-mongodb.html', f'{len(ch61_exercises)}/{len(ch61_exercises)}'),
+            62: ('062-analiticheskaya-subd-clickhouse.html', f'{len(ch62_exercises)}/{len(ch62_exercises)}'),
+            63: ('063-poiskovye-dvizhki-elasticsearch-i-opensearch.html', f'{len(ch63_exercises)}/{len(ch63_exercises)}'),
+            64: ('064-logicheskaya-replikatsiya-i-change-data-capture.html', f'{len(ch64_exercises)}/{len(ch64_exercises)}'),
+            65: ('065-vebkhuki-i-platformy-obratnykh-vyzovov.html', f'{len(ch65_exercises)}/{len(ch65_exercises)}'),
+            66: ('066-server-sent-events.html', f'{len(ch66_exercises)}/{len(ch66_exercises)}'),
+            67: ('067-alternativnye-rpc-protokoly.html', f'{len(ch67_exercises)}/{len(ch67_exercises)}'),
+            68: ('068-pattern-saga-i-kompensatsionnye-tranzaktsii.html', f'{len(ch68_exercises)}/{len(ch68_exercises)}'),
+            69: ('069-patterny-outbox-i-inbox-dlya-nadezhnoy-dostavki-soobshcheniy.html', f'{len(ch69_exercises)}/{len(ch69_exercises)}'),
+            70: ('070-proektirovanie-idempotentnykh-api.html', f'{len(ch70_exercises)}/{len(ch70_exercises)}'),
+            71: ('071-vybory-lidera-leader-election-v-raspredelennykh-sistemakh.html', f'{len(ch71_exercises)}/{len(ch71_exercises)}'),
+            72: ('072-protokol-konsensusa-raft.html', f'{len(ch72_exercises)}/{len(ch72_exercises)}'),
+            73: ('073-raspredelennye-blokirovki-i-fencing-tokens.html', f'{len(ch73_exercises)}/{len(ch73_exercises)}'),
+            74: ('074-cache-friendly-struktury-dannykh-i-vyravnivanie-pamyati.html', f'{len(ch74_exercises)}/{len(ch74_exercises)}'),
+            75: ('075-lock-free-struktury-dannykh.html', f'{len(ch75_exercises)}/{len(ch75_exercises)}'),
+            76: ('076-assembler-go-plan-9-assembly-i-simd.html', f'{len(ch76_exercises)}/{len(ch76_exercises)}'),
+            77: ('077-vysokoproizvoditelnye-setevye-freymvorki-gnet-evio.html', f'{len(ch77_exercises)}/{len(ch77_exercises)}'),
+            78: ('078-oblachnye-khranilishcha-envelope-encryption-i-kms.html', f'{len(ch78_exercises)}/{len(ch78_exercises)}'),
+            79: ('079-integratsiya-s-service-mesh-istio-linkerd-i-mtls.html', f'{len(ch79_exercises)}/{len(ch79_exercises)}'),
+            80: ('080-kontekst-trassirovki-w3c-trace-context-b3-i-grpc-keepalive.html', f'{len(ch80_exercises)}/{len(ch80_exercises)}'),
+            81: ('081-bezopasnost-tsepochki-postavok-supply-chain-security-i-sbom.html', f'{len(ch81_exercises)}/{len(ch81_exercises)}'),
+            82: ('082-zashchita-setevykh-soketov-i-protivodeystvie-dos-atakam.html', f'{len(ch82_exercises)}/{len(ch82_exercises)}'),
+            83: ('083-sistemnaya-izolyatsiya-seccomp-i-linux-capabilities.html', f'{len(ch83_exercises)}/{len(ch83_exercises)}'),
+            84: ('084-cqrs-i-event-sourcing-na-go.html', f'{len(ch84_exercises)}/{len(ch84_exercises)}'),
+            85: ('085-mnogourovnevoe-keshirovanie-l1-l2-i-raspredelennaya-kogerentnost.html', f'{len(ch85_exercises)}/{len(ch85_exercises)}'),
+            86: ('086-masshtabiruemye-raspredelennye-planirovshchiki-i-ocheredi-zadach.html', f'{len(ch86_exercises)}/{len(ch86_exercises)}'),
+            87: ('087-orkestratsiya-raspredelennykh-protsessov-durable-execution-na-temporal-io.html', f'{len(ch87_exercises)}/{len(ch87_exercises)}'),
+            88: ('088-potokovaya-obrabotka-dannykh-v-realnom-vremeni-stream-processing.html', f'{len(ch88_exercises)}/{len(ch88_exercises)}'),
+            89: ('089-khaos-inzheneriya-i-nagruzochnoe-testirovanie-na-go.html', f'{len(ch89_exercises)}/{len(ch89_exercises)}'),
+            90: ('090-kontrakt-orientirovannye-api-shlyuzy-grpc-gateway-grpc-web-i-openapi.html', f'{len(ch90_exercises)}/{len(ch90_exercises)}'),
+            91: ('091-razrabotka-sobstvennykh-kubernetes-operators-i-crd-na-go.html', f'{len(ch91_exercises)}/{len(ch91_exercises)}'),
+            92: ('092-rasshiryaemost-sistem-plugins-ipc-i-webassembly-wazero.html', f'{len(ch92_exercises)}/{len(ch92_exercises)}'),
+            93: ('093-vysokoproizvoditelnye-api-gateway-i-reverse-proxy-na-chistom-go.html', f'{len(ch93_exercises)}/{len(ch93_exercises)}'),
+            94: ('094-enterprise-release-engineering-feature-flags-dinamicheskiy-konfig-i-canary-routing.html', f'{len(ch94_exercises)}/{len(ch94_exercises)}'),
+            95: ('095-raspredelennaya-koordinatsiya-i-khranilishche-metadannykh-etcd-v3.html', f'{len(ch95_exercises)}/{len(ch95_exercises)}'),
+            96: ('096-zero-downtime-migratsii-baz-dannykh-i-pattern-expand-contract-na-go.html', f'{len(ch96_exercises)}/{len(ch96_exercises)}'),
+            97: ('097-time-series-subd-szhatie-gorilla-i-iot-telemetriya-na-go.html', f'{len(ch97_exercises)}/{len(ch97_exercises)}'),
+            98: ('098-arkhitekturnyy-kontrol-razrabotka-korporativnykh-linterov-dlya-golangci-lint.html', f'{len(ch98_exercises)}/{len(ch98_exercises)}'),
+            99: ('099-integratsiya-s-ii-llm-orkestratsiya-i-vektornyy-poisk-na-go.html', f'{len(ch99_exercises)}/{len(ch99_exercises)}'),
+            100: ('100-arkhitekturnyy-capstone-proektirovanie-i-skvoznoy-zapusk-otkazoustoychivoy-highload-platformy.html', f'{len(ch100_exercises)}/{len(ch100_exercises)}'),
         }
         
         if num in status_map:
@@ -607,7 +607,7 @@ def build_chapter1_html(chapters):
         <p style="color: #94a3b8; max-width: 700px; margin: 0 auto 20px; line-height: 1.6;">
             Вы успешно изучили фундаментальные механизмы пакетов и модулей Go. Переходите к следующей главе!
         </p>
-        <a href="chapter2.html" style="display: inline-flex; align-items: center; gap: 8px; background: #00ADD8; color: #000; font-weight: 700; padding: 10px 20px; border-radius: 8px; text-decoration: none; transition: transform 0.2s;">
+        <a href="002-kompilyatsiya-sborka-i-zapusk.html" style="display: inline-flex; align-items: center; gap: 8px; background: #00ADD8; color: #000; font-weight: 700; padding: 10px 20px; border-radius: 8px; text-decoration: none; transition: transform 0.2s;">
             <span>Глава 02 Компиляция, сборка и запуск</span> →
         </a>
     </section>
@@ -653,8 +653,8 @@ def build_chapter2_html(chapters):
     <section style="margin-top: 60px; padding: 32px; background: #0f172a; border-radius: 12px; border: 1px solid #1e293b; text-align: center;">
         <h3 style="color: #38bdf8; font-size: 1.5rem; margin-bottom: 12px;">🎉 Поздравляем! Глава 02 полностью завершена!</h3>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter1.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 01 Пакеты и модули</a>
-            <a href="chapter3.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00ADD8; color: #000; font-weight: 700; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 03 fmt и ввод-вывод →</a>
+            <a href="001-pakety-i-moduli.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 01 Пакеты и модули</a>
+            <a href="003-paket-fmt-i-konsolnyy-vvod-vyvod.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00ADD8; color: #000; font-weight: 700; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 03 fmt и ввод-вывод →</a>
         </div>
     </section>
     """)
@@ -694,8 +694,8 @@ def build_chapter3_html(chapters):
     <section style="margin-top: 60px; padding: 32px; background: #0f172a; border-radius: 12px; border: 1px solid #1e293b; text-align: center;">
         <h3 style="color: #38bdf8; font-size: 1.5rem; margin-bottom: 12px;">🎉 Поздравляем! Глава 03 полностью завершена!</h3>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter2.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 02 Компиляция, сборка и запуск</a>
-            <a href="chapter4.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00ADD8; color: #000; font-weight: 700; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 04 Базовые типы →</a>
+            <a href="002-kompilyatsiya-sborka-i-zapusk.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 02 Компиляция, сборка и запуск</a>
+            <a href="004-bazovye-tipy-peremennye-i-konstanty.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00ADD8; color: #000; font-weight: 700; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 04 Базовые типы →</a>
         </div>
     </section>
     """)
@@ -736,8 +736,8 @@ def build_chapter4_html(chapters):
     <section style="margin-top: 60px; padding: 32px; background: #0f172a; border-radius: 12px; border: 1px solid #1e293b; text-align: center;">
         <h3 style="color: #38bdf8; font-size: 1.5rem; margin-bottom: 12px;">🎉 Поздравляем! Глава 04 полностью завершена!</h3>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter3.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 03 Пакет fmt и консольный ввод-вывод</a>
-            <a href="chapter5.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00ADD8; color: #000; font-weight: 700; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 05 Условные конструкции →</a>
+            <a href="003-paket-fmt-i-konsolnyy-vvod-vyvod.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 03 Пакет fmt и консольный ввод-вывод</a>
+            <a href="005-uslovnye-konstruktsii.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00ADD8; color: #000; font-weight: 700; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 05 Условные конструкции →</a>
         </div>
     </section>
     """)
@@ -776,8 +776,8 @@ def build_chapter5_html(chapters):
     <section style="margin-top: 60px; padding: 32px; background: #0f172a; border-radius: 12px; border: 1px solid #1e293b; text-align: center;">
         <h3 style="color: #38bdf8; font-size: 1.5rem; margin-bottom: 12px;">🎉 Поздравляем! Глава 05 полностью завершена!</h3>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter4.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 04 Базовые типы</a>
-            <a href="chapter6.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00ADD8; color: #000; font-weight: 700; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 06 Циклы →</a>
+            <a href="004-bazovye-tipy-peremennye-i-konstanty.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 04 Базовые типы</a>
+            <a href="006-tsikly.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00ADD8; color: #000; font-weight: 700; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 06 Циклы →</a>
         </div>
     </section>
     """)
@@ -816,8 +816,8 @@ def build_chapter6_html(chapters):
     <section style="margin-top: 60px; padding: 32px; background: #0f172a; border-radius: 12px; border: 1px solid #1e293b; text-align: center;">
         <h3 style="color: #38bdf8; font-size: 1.5rem; margin-bottom: 12px;">🎉 Поздравляем! Глава 06 полностью завершена!</h3>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter5.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 05 Условные конструкции</a>
-            <a href="chapter7.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00ADD8; color: #000; font-weight: 700; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 07 Массивы →</a>
+            <a href="005-uslovnye-konstruktsii.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 05 Условные конструкции</a>
+            <a href="007-massivy.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00ADD8; color: #000; font-weight: 700; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 07 Массивы →</a>
         </div>
     </section>
     """)
@@ -854,8 +854,8 @@ def build_chapter7_html(chapters):
     <section style="margin-top: 60px; padding: 32px; background: #0f172a; border-radius: 12px; border: 1px solid #1e293b; text-align: center;">
         <h3 style="color: #38bdf8; font-size: 1.5rem; margin-bottom: 12px;">🎉 Поздравляем! Глава 07 полностью завершена!</h3>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter6.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 06 Циклы</a>
-            <a href="chapter8.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00ADD8; color: #000; font-weight: 700; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 08 Слайсы →</a>
+            <a href="006-tsikly.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 06 Циклы</a>
+            <a href="008-slaysy.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00ADD8; color: #000; font-weight: 700; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 08 Слайсы →</a>
         </div>
     </section>
     """)
@@ -894,8 +894,8 @@ def build_chapter8_html(chapters):
     <section style="margin-top: 60px; padding: 32px; background: #0f172a; border-radius: 12px; border: 1px solid #1e293b; text-align: center;">
         <h3 style="color: #38bdf8; font-size: 1.5rem; margin-bottom: 12px;">🎉 Поздравляем! Глава 08 полностью завершена!</h3>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter7.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 07 Массивы</a>
-            <a href="chapter9.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00ADD8; color: #000; font-weight: 700; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 09 Мапы →</a>
+            <a href="007-massivy.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 07 Массивы</a>
+            <a href="009-mapy.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00ADD8; color: #000; font-weight: 700; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 09 Мапы →</a>
         </div>
     </section>
     """)
@@ -944,8 +944,8 @@ def build_chapter9_html(chapters):
             Вы в совершенстве освоили хэш-таблицы, устройство бакетов hmap, потокобезопасность с мьютексами и предотвращение утечек памяти.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter8.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 08 Слайсы</a>
-            <a href="chapter10.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00ADD8; color: #000; font-weight: 700; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 10 Функции →</a>
+            <a href="008-slaysy.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 08 Слайсы</a>
+            <a href="010-funktsii.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00ADD8; color: #000; font-weight: 700; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 10 Функции →</a>
         </div>
     </section>
     """)
@@ -993,8 +993,8 @@ def build_chapter10_html(chapters):
             Вы в совершенстве изучили все вариации функций в Go: замыкания, стек defer, перехват паник через recover, функции высшего порядка и дженерики.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter9.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 09 Мапы</a>
-            <a href="chapter11.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00ADD8; color: #000; font-weight: 700; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 11 Указатели →</a>
+            <a href="009-mapy.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 09 Мапы</a>
+            <a href="011-ukazateli.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00ADD8; color: #000; font-weight: 700; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 11 Указатели →</a>
         </div>
     </section>
     """)
@@ -1041,8 +1041,8 @@ def build_chapter11_html(chapters):
             Вы в совершенстве освоили работу с указателями, управление памятью, Escape-анализ и безопасное разыменование в Go.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter10.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 10 Функции</a>
-            <a href="chapter12.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00ADD8; color: #000; font-weight: 700; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 12 Передача аргументов →</a>
+            <a href="010-funktsii.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 10 Функции</a>
+            <a href="012-peredacha-argumentov.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00ADD8; color: #000; font-weight: 700; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 12 Передача аргументов →</a>
         </div>
     </section>
     """)
@@ -1090,8 +1090,8 @@ def build_chapter12_html(chapters):
             Вы в совершенстве освоили механику передачи аргументов в Go: изоляцию стека, ссылочную семантику мап/каналов, ловушки срезов и глубокое копирование.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter11.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 11 Указатели</a>
-            <a href="chapter13.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00ADD8; color: #000; font-weight: 700; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 13 Структуры →</a>
+            <a href="011-ukazateli.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 11 Указатели</a>
+            <a href="013-struktury.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00ADD8; color: #000; font-weight: 700; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 13 Структуры →</a>
         </div>
     </section>
     """)
@@ -1141,8 +1141,8 @@ def build_chapter13_html(chapters):
             Вы в совершенстве изучили структуры, композицию, выравнивание памяти, теги сериализации и объектные паттерны в Go.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter12.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 12 Передача аргументов</a>
-            <a href="chapter14.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00ADD8; color: #000; font-weight: 700; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 14 Интерфейсы →</a>
+            <a href="012-peredacha-argumentov.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 12 Передача аргументов</a>
+            <a href="014-interfeysy.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00ADD8; color: #000; font-weight: 700; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 14 Интерфейсы →</a>
         </div>
     </section>
     """)
@@ -1194,8 +1194,8 @@ def build_chapter14_html(chapters):
             Вы в совершенстве освоили интерфейсы в Go: модель iface/eface, обработку nil interface, полиморфизм потоков io, паттерны DI и статические проверки.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter13.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 13 Структуры</a>
-            <a href="chapter15.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00ADD8; color: #0f172a; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 15 ООП в Go →</a>
+            <a href="013-struktury.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 13 Структуры</a>
+            <a href="015-oop-v-go.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00ADD8; color: #0f172a; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 15 ООП в Go →</a>
         </div>
     </section>
     """)
@@ -1247,8 +1247,8 @@ def build_chapter15_html(chapters):
             Вы в совершенстве освоили объектно-ориентированный Go: композицию и всплытие методов, разрешение конфликтов селекторов, nil-ресиверы, Method Values/Expressions, паттерны GoF и принципы Clean Architecture.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter14.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 14 Интерфейсы</a>
-            <a href="chapter16.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 16 Дженерики →</a>
+            <a href="014-interfeysy.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 14 Интерфейсы</a>
+            <a href="016-dzheneriki.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 16 Дженерики →</a>
         </div>
     </section>
     """)
@@ -1297,8 +1297,8 @@ def build_chapter16_html(chapters):
             Вы в совершенстве освоили обобщенное программирование (Generics) в Go: Type Sets, аппроксимацию типов (~), Constraint Type Inference, реализацию обобщенных коллекций и понимание мономорфизации рантайма (GC Shape Stenciling).
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter15.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 15 ООП в Go</a>
-            <a href="chapter17.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 17 Обработка ошибок →</a>
+            <a href="015-oop-v-go.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 15 ООП в Go</a>
+            <a href="017-obrabotka-oshibok.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 17 Обработка ошибок →</a>
         </div>
     </section>
     """)
@@ -1346,8 +1346,8 @@ def build_chapter17_html(chapters):
             Вы в совершенстве освоили идиоматичную обработку ошибок в Go: цепочки оборачивания с %w, рекурсивные проверки через errors.Is/As, древовидную агрегацию через errors.Join, паттерны Must и Deferred Rollback, а также безопасную изоляцию паник через recover.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter16.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 16 Дженерики</a>
-            <a href="chapter18.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 18 Работа с файлами →</a>
+            <a href="016-dzheneriki.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 16 Дженерики</a>
+            <a href="018-rabota-s-faylami.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 18 Работа с файлами →</a>
         </div>
     </section>
     """)
@@ -1397,8 +1397,8 @@ def build_chapter18_html(chapters):
             Вы в совершенстве освоили файловый ввод-вывод и потоковую обработку данных в Go: потоковое сканирование bufio.Scanner, высокоскоростную запись bufio.Writer, низкоуровневые системные вызовы Seek/Stat/Chmod, бинарную сериализацию binary/gob/json и проектирование кастомных io.Reader / io.Writer.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter17.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 17 Обработка ошибок</a>
-            <a href="chapter19.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 19 Логирование →</a>
+            <a href="017-obrabotka-oshibok.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 17 Обработка ошибок</a>
+            <a href="019-logirovanie.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 19 Логирование →</a>
         </div>
     </section>
     """)
@@ -1448,8 +1448,8 @@ def build_chapter19_html(chapters):
             Вы в совершенстве освоили структурированное логирование и основы Cloud-Native Observability в Go: современный пакет log/slog, динамическое управление уровнями через LevelVar, OpenTelemetry распределенную трассировку, маскирование PII-данных (152-ФЗ/GDPR), log sampling, интеграцию с Grafana Loki (LogQL) и проектирование отказоустойчивых асинхронных конвейеров.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter18.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 18 Работа с файлами</a>
-            <a href="chapter20.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 20 Горутины и синхронизация →</a>
+            <a href="018-rabota-s-faylami.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 18 Работа с файлами</a>
+            <a href="020-gorutiny-i-sinkhronizatsiya.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 20 Горутины и синхронизация →</a>
         </div>
     </section>
     """)
@@ -1499,8 +1499,8 @@ def build_chapter20_html(chapters):
             Вы в совершенстве освоили базовую модель конкурентности и примитивы синхронизации в Go: планировщик GMP, безопасную работу с горутинами, пакеты <code>sync</code> (WaitGroup, Mutex, RWMutex, Once, Pool, Cond, Map), библиотеку <code>errgroup</code>, и низкоуровневые Lock-Free алгоритмы на <code>sync/atomic</code>.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter19.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 19 Логирование</a>
-            <a href="chapter21.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 21 Каналы и select →</a>
+            <a href="019-logirovanie.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 19 Логирование</a>
+            <a href="021-kanaly-i-select.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 21 Каналы и select →</a>
         </div>
     </section>
     """)
@@ -1550,8 +1550,8 @@ def build_chapter21_html(chapters):
             Вы в совершенстве освоили модель каналов и мультиплексирование select в Go: внутреннее устройство runtime.hchan, безопасную передачу данных между горутинами, неблокирующие операции, отмену через Done-каналы, и полный спектр конкурентных паттернов (Pipeline, Fan-In, Debounce, Throttle, Rate Limiter).
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter20.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 20 Горутины и синхронизация</a>
-            <a href="chapter22.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 22 Пакет context →</a>
+            <a href="020-gorutiny-i-sinkhronizatsiya.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 20 Горутины и синхронизация</a>
+            <a href="022-paket-context.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 22 Пакет context →</a>
         </div>
     </section>
     """)
@@ -1600,8 +1600,8 @@ def build_chapter22_html(chapters):
             Вы в совершенстве освоили пакет <code>context</code> в Go: управление жизненным циклом горутин, каскадную отмену, дедлайны и таймауты, типобезопасные метаданные WithValue, Graceful Shutdown, а также новые функции Go 1.21+ (AfterFunc и WithoutCancel).
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter21.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 21 Каналы и select</a>
-            <a href="chapter23.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00ADD8; color: #080c14; font-weight: 700; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 23 Паттерны конкурентности →</a>
+            <a href="021-kanaly-i-select.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 21 Каналы и select</a>
+            <a href="023-patterny-i-kaverznye-sluchai-konkurentnosti.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00ADD8; color: #080c14; font-weight: 700; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 23 Паттерны конкурентности →</a>
         </div>
     </section>
     """)
@@ -1653,8 +1653,8 @@ def build_chapter23_html(chapters):
             Вы в совершенстве освоили все ключевые паттерны конкурентности и тонкие нюансы рантайма Go: от многостадийных конвейеров и пулов воркеров до ликвидации утечек памяти, шардирования мьютексов и реализации отказоустойчивых HighLoad микросервисов.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter22.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 22 Пакет context</a>
-            <a href="chapter24.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00ADD8; color: #080c14; font-weight: 700; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 24 Низкоуровневая сеть TCP и UDP →</a>
+            <a href="022-paket-context.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 22 Пакет context</a>
+            <a href="024-nizkourovnevaya-set-tcp-i-udp.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00ADD8; color: #080c14; font-weight: 700; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 24 Низкоуровневая сеть TCP и UDP →</a>
         </div>
     </section>
     """)
@@ -1705,8 +1705,8 @@ def build_chapter24_html(chapters):
             Вы в совершенстве освоили низкоуровневое сетевое программирование на Go: работу с TCP и UDP сокетами, управление тайм-аутами и дедлайнами, создание кастомных бинарных TLV протоколов, реализацию масштабируемых прокси и сетевых демонов.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter23.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 23 Паттерны конкурентности</a>
-            <a href="chapter25.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00ADD8; color: #080c14; font-weight: 700; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 25 HTTP-клиент →</a>
+            <a href="023-patterny-i-kaverznye-sluchai-konkurentnosti.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 23 Паттерны конкурентности</a>
+            <a href="025-http-klient.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00ADD8; color: #080c14; font-weight: 700; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 25 HTTP-клиент →</a>
         </div>
     </section>
     """)
@@ -1757,8 +1757,8 @@ def build_chapter25_html(chapters):
             Вы в совершенстве освоили клиентский HTTP-стек в Go: от базовых запросов и управления дедлайнами до тюнинга Keep-Alive пулов, реализации отказоустойчивых ретраев и кастомных клиентских Middleware на RoundTripper.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter24.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 24 Низкоуровневая сеть TCP и UDP</a>
-            <a href="chapter26.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00ADD8; color: #080c14; font-weight: 700; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 26 HTTP-сервер и REST API →</a>
+            <a href="024-nizkourovnevaya-set-tcp-i-udp.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 24 Низкоуровневая сеть TCP и UDP</a>
+            <a href="026-http-server-rest-api-i-middleware.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00ADD8; color: #080c14; font-weight: 700; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 26 HTTP-сервер и REST API →</a>
         </div>
     </section>
     """)
@@ -1812,8 +1812,8 @@ def build_chapter26_html(chapters):
             Вы в совершенстве освоили серверное веб-программирование на Go: от современной маршрутизации Go 1.22 и проектирования REST API до луковой архитектуры Middleware, полнодуплексных WebSockets, взаимной аутентификации mTLS, gRPC микросервисов и построения надежных HighLoad шлюзов API Gateway.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter25.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 25 HTTP-клиент</a>
-            <a href="chapter27.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 27 Реляционные базы данных SQL и PostgreSQL →</a>
+            <a href="025-http-klient.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 25 HTTP-клиент</a>
+            <a href="027-relyatsionnye-bazy-dannykh-sql-i-postgresql.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 27 Реляционные базы данных SQL и PostgreSQL →</a>
         </div>
     </section>
     """)
@@ -1866,8 +1866,8 @@ def build_chapter27_html(chapters):
             Вы в совершенстве освоили работу с реляционными базами данных в Go: от пула соединений database/sql и нативного pgxpool до продвинутых транзакций ACID, блокировок SKIP LOCKED, потокового импорта pgx.CopyFrom, кодогенерации sqlc, миграций схемы и паттернов надежного HighLoad бэкенда.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter26.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 26 HTTP-сервер, REST API и Middleware</a>
-            <a href="chapter28.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 28 Базы данных NoSQL и кэширование Redis →</a>
+            <a href="026-http-server-rest-api-i-middleware.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 26 HTTP-сервер, REST API и Middleware</a>
+            <a href="028-bazy-dannykh-nosql-i-keshirovanie-redis.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 28 Базы данных NoSQL и кэширование Redis →</a>
         </div>
     </section>
     """)
@@ -1920,8 +1920,8 @@ def build_chapter28_html(chapters):
             Вы в совершенстве освоили работу с NoSQL СУБД и кэшированием в Redis на Go: от структур данных и атомарных счетчиков до транзакций MULTI/EXEC, конвейеризации Pipeline, Lua-скриптов, распределенных блокировок Redlock, брокера Redis Streams, защиты от Cache Stampede и архитектуры Redis Cluster.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter27.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 27 Реляционные базы данных SQL и PostgreSQL</a>
-            <a href="chapter29.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 29 Модульное тестирование Unit Testing и Assertions →</a>
+            <a href="027-relyatsionnye-bazy-dannykh-sql-i-postgresql.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 27 Реляционные базы данных SQL и PostgreSQL</a>
+            <a href="029-modulnoe-testirovanie-unit-testing-i-assertions.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 29 Модульное тестирование Unit Testing и Assertions →</a>
         </div>
     </section>
     """)
@@ -1973,8 +1973,8 @@ def build_chapter29_html(chapters):
             Вы в совершенстве освоили модульное тестирование в Go: от базовых соглашений тестирования и Table-Driven архитектуры до параллелизма, детекции гонок с -race, библиотеки testify, мокирования зависимостей, самопроверяющихся Testable Examples и построения надежных CI/CD пайплайнов.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter28.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 28 Базы данных NoSQL и кэширование Redis</a>
-            <a href="chapter30.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 30 Мокирование и интеграционное тестирование →</a>
+            <a href="028-bazy-dannykh-nosql-i-keshirovanie-redis.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 28 Базы данных NoSQL и кэширование Redis</a>
+            <a href="030-mokirovanie-i-integratsionnoe-testirovanie.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 30 Мокирование и интеграционное тестирование →</a>
         </div>
     </section>
     """)
@@ -2026,8 +2026,8 @@ def build_chapter30_html(chapters):
             Вы в совершенстве освоили мокирование и интеграционное тестирование в Go: от ручных моков, шпионов вызовов и кодогенерации gomock/mockery до тестирования HTTP через httptest, мокирования БД с go-sqlmock, виртуализации файловой системы с afero и запуска реальных Docker-контейнеров с testcontainers-go.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter29.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 29 Модульное тестирование Unit Testing и Assertions</a>
-            <a href="chapter31.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 31 Бенчмарки, фаззинг и продвинутые методы тестирования →</a>
+            <a href="029-modulnoe-testirovanie-unit-testing-i-assertions.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 29 Модульное тестирование Unit Testing и Assertions</a>
+            <a href="031-benchmarki-fazzing-i-prodvinutye-metody-testirovaniya.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 31 Бенчмарки, фаззинг и продвинутые методы тестирования →</a>
         </div>
     </section>
     """)
@@ -2079,8 +2079,8 @@ def build_chapter31_html(chapters):
             Вы в совершенстве освоили бенчмарки, фаззинг и передовые инженерные практики тестирования в Go: от микробенчмаркинга с b.N и Go 1.24 b.Loop() до статистического анализа через benchstat, фаззинга граничных условий с coverage-guided мутациями, профилирования pprof, устранения гонок данных с -race, работы с виртуальным временем и Golden Files.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter30.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 30 Мокирование и интеграционное тестирование</a>
-            <a href="chapter32.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 32 Protocol Buffers и gRPC →</a>
+            <a href="030-mokirovanie-i-integratsionnoe-testirovanie.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 30 Мокирование и интеграционное тестирование</a>
+            <a href="032-protocol-buffers-i-grpc.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 32 Protocol Buffers и gRPC →</a>
         </div>
     </section>
     """)
@@ -2133,8 +2133,8 @@ def build_chapter32_html(chapters):
             Вы в совершенстве освоили Protocol Buffers и gRPC в Go: от составления схем proto3, типизации и кодогенерации до всех видов потоковой передачи, многослойных интерцепторов, сквозной безопасности mTLS, трансляции gRPC-Gateway, тестирования на in-memory сокетах и архитектуры высоконагруженных распределенных микросервисов.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter31.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 31 Бенчмарки, фаззинг и продвинутые методы тестирования</a>
-            <a href="chapter33.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 33 Микросервисная архитектура и паттерны →</a>
+            <a href="031-benchmarki-fazzing-i-prodvinutye-metody-testirovaniya.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 31 Бенчмарки, фаззинг и продвинутые методы тестирования</a>
+            <a href="033-mikroservisnaya-arkhitektura-i-patterny.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 33 Микросервисная архитектура и паттерны →</a>
         </div>
     </section>
     """)
@@ -2186,8 +2186,8 @@ def build_chapter33_html(chapters):
             Вы в совершенстве освоили микросервисную архитектуру и паттерны распределенных систем в Go: от декомпозиции монолита и шлюзов API Gateway до паттернов Saga, Transactional Outbox, CQRS, Event Sourcing, Circuit Breaker, Service Mesh Istio, GitOps ArgoCD и проектирования высоконагруженных платформ e-commerce.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter32.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 32 Protocol Buffers и gRPC</a>
-            <a href="chapter34.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 34 GraphQL →</a>
+            <a href="032-protocol-buffers-i-grpc.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 32 Protocol Buffers и gRPC</a>
+            <a href="034-graphql.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 34 GraphQL →</a>
         </div>
     </section>
     """)
@@ -2239,8 +2239,8 @@ def build_chapter34_html(chapters):
             Вы в совершенстве освоили GraphQL и кодогенерацию на Go: от строгой типизации SDL схем и написания надежных резолверов до ликвидации проблемы N+1 с помощью DataLoaders, Relay Cursor пагинации, защиты от атак через Query Complexity, масштабирования подписок в реальном времени и федеративной микросервисной архитектуры Apollo Federation.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter33.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 33 Микросервисная архитектура и паттерны</a>
-            <a href="chapter35.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 35 WebSockets и Real-time →</a>
+            <a href="033-mikroservisnaya-arkhitektura-i-patterny.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 33 Микросервисная архитектура и паттерны</a>
+            <a href="035-websockets-i-real-time.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 35 WebSockets и Real-time →</a>
         </div>
     </section>
     """)
@@ -2293,8 +2293,8 @@ def build_chapter35_html(chapters):
             Вы в совершенстве освоили разработку распределенных систем реального времени на Go: от низкоуровневых фреймов WebSocket и канонических циклов readPump/writePump до горизонтального масштабирования подписок через Redis Pub/Sub, бесконфликтной синхронизации данных CRDT, сетевых игровых движков с тикрейтом 60 FPS и архитектуры стриминговых платформ уровня Twitch.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter34.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 34 GraphQL</a>
-            <a href="chapter36.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 36 RabbitMQ →</a>
+            <a href="034-graphql.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 34 GraphQL</a>
+            <a href="036-rabbitmq.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 36 RabbitMQ →</a>
         </div>
     </section>
     """)
@@ -2348,8 +2348,8 @@ def build_chapter36_html(chapters):
             Вы в совершенстве освоили брокер сообщений RabbitMQ и архитектуру Event-Driven систем на Go: от низкоуровневых фреймов AMQP 0-9-1 и тонкой маршрутизации обменников до отказоустойчивых Quorum Queues на базе Raft, Transactional Outbox с гарантией At-Least-Once доставки, идемпотентных консьюмеров, координации распределенных транзакций Saga и высоконагруженных платформ уровня Uber и Lyft.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter35.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 35 WebSockets и Real-time</a>
-            <a href="chapter37.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 37 Apache Kafka →</a>
+            <a href="035-websockets-i-real-time.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 35 WebSockets и Real-time</a>
+            <a href="037-apache-kafka.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 37 Apache Kafka →</a>
         </div>
     </section>
     """)
@@ -2403,8 +2403,8 @@ def build_chapter37_html(chapters):
             Вы в совершенстве освоили распределенный брокер Apache Kafka и стриминговую архитектуру на Go: от низкоуровневых фреймов сетевого протокола и детерминированного партиционирования по ключу до транзакционного Exactly-Once процессинга, Change Data Capture (Debezium), эволюции схем Avro/Protobuf через Confluent Schema Registry, оконной аналитики 100K RPS и построения отказоустойчивых платформ уровня BigTech.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter36.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 36 RabbitMQ</a>
-            <a href="chapter38.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 38 NATS и NATS JetStream →</a>
+            <a href="036-rabbitmq.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 36 RabbitMQ</a>
+            <a href="038-nats-i-nats-jetstream.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 38 NATS и NATS JetStream →</a>
         </div>
     </section>
     """)
@@ -2458,8 +2458,8 @@ def build_chapter38_html(chapters):
             Вы в совершенстве освоили сверхбыструю систему сообщений NATS и персистентную платформу JetStream на Go: от субмикросекундного in-memory обмена Core NATS и синхронного Request/Reply до распределенного консенсуса Raft, надежных очередей WorkQueue, встроенных хранилищ Key-Value и Object Store, паттернов Outbox, Saga и построения высоконагруженных платформ уровня BigTech.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter37.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 37 Apache Kafka</a>
-            <a href="chapter39.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 39 Метрики и мониторинг (Prometheus) →</a>
+            <a href="037-apache-kafka.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 37 Apache Kafka</a>
+            <a href="039-metriki-i-monitoring-prometheus.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 39 Метрики и мониторинг (Prometheus) →</a>
         </div>
     </section>
     """)
@@ -2513,8 +2513,8 @@ def build_chapter39_html(chapters):
             Вы в совершенстве освоили индустриальные стандарты метрик, мониторинга и телеметрии на Go: от базовых типов Counter и Gauge до калиброванных гистограмм, кастомных коллекторов, архитектуры Thanos Remote Write, дашбордов Grafana, методологий RED и USE, практик Google SRE (SLO, Error Budget, 14.4x Burn Rate) и культуры Observability-Driven Development.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter38.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 38 NATS и NATS JetStream</a>
-            <a href="chapter40.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 40 Распределенная трассировка (OpenTelemetry) →</a>
+            <a href="038-nats-i-nats-jetstream.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 38 NATS и NATS JetStream</a>
+            <a href="040-raspredelennaya-trassirovka-opentelemetry.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 40 Распределенная трассировка (OpenTelemetry) →</a>
         </div>
     </section>
     """)
@@ -2568,8 +2568,8 @@ def build_chapter40_html(chapters):
             Вы в совершенстве освоили распределенную трассировку OpenTelemetry на Go: от инициализации TracerProvider и протокола W3C Trace Context до сквозной передачи Baggage, интеграции с Jaeger, Grafana Tempo и Loki, настройки Tail-Based Sampling, защиты OTel Collector от OOM и глубокого анализа производительности распределенных транзакций.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter39.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 39 Метрики и мониторинг (Prometheus)</a>
-            <a href="chapter41.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 41 Профилирование и рантайм-диагностика →</a>
+            <a href="039-metriki-i-monitoring-prometheus.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 39 Метрики и мониторинг (Prometheus)</a>
+            <a href="041-profilirovanie-i-rantaym-diagnostika.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 41 Профилирование и рантайм-диагностика →</a>
         </div>
     </section>
     """)
@@ -2621,8 +2621,8 @@ def build_chapter41_html(chapters):
             Вы в совершенстве освоили профилирование и рантайм-диагностику в Go: от подключения изолированного pprof на порту :6060 и поиска утечек памяти в куче до работы с runtime/trace, настройки непрерывного профилирования Pyroscope, дифференциального анализа -base и управления инфраструктурной стоимостью в рамках FinOps.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter40.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 40 Распределенная трассировка (OpenTelemetry)</a>
-            <a href="chapter42.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 42 Проектирование чистой архитектуры и DDD →</a>
+            <a href="040-raspredelennaya-trassirovka-opentelemetry.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 40 Распределенная трассировка (OpenTelemetry)</a>
+            <a href="042-proektirovanie-chistoy-arkhitektury-i-ddd.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 42 Проектирование чистой архитектуры и DDD →</a>
         </div>
     </section>
     """)
@@ -2676,8 +2676,8 @@ def build_chapter42_html(chapters):
             Вы в совершенстве освоили проектирование чистой архитектуры и предметно-ориентированное проектирование (DDD) в Go: от организации слоев и инверсии зависимостей DIP до тактических шаблонов Aggregate Roots, Value Objects, распределенных саг с компенсацией, Event Sourcing, CQRS, Transactional Outbox и создания масштабируемого HighLoad сервиса коротких ссылок.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter41.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 41 Профилирование и рантайм-диагностика</a>
-            <a href="chapter43.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 43 Шаблоны проектирования распределенных и enterprise-систем →</a>
+            <a href="041-profilirovanie-i-rantaym-diagnostika.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 41 Профилирование и рантайм-диагностика</a>
+            <a href="043-shablony-proektirovaniya-raspredelennykh-i-enterprise-sistem.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 43 Шаблоны проектирования распределенных и enterprise-систем →</a>
         </div>
     </section>
     """)
@@ -2734,8 +2734,8 @@ def build_chapter43_html(chapters):
             Вы в совершенстве изучили архитектурные паттерны распределенных и enterprise-систем на Go: от проектирования шлюзов, изоляции хранилищ и саг с Outbox/Inbox до мультитенантности, Zero Trust, канареечных релизов, Patroni HA и системного дизайна высоконагруженных платформ e-commerce, финтеха, RTB и AI/ML.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter42.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 42 Проектирование чистой архитектуры и DDD</a>
-            <a href="chapter44.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 44 Проектирование высоконагруженных и отказоустойчивых систем →</a>
+            <a href="042-proektirovanie-chistoy-arkhitektury-i-ddd.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 42 Проектирование чистой архитектуры и DDD</a>
+            <a href="044-proektirovanie-vysokonagruzhennykh-i-otkazoustoychivykh-sistem.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 44 Проектирование высоконагруженных и отказоустойчивых систем →</a>
         </div>
     </section>
     """)
@@ -2792,8 +2792,8 @@ def build_chapter44_html(chapters):
             Вы успешно освоили ключевые дисциплины HighLoad и Fault Tolerance инженерии на Go: от тонкой настройки кэширования, лимитирования запросов и защиты пулов до согласованного хеширования, катастрофоустойчивости и неблокирующего сетевого ввода-вывода через системные вызовы Linux epoll.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter43.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 43 Шаблоны проектирования распределенных и enterprise-систем</a>
-            <a href="chapter45.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 45 Контейнеризация и Docker →</a>
+            <a href="043-shablony-proektirovaniya-raspredelennykh-i-enterprise-sistem.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 43 Шаблоны проектирования распределенных и enterprise-систем</a>
+            <a href="045-konteynerizatsiya-i-docker.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 173, 216, 0.2); color: #38bdf8; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(0, 173, 216, 0.4);">Глава 45 Контейнеризация и Docker →</a>
         </div>
     </section>
     """)
@@ -2850,8 +2850,8 @@ def build_chapter45_html(chapters):
             Вы досконально изучили технологии контейнеризации Go-микросервисов на уровне Senior/Staff инженера: от проектирования минималистичных и безопасных OCI-образов до оркестрации распределенных стеков разработки в Docker Compose, аудита безопасности DevSecOps и защиты от атак Container Escape.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter44.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 44 Проектирование высоконагруженных и отказоустойчивых систем</a>
-            <a href="chapter46.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00ADD8; color: #090d16; font-weight: 700; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 46 Автоматизация CI-CD →</a>
+            <a href="044-proektirovanie-vysokonagruzhennykh-i-otkazoustoychivykh-sistem.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 44 Проектирование высоконагруженных и отказоустойчивых систем</a>
+            <a href="046-avtomatizatsiya-ci-cd.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00ADD8; color: #090d16; font-weight: 700; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 46 Автоматизация CI-CD →</a>
         </div>
     </section>
     """)
@@ -2908,8 +2908,8 @@ def build_chapter46_html(chapters):
             Вы в совершенстве освоили проектирование промышленных CI/CD конвейеров для Go: от матричных сборок, линтинга и криптографической подписи артефактов до GitOps-доставки через ArgoCD, канареечных релизов в Argo Rollouts и платформ самообслуживания разработчиков.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter45.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 45 Контейнеризация и Docker</a>
-            <a href="chapter47.html" style="display: inline-flex; align-items: center; gap: 6px; background: #0284c7; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #38bdf8;">Глава 47 Оркестрация в Kubernetes →</a>
+            <a href="045-konteynerizatsiya-i-docker.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 45 Контейнеризация и Docker</a>
+            <a href="047-orkestratsiya-v-kubernetes.html" style="display: inline-flex; align-items: center; gap: 6px; background: #0284c7; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #38bdf8;">Глава 47 Оркестрация в Kubernetes →</a>
         </div>
     </section>
     """)
@@ -2967,8 +2967,8 @@ def build_chapter47_html(chapters):
             Вы завершили один из самых объемных и фундаментальных модулей курса! Теперь вы в совершенстве владеете полным стеком оркестрации в Kubernetes: от архитектуры базовых примитивов до создания отказоустойчивых Cloud Native платформ, GitOps автоматизации, внедрения Service Mesh и проектирования систем с надежностью 99.99%.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter46.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 46 Автоматизация CI-CD</a>
-            <a href="chapter48.html" style="display: inline-flex; align-items: center; gap: 6px; background: #0284c7; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #38bdf8;">Глава 48 Планировщик GMP →</a>
+            <a href="046-avtomatizatsiya-ci-cd.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 46 Автоматизация CI-CD</a>
+            <a href="048-planirovshchik-gmp.html" style="display: inline-flex; align-items: center; gap: 6px; background: #0284c7; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #38bdf8;">Глава 48 Планировщик GMP →</a>
         </div>
     </section>
     """)
@@ -3026,8 +3026,8 @@ def build_chapter48_html(chapters):
             Вы завершили фундаментальное исследование планировщика GMP и рантайма Go! Теперь вы обладаете кристальным пониманием того, как выполняются миллионы горутин на системных потоках ОС, как рантайм вытесняет вычисления, мультиплексирует ввод-вывод через Netpoller и как тонко настраивать параметры исполнения в высоконагруженном production.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter47.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 47 Оркестрация в Kubernetes</a>
-            <a href="chapter49.html" style="display: inline-flex; align-items: center; gap: 6px; background: #0284c7; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #38bdf8;">Глава 49 Аллокатор кучи и управление памятью →</a>
+            <a href="047-orkestratsiya-v-kubernetes.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 47 Оркестрация в Kubernetes</a>
+            <a href="049-allokator-kuchi-i-upravlenie-pamyatyu.html" style="display: inline-flex; align-items: center; gap: 6px; background: #0284c7; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #38bdf8;">Глава 49 Аллокатор кучи и управление памятью →</a>
         </div>
     </section>
     """)
@@ -3085,8 +3085,8 @@ def build_chapter49_html(chapters):
             Вы в совершенстве изучили механику управления памятью в Go: от ассемблерных инструкций выделения памяти на стеке до многоуровневой архитектуры TCMalloc, профилирования утечек в pprof и создания высокоскоростных ареных аллокаторов для HighLoad.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter48.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 48 Планировщик GMP</a>
-            <a href="chapter50.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">Глава 50 Garbage Collector и тюнинг памяти →</a>
+            <a href="048-planirovshchik-gmp.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 48 Планировщик GMP</a>
+            <a href="050-garbage-collector-i-tyuning-pamyati.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">Глава 50 Garbage Collector и тюнинг памяти →</a>
         </div>
     </section>
     """)
@@ -3144,8 +3144,8 @@ def build_chapter50_html(chapters):
             Вы в совершенстве освоили механику работы сборщика мусора Go: от битовых карт gcmarkBits и ассемблерных инструкций барьера записи до тонкого тюнинга GOMEMLIMIT, предотвращения OOM в Kubernetes и устранения задержек Mark Assist в HighLoad.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter49.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 49 Аллокатор кучи и управление памятью</a>
-            <a href="chapter51.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #080d1a; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 51 Работа с unsafe и низкоуровневой памятью →</a>
+            <a href="049-allokator-kuchi-i-upravlenie-pamyatyu.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 49 Аллокатор кучи и управление памятью</a>
+            <a href="051-rabota-s-unsafe-i-nizkourovnevoy-pamyatyu.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #080d1a; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 51 Работа с unsafe и низкоуровневой памятью →</a>
         </div>
     </section>
     """)
@@ -3202,8 +3202,8 @@ def build_chapter51_html(chapters):
             Вы в совершенстве освоили низкоуровневую работу с памятью в Go: от правил адресной арифметики и выравнивания структур до экстремальных Zero-Copy техник, кастомных арен и атомарных lock-free структур данных, применяемых в ведущих HighLoad системах мира.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter50.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 50 Garbage Collector и тюнинг памяти</a>
-            <a href="chapter52.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #080d1a; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 52 Интеграция с C-кодом через CGO →</a>
+            <a href="050-garbage-collector-i-tyuning-pamyati.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 50 Garbage Collector и тюнинг памяти</a>
+            <a href="052-integratsiya-s-c-kodom-cherez-cgo.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #080d1a; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 52 Интеграция с C-кодом через CGO →</a>
         </div>
     </section>
     """)
@@ -3260,8 +3260,8 @@ def build_chapter52_html(chapters):
             Вы в совершенстве освоили интеграцию Go с C и C++ кодом: от C-преамбулы, преобразования типов и строгих правил cgocheck до экспорта коллбэков, статической компоновки и построения экстремальных zero-allocation мостов на разделяемой памяти.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter51.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 51 Работа с unsafe и низкоуровневой памятью</a>
-            <a href="chapter53.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #ffffff; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #00add8;">Глава 53 Системные вызовы и взаимодействие с ОС →</a>
+            <a href="051-rabota-s-unsafe-i-nizkourovnevoy-pamyatyu.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 51 Работа с unsafe и низкоуровневой памятью</a>
+            <a href="053-sistemnye-vyzovy-i-vzaimodeystvie-s-os.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #ffffff; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #00add8;">Глава 53 Системные вызовы и взаимодействие с ОС →</a>
         </div>
     </section>
     """)
@@ -3318,8 +3318,8 @@ def build_chapter53_html(chapters):
             Вы в совершенстве освоили системное программирование в Go: от низкоуровневых интерфейсов ядра, файловых дескрипторов и mmap до архитектуры epoll, signalfd, timerfd и построения сверхбыстрых сетевых движков на базе неблокирующего I/O.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter52.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 52 Интеграция с C-кодом через CGO</a>
-            <a href="chapter54.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #ffffff; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #00add8;">Глава 54 Продвинутая рефлексия (reflect) →</a>
+            <a href="052-integratsiya-s-c-kodom-cherez-cgo.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 52 Интеграция с C-кодом через CGO</a>
+            <a href="054-prodvinutaya-refleksiya-reflect.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #ffffff; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #00add8;">Глава 54 Продвинутая рефлексия (reflect) →</a>
         </div>
     </section>
     """)
@@ -3376,8 +3376,8 @@ def build_chapter54_html(chapters):
             Вы в совершенстве освоили рефлексию в Go: от законов рефлексии, манипуляции типами, полями и тегами до динамического создания функций через MakeFunc, построения mock-объектов, RPC-движков и оптимизации аллокаций в HighLoad.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter53.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 53 Системные вызовы и взаимодействие с ОС</a>
-            <a href="chapter55.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #ffffff; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #00add8;">Глава 55 Анализ AST и статический анализ кода →</a>
+            <a href="053-sistemnye-vyzovy-i-vzaimodeystvie-s-os.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 53 Системные вызовы и взаимодействие с ОС</a>
+            <a href="055-analiz-ast-i-staticheskiy-analiz-koda.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #ffffff; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #00add8;">Глава 55 Анализ AST и статический анализ кода →</a>
         </div>
     </section>
     """)
@@ -3433,8 +3433,8 @@ def build_chapter55_html(chapters):
             Вы в совершенстве освоили синтаксический и статический анализ кода в Go: от токенизации и обхода AST-деревьев до проверки типов в go/types, создания собственных линтеров на фреймворке go/analysis, автоисправления кода (SuggestedFixes) и интеграции в golangci-lint.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter54.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 54 Продвинутая рефлексия (reflect)</a>
-            <a href="chapter56.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #ffffff; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #00add8;">Глава 56 Кодогенерация и шаблонизация →</a>
+            <a href="054-prodvinutaya-refleksiya-reflect.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 54 Продвинутая рефлексия (reflect)</a>
+            <a href="056-kodogeneratsiya-i-shablonizatsiya.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #ffffff; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #00add8;">Глава 56 Кодогенерация и шаблонизация →</a>
         </div>
     </section>
     """)
@@ -3490,8 +3490,8 @@ def build_chapter56_html(chapters):
             Вы в совершенстве освоили кодогенерацию и шаблонизацию в Go: от базовых директив go:generate и stringer до глубокого парсинга AST, шаблонов text/template, построения собственных ORM, DI-контейнеров, генераторов моков и интеграции в CI/CD пайплайны.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter55.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 55 Анализ AST и статический анализ кода</a>
-            <a href="chapter57.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #070d19; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 57 Симметричное и асимметричное шифрование →</a>
+            <a href="055-analiz-ast-i-staticheskiy-analiz-koda.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 55 Анализ AST и статический анализ кода</a>
+            <a href="057-simmetrichnoe-i-asimmetrichnoe-shifrovanie.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #070d19; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 57 Симметричное и асимметричное шифрование →</a>
         </div>
     </section>
     """)
@@ -3548,8 +3548,8 @@ def build_chapter57_html(chapters):
             Вы в совершенстве освоили симметричное и асимметричное шифрование в Go: от блочных и AEAD-шифров AES/ChaCha20 до RSA-OAEP, RSA-PSS, ECDSA, Ed25519, инфраструктуры открытых ключей X.509, взаимного mTLS в Zero Trust, автоматизации ACME Let's Encrypt и защиты памяти секретов.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter56.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 56 Кодогенерация и шаблонизация</a>
-            <a href="chapter58.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">Глава 58 Хеширование паролей и криптографическая стойкость →</a>
+            <a href="056-kodogeneratsiya-i-shablonizatsiya.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 56 Кодогенерация и шаблонизация</a>
+            <a href="058-kheshirovanie-paroley-i-kriptograficheskaya-stoykost.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">Глава 58 Хеширование паролей и криптографическая стойкость →</a>
         </div>
     </section>
     """)
@@ -3606,8 +3606,8 @@ def build_chapter58_html(chapters):
             Вы в совершенстве освоили современные методы безопасного хранения паролей и токены аутентификации в Go: от bcrypt и pre-hashing до Argon2id PHC, scrypt, HMAC Pepper, защищенных токенов PASETO, k-anonymity HaveIBeenPwned API, OAuth2/OIDC и гарантированного затирания секретов в памяти.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter57.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 57 Симметричное и асимметричное шифрование</a>
-            <a href="chapter59.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">Глава 59 Токены аутентификации и авторизация →</a>
+            <a href="057-simmetrichnoe-i-asimmetrichnoe-shifrovanie.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 57 Симметричное и асимметричное шифрование</a>
+            <a href="059-tokeny-autentifikatsii-i-avtorizatsiya.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">Глава 59 Токены аутентификации и авторизация →</a>
         </div>
     </section>
     """)
@@ -3664,8 +3664,8 @@ def build_chapter59_html(chapters):
             Вы в совершенстве освоили токены аутентификации и протоколы авторизации в Go: от ручной сборки JWT и PASETO v4 до PKCE, Refresh Token Rotation, DPoP, OIDC Discovery, JWKS кэширования и проектирования собственного OAuth 2.0 сервера.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter58.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 58 Хеширование паролей и криптографическая стойкость</a>
-            <a href="chapter60.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #0b1120; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 60 Безопасность веб-приложений и защита API →</a>
+            <a href="058-kheshirovanie-paroley-i-kriptograficheskaya-stoykost.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 58 Хеширование паролей и криптографическая стойкость</a>
+            <a href="060-bezopasnost-veb-prilozheniy-i-zashchita-api.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #0b1120; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 60 Безопасность веб-приложений и защита API →</a>
         </div>
     </section>
     """)
@@ -3722,8 +3722,8 @@ def build_chapter60_html(chapters):
             Вы освоили полный стек защиты веб-приложений и API в Go: от предотвращения DoS, SSRF, SQLi, XSS, Path Traversal и CSRF до интеграции с HashiCorp Vault, AWS Secrets Manager, Strict CSP, Double Submit Cookie и создания промышленного фасада безопасности.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter59.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 59 Токены аутентификации и авторизация</a>
-            <a href="chapter61.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #0b1120; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 61 Документоориентированная база данных MongoDB →</a>
+            <a href="059-tokeny-autentifikatsii-i-avtorizatsiya.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 59 Токены аутентификации и авторизация</a>
+            <a href="061-dokumentoorientirovannaya-baza-dannykh-mongodb.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #0b1120; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 61 Документоориентированная база данных MongoDB →</a>
         </div>
     </section>
     """)
@@ -3781,8 +3781,8 @@ def build_chapter61_html(chapters):
             Вы досконально изучили работу с MongoDB в Go: от внутреннего устройства BSON и индексов WiredTiger до распределенных ACID-транзакций, реактивных Change Streams, сложных агрегаций, Time Series коллекций, Atlas Vector Search и GridFS.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter60.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 60 Безопасность веб-приложений и защита API</a>
-            <a href="chapter62.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #0b1120; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 62 Аналитическая СУБД ClickHouse →</a>
+            <a href="060-bezopasnost-veb-prilozheniy-i-zashchita-api.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 60 Безопасность веб-приложений и защита API</a>
+            <a href="062-analiticheskaya-subd-clickhouse.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #0b1120; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 62 Аналитическая СУБД ClickHouse →</a>
         </div>
     </section>
     """)
@@ -3840,8 +3840,8 @@ def build_chapter62_html(chapters):
             Вы в совершенстве освоили аналитическую СУБД ClickHouse в Go: от физического устройства MergeTree и нативного бинарного протокола до специализированных движков, оконных функций, Materialized Views, шардирования и потокового импорта из Apache Kafka.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter61.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 61 Документоориентированная база данных MongoDB</a>
-            <a href="chapter63.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #0b1120; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 63 Поисковые движки Elasticsearch и OpenSearch →</a>
+            <a href="061-dokumentoorientirovannaya-baza-dannykh-mongodb.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 61 Документоориентированная база данных MongoDB</a>
+            <a href="063-poiskovye-dvizhki-elasticsearch-i-opensearch.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #0b1120; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 63 Поисковые движки Elasticsearch и OpenSearch →</a>
         </div>
     </section>
     """)
@@ -3899,8 +3899,8 @@ def build_chapter63_html(chapters):
             Вы в совершенстве освоили поисковые движки Elasticsearch и OpenSearch в Go: от физического устройства инвертированного индекса Lucene и высокопроизводительного BulkIndexer до сложных Bool-запросов, фасетных агрегаций, глубокой пагинации через PIT + search_after, скриптов Painless и time-series архитектуры с ILM.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter62.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 62 Аналитическая СУБД ClickHouse</a>
-            <a href="chapter64.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #0b1120; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 64 Логическая репликация и Change Data Capture →</a>
+            <a href="062-analiticheskaya-subd-clickhouse.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 62 Аналитическая СУБД ClickHouse</a>
+            <a href="064-logicheskaya-replikatsiya-i-change-data-capture.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #0b1120; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 64 Логическая репликация и Change Data Capture →</a>
         </div>
     </section>
     """)
@@ -3958,8 +3958,8 @@ def build_chapter64_html(chapters):
             Вы в совершенстве освоили логическую репликацию и Change Data Capture в Go: от физического устройства WAL и репликационных слотов PostgreSQL до низкоуровневого парсинга протокола pgoutput, построения надежного CDC-пайплайна с At-Least-Once семантикой и стриминга изменений в Kafka, ClickHouse и Elasticsearch без оверхеда опроса базы данных.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter63.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 63 Поисковые движки Elasticsearch и OpenSearch</a>
-            <a href="chapter65.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #0b1120; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 65 Вебхуки и платформы обратных вызовов →</a>
+            <a href="063-poiskovye-dvizhki-elasticsearch-i-opensearch.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 63 Поисковые движки Elasticsearch и OpenSearch</a>
+            <a href="065-vebkhuki-i-platformy-obratnykh-vyzovov.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #0b1120; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 65 Вебхуки и платформы обратных вызовов →</a>
         </div>
     </section>
     """)
@@ -4017,8 +4017,8 @@ def build_chapter65_html(chapters):
             Вы в совершенстве освоили проектирование и эксплуатацию платформ вебхуков корпоративного уровня в Go: от криптографической защиты HMAC-SHA256 и перехвата сокетов против SSRF/DNS Rebinding до построения надежного Transactional Outbox, управления очередями с Full Jitter бэкоффом, изоляции очередей DLQ и мультипротокольной интеграции с Server-Sent Events и gRPC.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter64.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 64 Логическая репликация и Change Data Capture</a>
-            <a href="chapter66.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #0b1120; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 66 Server-Sent Events →</a>
+            <a href="064-logicheskaya-replikatsiya-i-change-data-capture.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 64 Логическая репликация и Change Data Capture</a>
+            <a href="066-server-sent-events.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #0b1120; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 66 Server-Sent Events →</a>
         </div>
     </section>
     """)
@@ -4076,8 +4076,8 @@ def build_chapter66_html(chapters):
             Вы в совершенстве освоили проектирование высоконагруженных платформ потоковой передачи данных на Server-Sent Events в Go: от спецификации W3C текстового кадрирования и низкоуровневого управления буферизацией через ResponseController до проектирования брокеров с защитой от медленных клиентов, организации бесшовного возобновления связи по Last-Event-ID и стриминга ответов LLM в стиле ChatGPT.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter65.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 65 Вебхуки и платформы обратных вызовов</a>
-            <a href="chapter67.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #0b1120; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 67 Альтернативные RPC-протоколы →</a>
+            <a href="065-vebkhuki-i-platformy-obratnykh-vyzovov.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 65 Вебхуки и платформы обратных вызовов</a>
+            <a href="067-alternativnye-rpc-protokoly.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #0b1120; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 67 Альтернативные RPC-протоколы →</a>
         </div>
     </section>
     """)
@@ -4135,8 +4135,8 @@ def build_chapter67_html(chapters):
             Вы глубоко освоили весь спектр современных RPC-технологий на Go: от чистого JSON-RPC 2.0 с пакетным батчингом и сокетными нотификациями до промышленной настройки Envoy Proxy для gRPC-Web, сквозной разработки сервисов на ConnectRPC без сторонних прокси и построения контрактов по методологии Protobuf-first.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter66.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 66 Server-Sent Events</a>
-            <a href="chapter68.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #0b1120; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 68 Паттерн Saga и компенсационные транзакции →</a>
+            <a href="066-server-sent-events.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 66 Server-Sent Events</a>
+            <a href="068-pattern-saga-i-kompensatsionnye-tranzaktsii.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #0b1120; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 68 Паттерн Saga и компенсационные транзакции →</a>
         </div>
     </section>
     """)
@@ -4194,8 +4194,8 @@ def build_chapter68_html(chapters):
             Вы досконально изучили одну из самых сложных тем распределенных систем: паттерн Сага, построение оркестраторов и хореографии, идемпотентные компенсации, транзакционный Outbox и Inbox, а также методы достижения строгой согласованности данных в HighLoad микросервисах BigTech.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter67.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 67 Альтернативные RPC-протоколы</a>
-            <a href="chapter69.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #ffffff; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #00add8;">Глава 69 Паттерны Outbox и Inbox для надежной доставки сообщений →</a>
+            <a href="067-alternativnye-rpc-protokoly.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 67 Альтернативные RPC-протоколы</a>
+            <a href="069-patterny-outbox-i-inbox-dlya-nadezhnoy-dostavki-soobshcheniy.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #ffffff; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #00add8;">Глава 69 Паттерны Outbox и Inbox для надежной доставки сообщений →</a>
         </div>
     </section>
     """)
@@ -4252,8 +4252,8 @@ def build_chapter69_html(chapters):
             Вы досконально освоили фундаментальные стандарты надежности распределенных систем: искоренение Dual Write, Transactional Outbox и Inbox, чтение PostgreSQL WAL через CDC, групповые подтверждения брокеров, а также построение надежных сквозных пайплайнов с семантикой Effectively Exactly-Once.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter68.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 68 Паттерн Saga и компенсационные транзакции</a>
-            <a href="chapter70.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #ffffff; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #00add8;">Глава 70 Проектирование идемпотентных API →</a>
+            <a href="068-pattern-saga-i-kompensatsionnye-tranzaktsii.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 68 Паттерн Saga и компенсационные транзакции</a>
+            <a href="070-proektirovanie-idempotentnykh-api.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #ffffff; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #00add8;">Глава 70 Проектирование идемпотентных API →</a>
         </div>
     </section>
     """)
@@ -4310,8 +4310,8 @@ def build_chapter70_html(chapters):
             Вы в совершенстве освоили проектирование идемпотентных API на уровне архитектуры HighLoad и Tier-1 BigTech: дедупликацию запросов, защиту от гонок и подмены данных, транзакционную фиксацию в СУБД, перехват ответов и сквозную надежность в распределенных системах.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter69.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 69 Паттерны Outbox и Inbox для надежной доставки сообщений</a>
-            <a href="chapter71.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #ffffff; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #00add8;">Глава 71 Выборы лидера (Leader Election) в распределенных системах →</a>
+            <a href="069-patterny-outbox-i-inbox-dlya-nadezhnoy-dostavki-soobshcheniy.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 69 Паттерны Outbox и Inbox для надежной доставки сообщений</a>
+            <a href="071-vybory-lidera-leader-election-v-raspredelennykh-sistemakh.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #ffffff; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #00add8;">Глава 71 Выборы лидера (Leader Election) в распределенных системах →</a>
         </div>
     </section>
     """)
@@ -4368,8 +4368,8 @@ def build_chapter71_html(chapters):
             Вы досконально изучили механизмы распределенного выбора лидера в HighLoad и Cloud Native архитектурах: от низкоуровневых арен etcd и сессий Consul до защиты от сетевых разделений, кворумов, предотвращения Split-Brain с помощью Fencing Tokens и бесшовного переключения при сбоях.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter70.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 70 Проектирование идемпотентных API</a>
-            <a href="chapter72.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #0b1120; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 72 Протокол консенсуса Raft →</a>
+            <a href="070-proektirovanie-idempotentnykh-api.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 70 Проектирование идемпотентных API</a>
+            <a href="072-protokol-konsensusa-raft.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #0b1120; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 72 Протокол консенсуса Raft →</a>
         </div>
     </section>
     """)
@@ -4426,8 +4426,8 @@ def build_chapter72_html(chapters):
             Вы досконально освоили устройство протокола Raft: от математических инвариантов консенсуса, репликации логов и конечных автоматов до создания снапшотов, Pre-Vote фазы, линейного чтения ReadIndex и построения отказоустойчивых кластеров высокой доступности.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter71.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 71 Выборы лидера (Leader Election)</a>
-            <a href="chapter73.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #0b1120; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 73 Распределенные блокировки и Fencing Tokens →</a>
+            <a href="071-vybory-lidera-leader-election-v-raspredelennykh-sistemakh.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 71 Выборы лидера (Leader Election)</a>
+            <a href="073-raspredelennye-blokirovki-i-fencing-tokens.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #0b1120; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 73 Распределенные блокировки и Fencing Tokens →</a>
         </div>
     </section>
     """)
@@ -4485,8 +4485,8 @@ def build_chapter73_html(chapters):
             Вы глубоко и всесторонне освоили распределенные блокировки и Fencing Tokens: от Redis SET NX PX и Lua-скриптов до etcd concurrency, сессий Consul, Guard Row в PostgreSQL, защиты от Split-Brain и построения отказоустойчивых планировщиков корпоративного уровня.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter72.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 72 Протокол консенсуса Raft</a>
-            <a href="chapter74.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #0b1120; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 74 Cache-friendly структуры данных и выравнивание памяти →</a>
+            <a href="072-protokol-konsensusa-raft.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 72 Протокол консенсуса Raft</a>
+            <a href="074-cache-friendly-struktury-dannykh-i-vyravnivanie-pamyati.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #0b1120; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 74 Cache-friendly структуры данных и выравнивание памяти →</a>
         </div>
     </section>
     """)
@@ -4544,8 +4544,8 @@ def build_chapter74_html(chapters):
             Вы глубоко изучили микроархитектуру современных процессоров и принципы построения Cache-friendly систем: от выравнивания структур и устранения False Sharing до Data-Oriented Design, Swiss Tables, лейаута Эйтзингера, String Arenas, NUMA-топологии и модели Roofline.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter73.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 73 Распределенные блокировки и Fencing Tokens</a>
-            <a href="chapter75.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #040d21; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 75 Lock-free структуры данных →</a>
+            <a href="073-raspredelennye-blokirovki-i-fencing-tokens.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 73 Распределенные блокировки и Fencing Tokens</a>
+            <a href="075-lock-free-struktury-dannykh.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #040d21; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 75 Lock-free структуры данных →</a>
         </div>
     </section>
     """)
@@ -4603,8 +4603,8 @@ def build_chapter75_html(chapters):
             Вы в совершенстве освоили проектирование Lock-free структур данных: от атомиков, модели памяти Go и Treiber Stack до устранения проблемы ABA, SPSC и MPMC очередей Вьюкова, LMAX Disruptor, стратегий Backpressure и финального фреймворка передачи сообщений.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter74.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 74 Cache-friendly структуры данных и выравнивание памяти</a>
-            <a href="chapter76.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #040d21; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 76 Ассемблер Go (Plan 9 Assembly) и SIMD →</a>
+            <a href="074-cache-friendly-struktury-dannykh-i-vyravnivanie-pamyati.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 74 Cache-friendly структуры данных и выравнивание памяти</a>
+            <a href="076-assembler-go-plan-9-assembly-i-simd.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #040d21; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 76 Ассемблер Go (Plan 9 Assembly) и SIMD →</a>
         </div>
     </section>
     """)
@@ -4661,8 +4661,8 @@ def build_chapter76_html(chapters):
             Вы освоили Plan 9 Assembly и SIMD-векторизацию в Go: от соглашений ABI0/ABIInternal и псевдорегистров до инструкций AVX2/FMA, кодогенерации с библиотекой avo, Branchless-алгоритмов и оптимизации Huge Pages.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter75.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 75 Lock-free структуры данных</a>
-            <a href="chapter77.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #040d21; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 77 Высокопроизводительные сетевые фреймворки (gnet, evio) →</a>
+            <a href="075-lock-free-struktury-dannykh.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 75 Lock-free структуры данных</a>
+            <a href="077-vysokoproizvoditelnye-setevye-freymvorki-gnet-evio.html" style="display: inline-flex; align-items: center; gap: 6px; background: #00add8; color: #040d21; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none;">Глава 77 Высокопроизводительные сетевые фреймворки (gnet, evio) →</a>
         </div>
     </section>
     """)
@@ -4719,8 +4719,8 @@ def build_chapter77_html(chapters):
             Вы в совершенстве освоили событийно-ориентированную сетевую разработку: от системных вызовов epoll и многопоточного Multi-Reactor gnet до протоколов кадрирования, Worker Pools, Zero-Copy парсинга RESP и проектирования сверхбыстрого HFT шлюза.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter76.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 76 Ассемблер Go (Plan 9 Assembly) и SIMD</a>
-            <a href="chapter78.html" style="display: inline-flex; align-items: center; gap: 6px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #0284c7;">Глава 78 Облачные хранилища, Envelope Encryption и KMS →</a>
+            <a href="076-assembler-go-plan-9-assembly-i-simd.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 76 Ассемблер Go (Plan 9 Assembly) и SIMD</a>
+            <a href="078-oblachnye-khranilishcha-envelope-encryption-i-kms.html" style="display: inline-flex; align-items: center; gap: 6px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #0284c7;">Глава 78 Облачные хранилища, Envelope Encryption и KMS →</a>
         </div>
     </section>
     """)
@@ -4778,8 +4778,8 @@ def build_chapter78_html(chapters):
             Вы освоили полный стек облачной безопасности данных: от Envelope Encryption и AWS/GCP KMS до параллельного Multipart Upload, S3 Lifecycle, Presigned URLs, WORM Object Lock и паттерна Crypto-shredding.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter77.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 77 Высокопроизводительные сетевые фреймворки (gnet, evio)</a>
-            <a href="chapter79.html" style="display: inline-flex; align-items: center; gap: 6px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #0284c7;">Глава 79 Интеграция с Service Mesh (Istio, Linkerd) и mTLS →</a>
+            <a href="077-vysokoproizvoditelnye-setevye-freymvorki-gnet-evio.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 77 Высокопроизводительные сетевые фреймворки (gnet, evio)</a>
+            <a href="079-integratsiya-s-service-mesh-istio-linkerd-i-mtls.html" style="display: inline-flex; align-items: center; gap: 6px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #0284c7;">Глава 79 Интеграция с Service Mesh (Istio, Linkerd) и mTLS →</a>
         </div>
     </section>
     """)
@@ -4837,8 +4837,8 @@ def build_chapter79_html(chapters):
             Вы освоили полный стек облачной интеграции с Service Mesh: от архитектуры Sidecar, iptables перехвата и Zero Trust mTLS до канареечной маршрутизации VirtualService, Outlier Detection, Envoy RLS, WASM-фильтров на TinyGo и сквозного проброса трейсов W3C/B3.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter78.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 78 Облачные хранилища, Envelope Encryption и KMS</a>
-            <a href="chapter80.html" style="display: inline-flex; align-items: center; gap: 6px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #0284c7;">Глава 80 Контекст трассировки (W3C Trace Context, B3) и gRPC Keepalive →</a>
+            <a href="078-oblachnye-khranilishcha-envelope-encryption-i-kms.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 78 Облачные хранилища, Envelope Encryption и KMS</a>
+            <a href="080-kontekst-trassirovki-w3c-trace-context-b3-i-grpc-keepalive.html" style="display: inline-flex; align-items: center; gap: 6px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #0284c7;">Глава 80 Контекст трассировки (W3C Trace Context, B3) и gRPC Keepalive →</a>
         </div>
     </section>
     """)
@@ -4896,8 +4896,8 @@ def build_chapter80_html(chapters):
             Вы в совершенстве освоили протоколы распределенной трассировки W3C Trace Context и Zipkin B3, клиентские и серверные политики gRPC Keepalive, ликвидацию сетевых гонок в Kubernetes с помощью Graceful Draining и PreStop хуков, а также построение надежных микросервисных архитектур.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter79.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 79 Интеграция с Service Mesh (Istio, Linkerd) и mTLS</a>
-            <a href="chapter81.html" style="display: inline-flex; align-items: center; gap: 6px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #0284c7;">Глава 81 Безопасность цепочки поставок (Supply Chain Security) и SBOM →</a>
+            <a href="079-integratsiya-s-service-mesh-istio-linkerd-i-mtls.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 79 Интеграция с Service Mesh (Istio, Linkerd) и mTLS</a>
+            <a href="081-bezopasnost-tsepochki-postavok-supply-chain-security-i-sbom.html" style="display: inline-flex; align-items: center; gap: 6px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #0284c7;">Глава 81 Безопасность цепочки поставок (Supply Chain Security) и SBOM →</a>
         </div>
     </section>
     """)
@@ -4954,8 +4954,8 @@ def build_chapter81_html(chapters):
             Вы в совершенстве освоили защиту цепочки поставок ПО, контроль контрольных сумм и изоляцию приватных репозиториев, генерацию спецификаций SBOM, подписание образов утилитой Cosign и построение надежного защищенного конвейера DevSecOps.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter80.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 80 Контекст трассировки (W3C Trace Context, B3) и gRPC Keepalive</a>
-            <a href="chapter82.html" style="display: inline-flex; align-items: center; gap: 6px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #0284c7;">Глава 82 Защита сетевых сокетов и противодействие DoS-атакам →</a>
+            <a href="080-kontekst-trassirovki-w3c-trace-context-b3-i-grpc-keepalive.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 80 Контекст трассировки (W3C Trace Context, B3) и gRPC Keepalive</a>
+            <a href="082-zashchita-setevykh-soketov-i-protivodeystvie-dos-atakam.html" style="display: inline-flex; align-items: center; gap: 6px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #0284c7;">Глава 82 Защита сетевых сокетов и противодействие DoS-атакам →</a>
         </div>
     </section>
     """)
@@ -5012,8 +5012,8 @@ def build_chapter82_html(chapters):
             Вы в совершенстве освоили низкоуровневую защиту сокетов, парирование атак Slowloris и SYN Flood, тонкий тюнинг сетевых параметров ядра Linux, шардирование портов через SO_REUSEPORT и проектирование неуязвимых HighLoad-серверов на Go.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter81.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 81 Безопасность цепочки поставок (Supply Chain Security) и SBOM</a>
-            <a href="chapter83.html" style="display: inline-flex; align-items: center; gap: 6px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #0284c7;">Глава 83 Системная изоляция, Seccomp и Linux Capabilities →</a>
+            <a href="081-bezopasnost-tsepochki-postavok-supply-chain-security-i-sbom.html" style="display: inline-flex; align-items: center; gap: 6px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #334155;">← Глава 81 Безопасность цепочки поставок (Supply Chain Security) и SBOM</a>
+            <a href="083-sistemnaya-izolyatsiya-seccomp-i-linux-capabilities.html" style="display: inline-flex; align-items: center; gap: 6px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #0284c7;">Глава 83 Системная изоляция, Seccomp и Linux Capabilities →</a>
         </div>
     </section>
     """)
@@ -5073,8 +5073,8 @@ def build_chapter83_html(chapters):
             <strong>Все 7 071 практическое упражнение</strong> вооружили вас инженерными знаниями уровня <strong>Lead / Principal Go Engineer</strong> в ведущих технологических компаниях!
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter82.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #334155; transition: background 0.2s;">← Глава 82 Защита сетевых сокетов и противодействие DoS-атакам</a>
-            <a href="chapter84.html" style="display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">Глава 84 CQRS и Event Sourcing на Go →</a>
+            <a href="082-zashchita-setevykh-soketov-i-protivodeystvie-dos-atakam.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #334155; transition: background 0.2s;">← Глава 82 Защита сетевых сокетов и противодействие DoS-атакам</a>
+            <a href="084-cqrs-i-event-sourcing-na-go.html" style="display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">Глава 84 CQRS и Event Sourcing на Go →</a>
             <a href="index.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #38bdf8; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">🏠 Главная портала (Треки)</a>
         </div>
     </section>
@@ -5134,8 +5134,8 @@ def build_chapter84_html(chapters):
             Вы глубоко освоили доменные агрегаты, архитектуру событийных хранилищ с защитой от гонок версий, снапшоты, асинхронные и синхронные проекции в PostgreSQL и Elasticsearch, эволюцию схем без миграций и криптографическое удаление персональных данных.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter83.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #334155; transition: background 0.2s;">← Глава 83 Системная изоляция, Seccomp и Linux Capabilities</a>
-            <a href="chapter85.html" style="display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">Глава 85 Многоуровневое кэширование (L1/L2) и распределенная когерентность →</a>
+            <a href="083-sistemnaya-izolyatsiya-seccomp-i-linux-capabilities.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #334155; transition: background 0.2s;">← Глава 83 Системная изоляция, Seccomp и Linux Capabilities</a>
+            <a href="085-mnogourovnevoe-keshirovanie-l1-l2-i-raspredelennaya-kogerentnost.html" style="display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">Глава 85 Многоуровневое кэширование (L1/L2) и распределенная когерентность →</a>
             <a href="index.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #38bdf8; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">🏠 Главная портала (Треки)</a>
         </div>
     </section>
@@ -5194,8 +5194,8 @@ def build_chapter85_html(chapters):
             Вы детально изучили архитектуру двухуровневого кэша L1/L2, алгоритмы Zero-GC, ликвидацию Thundering Herd через singleflight и XFetch, защиту от Penetration через фильтры Блума, протокол RESP3 Client-Side Tracking, сжатие пейлоадов и предотвращение рассинхронизации данных в распределенных кластерах.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter84.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #334155; transition: background 0.2s;">← Глава 84 CQRS и Event Sourcing на Go</a>
-            <a href="chapter86.html" style="display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">Глава 86 Масштабируемые распределенные планировщики и очереди задач →</a>
+            <a href="084-cqrs-i-event-sourcing-na-go.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #334155; transition: background 0.2s;">← Глава 84 CQRS и Event Sourcing на Go</a>
+            <a href="086-masshtabiruemye-raspredelennye-planirovshchiki-i-ocheredi-zadach.html" style="display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">Глава 86 Масштабируемые распределенные планировщики и очереди задач →</a>
             <a href="index.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #38bdf8; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">🏠 Главная портала (Треки)</a>
         </div>
     </section>
@@ -5254,8 +5254,8 @@ def build_chapter86_html(chapters):
             Вы детально освоили архитектуру очередей на Redis и PostgreSQL, конкурентную выборку SKIP LOCKED, восстановление по Heartbeat, справедливое планирование между тенантами, батчинг, библиотеки Asynq и River, а также построение надежного корпоративного менеджера фоновых задач.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter85.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #334155; transition: background 0.2s;">← Глава 85 Многоуровневое кэширование (L1-L2) и распределенная когерентность</a>
-            <a href="chapter87.html" style="display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">Глава 87 Оркестрация распределенных процессов (Durable Execution) на Temporal.io →</a>
+            <a href="085-mnogourovnevoe-keshirovanie-l1-l2-i-raspredelennaya-kogerentnost.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #334155; transition: background 0.2s;">← Глава 85 Многоуровневое кэширование (L1-L2) и распределенная когерентность</a>
+            <a href="087-orkestratsiya-raspredelennykh-protsessov-durable-execution-na-temporal-io.html" style="display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">Глава 87 Оркестрация распределенных процессов (Durable Execution) на Temporal.io →</a>
             <a href="index.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #38bdf8; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">🏠 Главная портала (Треки)</a>
         </div>
     </section>
@@ -5314,8 +5314,8 @@ def build_chapter87_html(chapters):
             Вы полностью овладели архитектурой Temporal, парадигмой долговечного исполнения, гарантиями детерминизма, распределенными сагами, сигналами, запросами, Update API, версионированием через Build ID, сквозным шифрованием и проектированием высоконадежных систем банковского уровня.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter86.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #334155; transition: background 0.2s;">← Глава 86 Масштабируемые распределенные планировщики и очереди задач</a>
-            <a href="chapter88.html" style="display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">Глава 88 Потоковая обработка данных в реальном времени (Stream Processing) →</a>
+            <a href="086-masshtabiruemye-raspredelennye-planirovshchiki-i-ocheredi-zadach.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #334155; transition: background 0.2s;">← Глава 86 Масштабируемые распределенные планировщики и очереди задач</a>
+            <a href="088-potokovaya-obrabotka-dannykh-v-realnom-vremeni-stream-processing.html" style="display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">Глава 88 Потоковая обработка данных в реальном времени (Stream Processing) →</a>
             <a href="index.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #38bdf8; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">🏠 Главная портала (Треки)</a>
         </div>
     </section>
@@ -5374,8 +5374,8 @@ def build_chapter88_html(chapters):
             Вы полностью овладели архитектурой распределенной потоковой аналитики: оконными агрегациями, водяными знаками, встроенными хранилищами состояния, чекпоинтами Чанди-Лэмпорта, гарантией Exactly-Once, алгоритмами детектирования аномалий и высокоскоростными конвейерами на чистом Go.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter87.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #334155; transition: background 0.2s;">← Глава 87 Оркестрация распределенных процессов (Durable Execution) на Temporal.io</a>
-            <a href="chapter89.html" style="display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">Глава 89 Хаос-инженерия и нагрузочное тестирование на Go →</a>
+            <a href="087-orkestratsiya-raspredelennykh-protsessov-durable-execution-na-temporal-io.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #334155; transition: background 0.2s;">← Глава 87 Оркестрация распределенных процессов (Durable Execution) на Temporal.io</a>
+            <a href="089-khaos-inzheneriya-i-nagruzochnoe-testirovanie-na-go.html" style="display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">Глава 89 Хаос-инженерия и нагрузочное тестирование на Go →</a>
             <a href="index.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #38bdf8; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">🏠 Главная портала (Треки)</a>
         </div>
     </section>
@@ -5434,8 +5434,8 @@ def build_chapter89_html(chapters):
             Вы полностью овладели методологией проактивной надежности: инъекцией сетевых сбоев Toxiproxy, открытыми пуассоновскими моделями нагрузки, устранением скоординированного пропуска, точным расчетом перцентилей HdrHistogram, изоляцией Bulkhead, стресс-тестированием рантайма Go и автоматизацией Game Day.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter88.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #334155; transition: background 0.2s;">← Глава 88 Потоковая обработка данных в реальном времени (Stream Processing)</a>
-            <a href="chapter90.html" style="display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">Глава 90 Контракт-ориентированные API-шлюзы: gRPC-Gateway, gRPC-Web и OpenAPI →</a>
+            <a href="088-potokovaya-obrabotka-dannykh-v-realnom-vremeni-stream-processing.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #334155; transition: background 0.2s;">← Глава 88 Потоковая обработка данных в реальном времени (Stream Processing)</a>
+            <a href="090-kontrakt-orientirovannye-api-shlyuzy-grpc-gateway-grpc-web-i-openapi.html" style="display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">Глава 90 Контракт-ориентированные API-шлюзы: gRPC-Gateway, gRPC-Web и OpenAPI →</a>
             <a href="index.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #38bdf8; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">🏠 Главная портала (Треки)</a>
         </div>
     </section>
@@ -5494,8 +5494,8 @@ def build_chapter90_html(chapters):
             Вы в совершенстве овладели современным стеком контрактной разработки API: Protobuf Contract-First парадигмой, кодогенерацией gRPC-Gateway, мультиплексированием протоколов, gRPC-Web для фронтенда, декларативной валидацией protovalidate, аудитом Buf CLI и комплексной периметральной защитой.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter89.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #334155; transition: background 0.2s;">← Глава 89 Хаос-инженерия и нагрузочное тестирование на Go</a>
-            <a href="chapter91.html" style="display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">Глава 91 Разработка собственных Kubernetes Operators и CRD на Go →</a>
+            <a href="089-khaos-inzheneriya-i-nagruzochnoe-testirovanie-na-go.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #334155; transition: background 0.2s;">← Глава 89 Хаос-инженерия и нагрузочное тестирование на Go</a>
+            <a href="091-razrabotka-sobstvennykh-kubernetes-operators-i-crd-na-go.html" style="display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">Глава 91 Разработка собственных Kubernetes Operators и CRD на Go →</a>
             <a href="index.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #38bdf8; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">🏠 Главная портала (Треки)</a>
         </div>
     </section>
@@ -5554,8 +5554,8 @@ def build_chapter91_html(chapters):
             Вы в совершенстве овладели элитной компетенцией Cloud-Native инженерии: разработкой собственных операторов Kubernetes с использованием Kubebuilder, controller-runtime, Admission Webhooks, Server-Side Apply, Leader Election, хаос-тестирования и паттернов надежности распределенных систем.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter90.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #334155; transition: background 0.2s;">← Глава 90 Контракт-ориентированные API-шлюзы: gRPC-Gateway, gRPC-Web и OpenAPI</a>
-            <a href="chapter92.html" style="display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">Глава 92 Расширяемость систем: Plugins, IPC и WebAssembly (Wazero) →</a>
+            <a href="090-kontrakt-orientirovannye-api-shlyuzy-grpc-gateway-grpc-web-i-openapi.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #334155; transition: background 0.2s;">← Глава 90 Контракт-ориентированные API-шлюзы: gRPC-Gateway, gRPC-Web и OpenAPI</a>
+            <a href="092-rasshiryaemost-sistem-plugins-ipc-i-webassembly-wazero.html" style="display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">Глава 92 Расширяемость систем: Plugins, IPC и WebAssembly (Wazero) →</a>
             <a href="index.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #38bdf8; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">🏠 Главная портала (Треки)</a>
         </div>
     </section>
@@ -5613,8 +5613,8 @@ def build_chapter92_html(chapters):
             Вы в совершенстве овладели передовыми технологиями расширяемости корпоративных систем: архитектурой Out-of-Process IPC плагинов на базе HashiCorp go-plugin, бессерверным рантаймом Wazero WebAssembly на чистом Go, безопасными песочницами WASI, Gas Metering, пулингом инстансов и горячей заменой модулей без даунтайма.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter91.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #334155; transition: background 0.2s;">← Глава 91 Разработка собственных Kubernetes Operators и CRD на Go</a>
-            <a href="chapter93.html" style="display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">Глава 93 Высокопроизводительные API Gateway и Reverse Proxy на чистом Go →</a>
+            <a href="091-razrabotka-sobstvennykh-kubernetes-operators-i-crd-na-go.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #334155; transition: background 0.2s;">← Глава 91 Разработка собственных Kubernetes Operators и CRD на Go</a>
+            <a href="093-vysokoproizvoditelnye-api-gateway-i-reverse-proxy-na-chistom-go.html" style="display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">Глава 93 Высокопроизводительные API Gateway и Reverse Proxy на чистом Go →</a>
             <a href="index.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #38bdf8; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">🏠 Главная портала (Треки)</a>
         </div>
     </section>
@@ -5672,8 +5672,8 @@ def build_chapter93_html(chapters):
             Вы в совершенстве овладели передовыми компетенциями сетевой HighLoad-инженерии: проектированием производительных Reverse Proxy на базе httputil, сетевым тюнингом сокетов Linux (SO_REUSEPORT, somaxconn), алгоритмической балансировкой Least Connections и Consistent Hashing, защитой периметра (JWT, Rate Limiting, Circuit Breaker), поддержкой WebSockets/gRPC и сквозной наблюдаемостью.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter92.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #334155; transition: background 0.2s;">← Глава 92 Расширяемость систем: Plugins, IPC и WebAssembly (Wazero)</a>
-            <a href="chapter94.html" style="display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">Глава 94 Enterprise Release Engineering: Feature Flags, динамический конфиг и Canary Routing →</a>
+            <a href="092-rasshiryaemost-sistem-plugins-ipc-i-webassembly-wazero.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #334155; transition: background 0.2s;">← Глава 92 Расширяемость систем: Plugins, IPC и WebAssembly (Wazero)</a>
+            <a href="094-enterprise-release-engineering-feature-flags-dinamicheskiy-konfig-i-canary-routing.html" style="display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">Глава 94 Enterprise Release Engineering: Feature Flags, динамический конфиг и Canary Routing →</a>
             <a href="index.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #38bdf8; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">🏠 Главная портала (Треки)</a>
         </div>
     </section>
@@ -5731,8 +5731,8 @@ def build_chapter94_html(chapters):
             Вы освоили элитные практики управления релизами и конфигурацией: открытый стандарт OpenFeature, потокобезопасные рубильники безопасности (Kill Switches), горячую перезагрузку файлов с fsnotify/viper, lock-free архитектуру конфигурации на atomic.Pointer, процентные раскатки по хэшу CRC32 и автоматический откат релизов по метрикам Prometheus.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter93.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #334155; transition: background 0.2s;">← Глава 93 Высокопроизводительные API Gateway и Reverse Proxy на чистом Go</a>
-            <a href="chapter95.html" style="display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">Глава 95 Распределенная координация и хранилище метаданных etcd v3 →</a>
+            <a href="093-vysokoproizvoditelnye-api-gateway-i-reverse-proxy-na-chistom-go.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #334155; transition: background 0.2s;">← Глава 93 Высокопроизводительные API Gateway и Reverse Proxy на чистом Go</a>
+            <a href="095-raspredelennaya-koordinatsiya-i-khranilishche-metadannykh-etcd-v3.html" style="display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">Глава 95 Распределенная координация и хранилище метаданных etcd v3 →</a>
             <a href="index.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #38bdf8; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">🏠 Главная портала (Треки)</a>
         </div>
     </section>
@@ -5790,8 +5790,8 @@ def build_chapter95_html(chapters):
             Вы в совершенстве овладели передовыми механизмами распределенных систем: протоколом консенсуса Raft, версионированием MVCC, транзакциями CAS и STM, честными распределенными блокировками, выборами лидера с Resign, реактивными подписками Watchers, эксплуатацией (Compaction/Defragmentation) и разработкой отказоустойчивых координаторов на Go.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter94.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #334155; transition: background 0.2s;">← Глава 94 Enterprise Release Engineering: Feature Flags, динамический конфиг и Canary Routing</a>
-            <a href="chapter96.html" style="display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">Глава 96 Zero-Downtime миграции баз данных и паттерн Expand/Contract на Go →</a>
+            <a href="094-enterprise-release-engineering-feature-flags-dinamicheskiy-konfig-i-canary-routing.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #334155; transition: background 0.2s;">← Глава 94 Enterprise Release Engineering: Feature Flags, динамический конфиг и Canary Routing</a>
+            <a href="096-zero-downtime-migratsii-baz-dannykh-i-pattern-expand-contract-na-go.html" style="display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">Глава 96 Zero-Downtime миграции баз данных и паттерн Expand/Contract на Go →</a>
             <a href="index.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #38bdf8; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">🏠 Главная портала (Треки)</a>
         </div>
     </section>
@@ -5849,8 +5849,8 @@ def build_chapter96_html(chapters):
             Вы овладели высшим пилотажем эволюции баз данных под миллионными нагрузками: паттерном Expand-Contract, неблокирующим DDL, Keyset-пагинацией бэкфилла, троттлингом по лагу репликации, теневой верификацией Shadow Writing и разработкой надежных миграционных утилит на Go.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter95.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #334155; transition: background 0.2s;">← Глава 95 Распределенная координация и хранилище метаданных etcd v3</a>
-            <a href="chapter97.html" style="display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">Глава 97 Time-Series СУБД, сжатие Gorilla и IoT-телеметрия на Go →</a>
+            <a href="095-raspredelennaya-koordinatsiya-i-khranilishche-metadannykh-etcd-v3.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #334155; transition: background 0.2s;">← Глава 95 Распределенная координация и хранилище метаданных etcd v3</a>
+            <a href="097-time-series-subd-szhatie-gorilla-i-iot-telemetriya-na-go.html" style="display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">Глава 97 Time-Series СУБД, сжатие Gorilla и IoT-телеметрия на Go →</a>
             <a href="index.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #38bdf8; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">🏠 Главная портала (Треки)</a>
         </div>
     </section>
@@ -5908,8 +5908,8 @@ def build_chapter97_html(chapters):
             Вы в совершенстве овладели передовыми технологиями хранения метрик: побитовым сжатием временных рядов Gorilla, архитектурой Head/Immutable чанков, Roaring Bitmaps фильтрацией, гипертаблицами TimescaleDB, MQTT конвейерами телеметрии и созданием собственных движков TSDB на Go.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter96.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #334155; transition: background 0.2s;">← Глава 96 Zero-Downtime миграции баз данных и паттерн Expand-Contract на Go</a>
-            <a href="chapter98.html" style="display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">Глава 98 Архитектурный контроль: Разработка корпоративных линтеров для golangci-lint →</a>
+            <a href="096-zero-downtime-migratsii-baz-dannykh-i-pattern-expand-contract-na-go.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #334155; transition: background 0.2s;">← Глава 96 Zero-Downtime миграции баз данных и паттерн Expand-Contract на Go</a>
+            <a href="098-arkhitekturnyy-kontrol-razrabotka-korporativnykh-linterov-dlya-golangci-lint.html" style="display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">Глава 98 Архитектурный контроль: Разработка корпоративных линтеров для golangci-lint →</a>
             <a href="index.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #38bdf8; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">🏠 Главная портала (Треки)</a>
         </div>
     </section>
@@ -5968,8 +5968,8 @@ def build_chapter98_html(chapters):
             Вы освоили разработку продвинутых статических анализаторов на базе go/analysis и go/types: от низкоуровневой инспекции AST и проверки архитектурных инвариантов до создания плагинов для golangci-lint, автоматических SuggestedFixes и построения корпоративного пайплайна контроля качества кода.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter97.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #334155; transition: background 0.2s;">← Глава 97 Time-Series СУБД, сжатие Gorilla и IoT-телеметрия на Go</a>
-            <a href="chapter99.html" style="display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">Глава 99 Интеграция с ИИ, LLM-оркестрация и векторный поиск на Go →</a>
+            <a href="097-time-series-subd-szhatie-gorilla-i-iot-telemetriya-na-go.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #334155; transition: background 0.2s;">← Глава 97 Time-Series СУБД, сжатие Gorilla и IoT-телеметрия на Go</a>
+            <a href="099-integratsiya-s-ii-llm-orkestratsiya-i-vektornyy-poisk-na-go.html" style="display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">Глава 99 Интеграция с ИИ, LLM-оркестрация и векторный поиск на Go →</a>
             <a href="index.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #38bdf8; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">🏠 Главная портала (Треки)</a>
         </div>
     </section>
@@ -6028,8 +6028,8 @@ def build_chapter99_html(chapters):
             Вы в совершенстве овладели передовыми технологиями искусственного интеллекта на Go: потоковой передачей токенов SSE, векторным поиском pgvector HNSW, гибридным ранжированием RRF, автономными ReAct-агентами, Function Calling и созданием надежных высокопроизводительных RAG-платформ.
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter98.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #334155; transition: background 0.2s;">← Глава 98 Архитектурный контроль: Разработка корпоративных линтеров для golangci-lint</a>
-            <a href="chapter100.html" style="display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">Глава 100 Архитектурный Capstone: Проектирование и сквозной запуск отказоустойчивой HighLoad-платформы →</a>
+            <a href="098-arkhitekturnyy-kontrol-razrabotka-korporativnykh-linterov-dlya-golangci-lint.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #334155; transition: background 0.2s;">← Глава 98 Архитектурный контроль: Разработка корпоративных линтеров для golangci-lint</a>
+            <a href="100-arkhitekturnyy-capstone-proektirovanie-i-skvoznoy-zapusk-otkazoustoychivoy-highload-platformy.html" style="display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">Глава 100 Архитектурный Capstone: Проектирование и сквозной запуск отказоустойчивой HighLoad-платформы →</a>
             <a href="index.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #38bdf8; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #0284c7;">🏠 Главная портала (Треки)</a>
         </div>
     </section>
@@ -6088,7 +6088,7 @@ def build_chapter100_html(chapters):
             Вы совершили грандиозный инженерный подвиг, пройдя все 100 глав и решив 7 666 сложнейших практических задач на Go! Вы овладели полным спектром технологий: от низкоуровневого ассемблера Plan 9, планировщика GMP и GC аллокатора до построения распределенных систем мирового уровня, надежных финансовых ядер, Kubernetes операторов и ИИ-агентов. Добро пожаловать в элиту мирового Go-сообщества!
         </p>
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="chapter99.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 14px 26px; border-radius: 12px; text-decoration: none; border: 1px solid #334155; transition: background 0.2s;">← Глава 99 Интеграция с ИИ, LLM-оркестрация и векторный поиск на Go</a>
+            <a href="099-integratsiya-s-ii-llm-orkestratsiya-i-vektornyy-poisk-na-go.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 14px 26px; border-radius: 12px; text-decoration: none; border: 1px solid #334155; transition: background 0.2s;">← Глава 99 Интеграция с ИИ, LLM-оркестрация и векторный поиск на Go</a>
             <a href="index.html" style="display: inline-flex; align-items: center; gap: 8px; background: #6366f1; color: #ffffff; font-weight: 700; padding: 14px 28px; border-radius: 12px; text-decoration: none; border: 1px solid #818cf8; box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);">🏠 Главная портала курса (Специализации и сертификация)</a>
         </div>
     </section>
@@ -6099,108 +6099,108 @@ def build_chapter100_html(chapters):
 
 # All 100 chapters metadata
 all_100_chapters = [
-    (1, "Пакеты и модули", "chapter1.html", 91, True, "Модули, go.mod, SemVer, Cobra CLI, internal, vendor"),
-    (2, "Компиляция, сборка и запуск", "chapter2.html", 25, True, "go build, флаги линкера, кросс-компиляция, race detector, Scratch Docker"),
-    (3, "Пакет fmt и консольный ввод-вывод", "chapter3.html", 65, True, "Форматирование, сканирование, буферизация, кастомные стрингеры"),
-    (4, "Базовые типы, переменные и константы", "chapter4.html", 111, True, "Числа, переполнения, iota, битовые маски, типизация, кастинг"),
-    (5, "Условные конструкции", "chapter5.html", 64, True, "if/else с инициализатором, switch, type switch, fallthrough"),
-    (6, "Циклы", "chapter6.html", 64, True, "for, range, итераторы, оптимизации компилятора, метки break/continue"),
-    (7, "Массивы", "chapter7.html", 32, True, "Фиксированные массивы, передача по значению, память на стеке"),
-    (8, "Слайсы", "chapter8.html", 74, True, "SliceHeader, len vs cap, append, подслайсирование, утечки памяти"),
-    (9, "Мапы", "chapter9.html", 62, True, "hmap, bmap, эвакуация бакетов, коллизии, конкурентная запись"),
-    (10, "Функции", "chapter10.html", 100, True, "Именованные возвраты, замыкания, defer хронология, рекурсия"),
-    (11, "Указатели", "chapter11.html", 49, True, "Разыменование, адресная арифметика, escape analysis, стек vs куча"),
-    (12, "Передача аргументов", "chapter12.html", 67, True, "Семантика передачи по значению, мутации, стоимость копирования"),
-    (13, "Структуры", "chapter13.html", 71, True, "Теги json/db, выравнивание полей (padding), анонимные структуры"),
-    (14, "Интерфейсы", "chapter14.html", 77, True, "iface, eface, dynamic dispatch, nil-interface ловушка, io.Reader/Writer"),
-    (15, "ООП в Go", "chapter15.html", 127, True, "Композиция vs наследование, эмбеддинг, полиморфизм, SOLID на Go"),
-    (16, "Дженерики", "chapter16.html", 131, True, "Параметрический полиморфизм, constraints, comparable, мономорфизация"),
-    (17, "Обработка ошибок", "chapter17.html", 58, True, "errors.Is, errors.As, wrapping %w, кастомные типы ошибок"),
-    (18, "Работа с файлами", "chapter18.html", 100, True, "os.File, bufio, ioutil/io, потоковое чтение, временные файлы"),
-    (19, "Логирование", "chapter19.html", 84, True, "log/slog, структурированные логи, лог-уровни, JSONHandler"),
-    (20, "Горутины и синхронизация", "chapter20.html", 124, True, "go routine, sync.WaitGroup, sync.Mutex, sync.RWMutex, sync.Once, atomic"),
-    (21, "Каналы и select", "chapter21.html", 95, True, "Буферизованные каналы, fan-out, fan-in, pipeline, закрытие каналов"),
-    (22, "Контекст", "chapter22.html", 52, True, "context.WithTimeout, WithCancel, WithValue, propagation, graceful stop"),
-    (23, "Паттерны конкурентности", "chapter23.html", 132, True, "Worker Pool, Semaphore, Or-Done, ErrGroup, Singleflight, Rate Limiting"),
-    (24, "Низкоуровневая сеть", "chapter24.html", 63, True, "net.TCPConn, net.UDPConn, таймауты сокетов, deadliness, буферы"),
-    (25, "HTTP-клиент", "chapter25.html", 45, True, "http.Client, Transport, Keep-Alive, connection pooling, retries"),
-    (26, "HTTP-сервер, REST API и Middleware", "chapter26.html", 158, True, "http.Handler, Chi/Gin/Fiber, CORS, Auth, Recovery, Rate Limiter"),
-    (27, "Реляционные базы данных (SQL и PostgreSQL)", "chapter27.html", 163, True, "database/sql, jackc/pgx, connection pool, ACID, транзакции, индексы"),
-    (28, "Базы данных NoSQL и кэширование (Redis)", "chapter28.html", 115, True, "go-redis, Strings, Hashes, Pub/Sub, Streams, Redis Cluster"),
-    (29, "Модульное тестирование (Unit Testing) и Assertions", "chapter29.html", 96, True, "testing.T, testify/assert, табличные тесты, TestMain"),
-    (30, "Мокирование и интеграционное тестирование", "chapter30.html", 107, True, "testcontainers-go, gomock, mockery, PostgreSQL/Redis в Docker"),
-    (31, "Бенчмарки, фаззинг и продвинутые методы тестирования", "chapter31.html", 120, True, "testing.B, testing.F, mem/allocs profiling, фаззинг парсеров"),
-    (32, "Protocol Buffers и gRPC", "chapter32.html", 189, True, "proto3, protoc-gen-go, Unary, Streaming, Interceptors, Metadata"),
-    (33, "Микросервисная архитектура и паттерны", "chapter33.html", 89, True, "Service Discovery, Circuit Breaker, Service-to-Service auth"),
-    (34, "GraphQL", "chapter34.html", 78, True, "graphql-go, gqlgen, Resolvers, Schema First, DataLoaders"),
-    (35, "WebSockets и Real-time", "chapter35.html", 78, True, "gorilla/websocket, coder/websocket, hub/room broadcast, ping/pong"),
-    (36, "RabbitMQ", "chapter36.html", 130, True, "amqp091-go, Exchanges (direct/topic/fanout), Queues, ACKs, DLQ"),
-    (37, "Apache Kafka", "chapter37.html", 88, True, "segmentio/kafka-go, Consumer Groups, Partitions, Rebalance, Offsets"),
-    (38, "NATS и NATS JetStream", "chapter38.html", 77, True, "nats.go, Core NATS, JetStream, At-Least-Once, Key-Value Store"),
-    (39, "Метрики и мониторинг (Prometheus)", "chapter39.html", 114, True, "prometheus/client_golang, Counter, Gauge, Histogram, Summary"),
-    (40, "Распределенная трассировка (OpenTelemetry)", "chapter40.html", 79, True, "OTel Go SDK, Tracers, Spans, Context Propagation, Jaeger/Otlp"),
-    (41, "Профилирование и рантайм-диагностика", "chapter41.html", 24, True, "net/http/pprof, CPU, Heap, Goroutine, Block/Mutex profile"),
-    (42, "Проектирование чистой архитектуры и DDD", "chapter42.html", 98, True, "Domain, UseCases, Repositories, Aggregates, Value Objects"),
-    (43, "Шаблоны проектирования распределенных и enterprise-систем", "chapter43.html", 112, True, "Factory, Strategy, Adapter, Unit of Work, Specification"),
-    (44, "Проектирование высоконагруженных и отказоустойчивых систем", "chapter44.html", 64, True, "Bulkhead, Sharding, Read Replicas, Backoff, Graceful Degradation"),
-    (45, "Контейнеризация и Docker", "chapter45.html", 75, True, "Multi-stage Dockerfile, Scratch/Alpine, non-root, Docker Compose"),
-    (46, "Автоматизация CI-CD", "chapter46.html", 57, True, "GitHub Actions, GitLab CI, линтинг, тесты, сборка и пуш образов"),
-    (47, "Оркестрация в Kubernetes", "chapter47.html", 180, True, "Pods, Deployments, Services, ConfigMaps, Secrets, Ingress, HPA, Probes"),
-    (48, "Планировщик GMP", "chapter48.html", 93, True, "G, M, P, Runqueues, Work Stealing, Sysmon, Preemption в Go"),
-    (49, "Аллокатор кучи и управление памятью", "chapter49.html", 66, True, "TCMalloc, mcache, mcentral, mheap, size classes, span"),
-    (50, "Garbage Collector и тюнинг памяти", "chapter50.html", 87, True, "Триколор марк-энд-свип, GOGC, GOMEMLIMIT, Write Barrier"),
-    (51, "Работа с unsafe и низкоуровневой памятью", "chapter51.html", 85, True, "unsafe.Pointer, uintptr, string-to-bytes no-alloc, struct offset"),
-    (52, "Интеграция с C-кодом через CGO", "chapter52.html", 70, True, "import \"C\", cgo types, накладные расходы CGO, call overhead"),
-    (53, "Системные вызовы и взаимодействие с ОС", "chapter53.html", 75, True, "syscall, golang.org/x/sys/unix, dup2, pipe, signals, fork/exec"),
-    (54, "Продвинутая рефлексия (reflect)", "chapter54.html", 114, True, "reflect.Type, reflect.Value, интроспекция полей, динамический вызов"),
-    (55, "Анализ AST и статический анализ кода", "chapter55.html", 85, True, "go/parser, go/ast, ast.Walk, инспекция синтаксических деревьев"),
-    (56, "Кодогенерация и шаблонизация", "chapter56.html", 77, True, "go:generate, text/template, stringer, генерация структур"),
-    (57, "Симметричное и асимметричное шифрование", "chapter57.html", 100, True, "AES-GCM, ChaCha20, RSA, ECDSA, Ed25519, crypto/rand"),
-    (58, "Хеширование паролей и криптографическая стойкость", "chapter58.html", 56, True, "bcrypt, Argon2id, scrypt, PBKDF2, соль, тайминг-атаки"),
-    (59, "Токены аутентификации и авторизация", "chapter59.html", 66, True, "JWT (golang-jwt), PASETO, OAuth2, RBAC, Claims validation"),
-    (60, "Безопасность веб-приложений и защита API", "chapter60.html", 63, True, "CSRF, XSS, SQLi защита, Secure Headers, Rate Limiting, CORS"),
-    (61, "Документоориентированная база данных MongoDB", "chapter61.html", 113, True, "mongo-go-driver, BSON, Aggregation Pipelines, Indexes, Transactions"),
-    (62, "Аналитическая СУБД ClickHouse", "chapter62.html", 71, True, "ClickHouse-go, MergeTree, батчинг вставок, OLAP аналитика"),
-    (63, "Поисковые движки Elasticsearch и OpenSearch", "chapter63.html", 60, True, "elastic/go-elasticsearch, Full-text Search, Aggregations, Indexing"),
-    (64, "Логическая репликация и Change Data Capture", "chapter64.html", 57, True, "PostgreSQL WAL, Debezium, pglogrepl, потоковая репликация событий"),
-    (65, "Вебхуки и платформы обратных вызовов", "chapter65.html", 116, True, "HMAC-SHA256 подписи, идемпотентность, очереди доставки, повторы"),
-    (66, "Server-Sent Events", "chapter66.html", 69, True, "text/event-stream, HTTP/1.1 и HTTP/2 стриминг, reconnect, event IDs"),
-    (67, "Альтернативные RPC-протоколы", "chapter67.html", 92, True, "Twirp, JSON-RPC 2.0, Cap'n Proto, FlatBuffers, производительность"),
-    (68, "Паттерн Saga и компенсационные транзакции", "chapter68.html", 104, True, "Оркестрация и хореография саг, компенсации, state machine"),
-    (69, "Паттерны Outbox и Inbox для надежной доставки сообщений", "chapter69.html", 72, True, "Transactional Outbox, De-duplication Inbox, At-Least-Once"),
-    (70, "Проектирование идемпотентных API", "chapter70.html", 74, True, "Idempotency-Key заголовок, Redis блокировки, кэш ответов"),
-    (71, "Выборы лидера (Leader Election) в распределенных системах", "chapter71.html", 90, True, "PostgreSQL advisory locks, Redis Redlock, Consul/K8s leases"),
-    (72, "Протокол консенсуса Raft", "chapter72.html", 83, True, "hashicorp/raft, Leader, Follower, Candidate, Log Replication, Quorum"),
-    (73, "Распределенные блокировки и Fencing Tokens", "chapter73.html", 68, True, "Redlock, Distributed Mutex, Fencing Tokens против pause"),
-    (74, "Cache-friendly структуры данных и выравнивание памяти", "chapter74.html", 99, True, "Кэш-линии L1/L2/L3, ложное разделение (false sharing), struct padding"),
-    (75, "Lock-free структуры данных", "chapter75.html", 75, True, "CAS, atomic.Value, Treiber Stack, Michael-Scott Queue"),
-    (76, "Ассемблер Go (Plan 9 Assembly) и SIMD", "chapter76.html", 35, True, "Plan 9 псевдорегистры (FP, SP, SB), SIMD AVX2 инструкции"),
-    (77, "Высокопроизводительные сетевые фреймворки (gnet, evio)", "chapter77.html", 32, True, "Reactor паттерн, non-blocking epoll, нулевые аллокации сокетов"),
-    (78, "Облачные хранилища, Envelope Encryption и KMS", "chapter78.html", 95, True, "AWS S3/MinIO, Envelope Encryption (DEK/KEK), HashiCorp Vault"),
-    (79, "Интеграция с Service Mesh (Istio, Linkerd) и mTLS", "chapter79.html", 80, True, "Envoy sidecar, взаимный TLS (mTLS), Spiffe/Spire идентификация"),
-    (80, "Контекст трассировки (W3C Trace Context, B3) и gRPC Keepalive", "chapter80.html", 76, True, "traceparent, tracestate, gRPC Keepalive пинги, HTTP/2 GOAWAY"),
-    (81, "Безопасность цепочки поставок (Supply Chain Security) и SBOM", "chapter81.html", 136, True, "govulncheck, Syft SBOM (SPDX/CycloneDX), Cosign криптоподпись"),
-    (82, "Защита сетевых сокетов и противодействие DoS-атакам", "chapter82.html", 55, True, "Slowloris, SYN flood, TCP SYN cookies, TCP keepalive, SO_REUSEPORT"),
-    (83, "Системная изоляция, Seccomp и Linux Capabilities", "chapter83.html", 28, True, "seccomp bpf фильтры, libseccomp, CAP_NET_BIND_SERVICE, drop privs"),
+    (1, "Пакеты и модули", "001-pakety-i-moduli.html", 91, True, "Модули, go.mod, SemVer, Cobra CLI, internal, vendor"),
+    (2, "Компиляция, сборка и запуск", "002-kompilyatsiya-sborka-i-zapusk.html", 25, True, "go build, флаги линкера, кросс-компиляция, race detector, Scratch Docker"),
+    (3, "Пакет fmt и консольный ввод-вывод", "003-paket-fmt-i-konsolnyy-vvod-vyvod.html", 65, True, "Форматирование, сканирование, буферизация, кастомные стрингеры"),
+    (4, "Базовые типы, переменные и константы", "004-bazovye-tipy-peremennye-i-konstanty.html", 111, True, "Числа, переполнения, iota, битовые маски, типизация, кастинг"),
+    (5, "Условные конструкции", "005-uslovnye-konstruktsii.html", 64, True, "if/else с инициализатором, switch, type switch, fallthrough"),
+    (6, "Циклы", "006-tsikly.html", 64, True, "for, range, итераторы, оптимизации компилятора, метки break/continue"),
+    (7, "Массивы", "007-massivy.html", 32, True, "Фиксированные массивы, передача по значению, память на стеке"),
+    (8, "Слайсы", "008-slaysy.html", 74, True, "SliceHeader, len vs cap, append, подслайсирование, утечки памяти"),
+    (9, "Мапы", "009-mapy.html", 62, True, "hmap, bmap, эвакуация бакетов, коллизии, конкурентная запись"),
+    (10, "Функции", "010-funktsii.html", 100, True, "Именованные возвраты, замыкания, defer хронология, рекурсия"),
+    (11, "Указатели", "011-ukazateli.html", 49, True, "Разыменование, адресная арифметика, escape analysis, стек vs куча"),
+    (12, "Передача аргументов", "012-peredacha-argumentov.html", 67, True, "Семантика передачи по значению, мутации, стоимость копирования"),
+    (13, "Структуры", "013-struktury.html", 71, True, "Теги json/db, выравнивание полей (padding), анонимные структуры"),
+    (14, "Интерфейсы", "014-interfeysy.html", 77, True, "iface, eface, dynamic dispatch, nil-interface ловушка, io.Reader/Writer"),
+    (15, "ООП в Go", "015-oop-v-go.html", 127, True, "Композиция vs наследование, эмбеддинг, полиморфизм, SOLID на Go"),
+    (16, "Дженерики", "016-dzheneriki.html", 131, True, "Параметрический полиморфизм, constraints, comparable, мономорфизация"),
+    (17, "Обработка ошибок", "017-obrabotka-oshibok.html", 58, True, "errors.Is, errors.As, wrapping %w, кастомные типы ошибок"),
+    (18, "Работа с файлами", "018-rabota-s-faylami.html", 100, True, "os.File, bufio, ioutil/io, потоковое чтение, временные файлы"),
+    (19, "Логирование", "019-logirovanie.html", 84, True, "log/slog, структурированные логи, лог-уровни, JSONHandler"),
+    (20, "Горутины и синхронизация", "020-gorutiny-i-sinkhronizatsiya.html", 124, True, "go routine, sync.WaitGroup, sync.Mutex, sync.RWMutex, sync.Once, atomic"),
+    (21, "Каналы и select", "021-kanaly-i-select.html", 95, True, "Буферизованные каналы, fan-out, fan-in, pipeline, закрытие каналов"),
+    (22, "Контекст", "022-paket-context.html", 52, True, "context.WithTimeout, WithCancel, WithValue, propagation, graceful stop"),
+    (23, "Паттерны конкурентности", "023-patterny-i-kaverznye-sluchai-konkurentnosti.html", 132, True, "Worker Pool, Semaphore, Or-Done, ErrGroup, Singleflight, Rate Limiting"),
+    (24, "Низкоуровневая сеть", "024-nizkourovnevaya-set-tcp-i-udp.html", 63, True, "net.TCPConn, net.UDPConn, таймауты сокетов, deadliness, буферы"),
+    (25, "HTTP-клиент", "025-http-klient.html", 45, True, "http.Client, Transport, Keep-Alive, connection pooling, retries"),
+    (26, "HTTP-сервер, REST API и Middleware", "026-http-server-rest-api-i-middleware.html", 158, True, "http.Handler, Chi/Gin/Fiber, CORS, Auth, Recovery, Rate Limiter"),
+    (27, "Реляционные базы данных (SQL и PostgreSQL)", "027-relyatsionnye-bazy-dannykh-sql-i-postgresql.html", 163, True, "database/sql, jackc/pgx, connection pool, ACID, транзакции, индексы"),
+    (28, "Базы данных NoSQL и кэширование (Redis)", "028-bazy-dannykh-nosql-i-keshirovanie-redis.html", 115, True, "go-redis, Strings, Hashes, Pub/Sub, Streams, Redis Cluster"),
+    (29, "Модульное тестирование (Unit Testing) и Assertions", "029-modulnoe-testirovanie-unit-testing-i-assertions.html", 96, True, "testing.T, testify/assert, табличные тесты, TestMain"),
+    (30, "Мокирование и интеграционное тестирование", "030-mokirovanie-i-integratsionnoe-testirovanie.html", 107, True, "testcontainers-go, gomock, mockery, PostgreSQL/Redis в Docker"),
+    (31, "Бенчмарки, фаззинг и продвинутые методы тестирования", "031-benchmarki-fazzing-i-prodvinutye-metody-testirovaniya.html", 120, True, "testing.B, testing.F, mem/allocs profiling, фаззинг парсеров"),
+    (32, "Protocol Buffers и gRPC", "032-protocol-buffers-i-grpc.html", 189, True, "proto3, protoc-gen-go, Unary, Streaming, Interceptors, Metadata"),
+    (33, "Микросервисная архитектура и паттерны", "033-mikroservisnaya-arkhitektura-i-patterny.html", 89, True, "Service Discovery, Circuit Breaker, Service-to-Service auth"),
+    (34, "GraphQL", "034-graphql.html", 78, True, "graphql-go, gqlgen, Resolvers, Schema First, DataLoaders"),
+    (35, "WebSockets и Real-time", "035-websockets-i-real-time.html", 78, True, "gorilla/websocket, coder/websocket, hub/room broadcast, ping/pong"),
+    (36, "RabbitMQ", "036-rabbitmq.html", 130, True, "amqp091-go, Exchanges (direct/topic/fanout), Queues, ACKs, DLQ"),
+    (37, "Apache Kafka", "037-apache-kafka.html", 88, True, "segmentio/kafka-go, Consumer Groups, Partitions, Rebalance, Offsets"),
+    (38, "NATS и NATS JetStream", "038-nats-i-nats-jetstream.html", 77, True, "nats.go, Core NATS, JetStream, At-Least-Once, Key-Value Store"),
+    (39, "Метрики и мониторинг (Prometheus)", "039-metriki-i-monitoring-prometheus.html", 114, True, "prometheus/client_golang, Counter, Gauge, Histogram, Summary"),
+    (40, "Распределенная трассировка (OpenTelemetry)", "040-raspredelennaya-trassirovka-opentelemetry.html", 79, True, "OTel Go SDK, Tracers, Spans, Context Propagation, Jaeger/Otlp"),
+    (41, "Профилирование и рантайм-диагностика", "041-profilirovanie-i-rantaym-diagnostika.html", 24, True, "net/http/pprof, CPU, Heap, Goroutine, Block/Mutex profile"),
+    (42, "Проектирование чистой архитектуры и DDD", "042-proektirovanie-chistoy-arkhitektury-i-ddd.html", 98, True, "Domain, UseCases, Repositories, Aggregates, Value Objects"),
+    (43, "Шаблоны проектирования распределенных и enterprise-систем", "043-shablony-proektirovaniya-raspredelennykh-i-enterprise-sistem.html", 112, True, "Factory, Strategy, Adapter, Unit of Work, Specification"),
+    (44, "Проектирование высоконагруженных и отказоустойчивых систем", "044-proektirovanie-vysokonagruzhennykh-i-otkazoustoychivykh-sistem.html", 64, True, "Bulkhead, Sharding, Read Replicas, Backoff, Graceful Degradation"),
+    (45, "Контейнеризация и Docker", "045-konteynerizatsiya-i-docker.html", 75, True, "Multi-stage Dockerfile, Scratch/Alpine, non-root, Docker Compose"),
+    (46, "Автоматизация CI-CD", "046-avtomatizatsiya-ci-cd.html", 57, True, "GitHub Actions, GitLab CI, линтинг, тесты, сборка и пуш образов"),
+    (47, "Оркестрация в Kubernetes", "047-orkestratsiya-v-kubernetes.html", 180, True, "Pods, Deployments, Services, ConfigMaps, Secrets, Ingress, HPA, Probes"),
+    (48, "Планировщик GMP", "048-planirovshchik-gmp.html", 93, True, "G, M, P, Runqueues, Work Stealing, Sysmon, Preemption в Go"),
+    (49, "Аллокатор кучи и управление памятью", "049-allokator-kuchi-i-upravlenie-pamyatyu.html", 66, True, "TCMalloc, mcache, mcentral, mheap, size classes, span"),
+    (50, "Garbage Collector и тюнинг памяти", "050-garbage-collector-i-tyuning-pamyati.html", 87, True, "Триколор марк-энд-свип, GOGC, GOMEMLIMIT, Write Barrier"),
+    (51, "Работа с unsafe и низкоуровневой памятью", "051-rabota-s-unsafe-i-nizkourovnevoy-pamyatyu.html", 85, True, "unsafe.Pointer, uintptr, string-to-bytes no-alloc, struct offset"),
+    (52, "Интеграция с C-кодом через CGO", "052-integratsiya-s-c-kodom-cherez-cgo.html", 70, True, "import \"C\", cgo types, накладные расходы CGO, call overhead"),
+    (53, "Системные вызовы и взаимодействие с ОС", "053-sistemnye-vyzovy-i-vzaimodeystvie-s-os.html", 75, True, "syscall, golang.org/x/sys/unix, dup2, pipe, signals, fork/exec"),
+    (54, "Продвинутая рефлексия (reflect)", "054-prodvinutaya-refleksiya-reflect.html", 114, True, "reflect.Type, reflect.Value, интроспекция полей, динамический вызов"),
+    (55, "Анализ AST и статический анализ кода", "055-analiz-ast-i-staticheskiy-analiz-koda.html", 85, True, "go/parser, go/ast, ast.Walk, инспекция синтаксических деревьев"),
+    (56, "Кодогенерация и шаблонизация", "056-kodogeneratsiya-i-shablonizatsiya.html", 77, True, "go:generate, text/template, stringer, генерация структур"),
+    (57, "Симметричное и асимметричное шифрование", "057-simmetrichnoe-i-asimmetrichnoe-shifrovanie.html", 100, True, "AES-GCM, ChaCha20, RSA, ECDSA, Ed25519, crypto/rand"),
+    (58, "Хеширование паролей и криптографическая стойкость", "058-kheshirovanie-paroley-i-kriptograficheskaya-stoykost.html", 56, True, "bcrypt, Argon2id, scrypt, PBKDF2, соль, тайминг-атаки"),
+    (59, "Токены аутентификации и авторизация", "059-tokeny-autentifikatsii-i-avtorizatsiya.html", 66, True, "JWT (golang-jwt), PASETO, OAuth2, RBAC, Claims validation"),
+    (60, "Безопасность веб-приложений и защита API", "060-bezopasnost-veb-prilozheniy-i-zashchita-api.html", 63, True, "CSRF, XSS, SQLi защита, Secure Headers, Rate Limiting, CORS"),
+    (61, "Документоориентированная база данных MongoDB", "061-dokumentoorientirovannaya-baza-dannykh-mongodb.html", 113, True, "mongo-go-driver, BSON, Aggregation Pipelines, Indexes, Transactions"),
+    (62, "Аналитическая СУБД ClickHouse", "062-analiticheskaya-subd-clickhouse.html", 71, True, "ClickHouse-go, MergeTree, батчинг вставок, OLAP аналитика"),
+    (63, "Поисковые движки Elasticsearch и OpenSearch", "063-poiskovye-dvizhki-elasticsearch-i-opensearch.html", 60, True, "elastic/go-elasticsearch, Full-text Search, Aggregations, Indexing"),
+    (64, "Логическая репликация и Change Data Capture", "064-logicheskaya-replikatsiya-i-change-data-capture.html", 57, True, "PostgreSQL WAL, Debezium, pglogrepl, потоковая репликация событий"),
+    (65, "Вебхуки и платформы обратных вызовов", "065-vebkhuki-i-platformy-obratnykh-vyzovov.html", 116, True, "HMAC-SHA256 подписи, идемпотентность, очереди доставки, повторы"),
+    (66, "Server-Sent Events", "066-server-sent-events.html", 69, True, "text/event-stream, HTTP/1.1 и HTTP/2 стриминг, reconnect, event IDs"),
+    (67, "Альтернативные RPC-протоколы", "067-alternativnye-rpc-protokoly.html", 92, True, "Twirp, JSON-RPC 2.0, Cap'n Proto, FlatBuffers, производительность"),
+    (68, "Паттерн Saga и компенсационные транзакции", "068-pattern-saga-i-kompensatsionnye-tranzaktsii.html", 104, True, "Оркестрация и хореография саг, компенсации, state machine"),
+    (69, "Паттерны Outbox и Inbox для надежной доставки сообщений", "069-patterny-outbox-i-inbox-dlya-nadezhnoy-dostavki-soobshcheniy.html", 72, True, "Transactional Outbox, De-duplication Inbox, At-Least-Once"),
+    (70, "Проектирование идемпотентных API", "070-proektirovanie-idempotentnykh-api.html", 74, True, "Idempotency-Key заголовок, Redis блокировки, кэш ответов"),
+    (71, "Выборы лидера (Leader Election) в распределенных системах", "071-vybory-lidera-leader-election-v-raspredelennykh-sistemakh.html", 90, True, "PostgreSQL advisory locks, Redis Redlock, Consul/K8s leases"),
+    (72, "Протокол консенсуса Raft", "072-protokol-konsensusa-raft.html", 83, True, "hashicorp/raft, Leader, Follower, Candidate, Log Replication, Quorum"),
+    (73, "Распределенные блокировки и Fencing Tokens", "073-raspredelennye-blokirovki-i-fencing-tokens.html", 68, True, "Redlock, Distributed Mutex, Fencing Tokens против pause"),
+    (74, "Cache-friendly структуры данных и выравнивание памяти", "074-cache-friendly-struktury-dannykh-i-vyravnivanie-pamyati.html", 99, True, "Кэш-линии L1/L2/L3, ложное разделение (false sharing), struct padding"),
+    (75, "Lock-free структуры данных", "075-lock-free-struktury-dannykh.html", 75, True, "CAS, atomic.Value, Treiber Stack, Michael-Scott Queue"),
+    (76, "Ассемблер Go (Plan 9 Assembly) и SIMD", "076-assembler-go-plan-9-assembly-i-simd.html", 35, True, "Plan 9 псевдорегистры (FP, SP, SB), SIMD AVX2 инструкции"),
+    (77, "Высокопроизводительные сетевые фреймворки (gnet, evio)", "077-vysokoproizvoditelnye-setevye-freymvorki-gnet-evio.html", 32, True, "Reactor паттерн, non-blocking epoll, нулевые аллокации сокетов"),
+    (78, "Облачные хранилища, Envelope Encryption и KMS", "078-oblachnye-khranilishcha-envelope-encryption-i-kms.html", 95, True, "AWS S3/MinIO, Envelope Encryption (DEK/KEK), HashiCorp Vault"),
+    (79, "Интеграция с Service Mesh (Istio, Linkerd) и mTLS", "079-integratsiya-s-service-mesh-istio-linkerd-i-mtls.html", 80, True, "Envoy sidecar, взаимный TLS (mTLS), Spiffe/Spire идентификация"),
+    (80, "Контекст трассировки (W3C Trace Context, B3) и gRPC Keepalive", "080-kontekst-trassirovki-w3c-trace-context-b3-i-grpc-keepalive.html", 76, True, "traceparent, tracestate, gRPC Keepalive пинги, HTTP/2 GOAWAY"),
+    (81, "Безопасность цепочки поставок (Supply Chain Security) и SBOM", "081-bezopasnost-tsepochki-postavok-supply-chain-security-i-sbom.html", 136, True, "govulncheck, Syft SBOM (SPDX/CycloneDX), Cosign криптоподпись"),
+    (82, "Защита сетевых сокетов и противодействие DoS-атакам", "082-zashchita-setevykh-soketov-i-protivodeystvie-dos-atakam.html", 55, True, "Slowloris, SYN flood, TCP SYN cookies, TCP keepalive, SO_REUSEPORT"),
+    (83, "Системная изоляция, Seccomp и Linux Capabilities", "083-sistemnaya-izolyatsiya-seccomp-i-linux-capabilities.html", 28, True, "seccomp bpf фильтры, libseccomp, CAP_NET_BIND_SERVICE, drop privs"),
     
     # 17 Planned Chapters (84-100)
-    (84, "CQRS и Event Sourcing на Go", "chapter84.html", len(ch84_exercises), True, "Агрегаты, оптимистическая блокировка версий, Snapshots, проекции в Postgres/Elastic"),
-    (85, "Многоуровневое кэширование (L1/L2) и распределенная когерентность", "chapter85.html", len(ch85_exercises), True, "In-memory TinyLFU/Ristretto, Redis RESP3 BCAST, алгоритм XFetch, Write-Behind"),
-    (86, "Масштабируемые распределенные планировщики и очереди задач", "chapter86.html", len(ch86_exercises), True, "Фоновые очереди Asynq/River, SKIP LOCKED, периодические задачи, кластерный Cron"),
-    (87, "Оркестрация распределенных процессов (Durable Execution) на Temporal.io", "chapter87.html", len(ch87_exercises), True, "Temporal Workflows, Activities, Replay детерминизм, Signals, Queries, Long Timers"),
-    (88, "Потоковая обработка данных в реальном времени (Stream Processing)", "chapter88.html", len(ch88_exercises), True, "Tumbling/Sliding/Session окна, Watermarks, Late Data, Exactly-Once Checkpoints"),
-    (89, "Хаос-инженерия и нагрузочное тестирование на Go", "chapter89.html", len(ch89_exercises), True, "Инъекция сбоев Toxiproxy, открытая модель нагрузки, HdrHistogram, p99.9 задержки"),
-    (90, "Контракт-ориентированные API-шлюзы: gRPC-Gateway, gRPC-Web и OpenAPI", "chapter90.html", len(ch90_exercises), True, "Contract-First, buf, gRPC-Gateway, gRPC-Web, OpenAPI v3, protovalidate"),
-    (91, "Разработка собственных Kubernetes Operators и CRD на Go", "chapter91.html", len(ch91_exercises), True, "Kubebuilder, Custom Resources, Reconcile Loop, Informers, Workqueues, Webhooks, SSA"),
-    (92, "Расширяемость систем: Plugins, IPC и WebAssembly (Wazero)", "chapter92.html", len(ch92_exercises), True, "plugin.Open, HashiCorp go-plugin (gRPC IPC), Wazero Wasm песочницы, Fuel metering"),
-    (93, "Высокопроизводительные API Gateway и Reverse Proxy на чистом Go", "chapter93.html", len(ch93_exercises), True, "httputil.ReverseProxy, динамическая маршрутизация, Peak-EWMA, Request Hedging"),
-    (94, "Enterprise Release Engineering: Feature Flags, динамический конфиг и Canary Routing", "chapter94.html", len(ch94_exercises), True, "OpenFeature SDK, Canary rollouts, Kill Switch за 50 мс, fsnotify Hot Reload"),
-    (95, "Распределенная координация и хранилище метаданных etcd v3", "chapter95.html", len(ch95_exercises), True, "clientv3 Watchers, Leases с автопродлением, атомарные транзакции Txn, Service Discovery"),
-    (96, "Zero-Downtime миграции баз данных и паттерн Expand-Contract на Go", "chapter96.html", len(ch96_exercises), True, "Expand/Migrate/Contract, Shadow Writing, Backfill воркеры, защита от AccessExclusiveLock"),
-    (97, "Time-Series СУБД, сжатие Gorilla и IoT-телеметрия на Go", "chapter97.html", len(ch97_exercises), True, "Прием сотен тысяч метрик/сек, Gorilla Delta-of-Delta и XOR компрессия, TimescaleDB"),
-    (98, "Архитектурный контроль: Разработка корпоративных линтеров для golangci-lint", "chapter98.html", len(ch98_exercises), True, "go/analysis фреймворк, семантика типов go/types, AST-инспекция, Suggested Fixes"),
-    (99, "Интеграция с ИИ, LLM-оркестрация и векторный поиск на Go", "chapter99.html", len(ch99_exercises), True, "Ollama, OpenAI SDK, SSE токены, Function Calling, pgvector, Qdrant, RAG конвейер"),
-    (100, "Архитектурный Capstone: Проектирование и сквозной запуск отказоустойчивой HighLoad-платформы", "chapter100.html", len(ch100_exercises), True, "Финальный проект: gRPC-Gateway, DDD, Event Sourcing, Temporal, L1/L2 кэш, OTel, Seccomp, AI")
+    (84, "CQRS и Event Sourcing на Go", "084-cqrs-i-event-sourcing-na-go.html", len(ch84_exercises), True, "Агрегаты, оптимистическая блокировка версий, Snapshots, проекции в Postgres/Elastic"),
+    (85, "Многоуровневое кэширование (L1/L2) и распределенная когерентность", "085-mnogourovnevoe-keshirovanie-l1-l2-i-raspredelennaya-kogerentnost.html", len(ch85_exercises), True, "In-memory TinyLFU/Ristretto, Redis RESP3 BCAST, алгоритм XFetch, Write-Behind"),
+    (86, "Масштабируемые распределенные планировщики и очереди задач", "086-masshtabiruemye-raspredelennye-planirovshchiki-i-ocheredi-zadach.html", len(ch86_exercises), True, "Фоновые очереди Asynq/River, SKIP LOCKED, периодические задачи, кластерный Cron"),
+    (87, "Оркестрация распределенных процессов (Durable Execution) на Temporal.io", "087-orkestratsiya-raspredelennykh-protsessov-durable-execution-na-temporal-io.html", len(ch87_exercises), True, "Temporal Workflows, Activities, Replay детерминизм, Signals, Queries, Long Timers"),
+    (88, "Потоковая обработка данных в реальном времени (Stream Processing)", "088-potokovaya-obrabotka-dannykh-v-realnom-vremeni-stream-processing.html", len(ch88_exercises), True, "Tumbling/Sliding/Session окна, Watermarks, Late Data, Exactly-Once Checkpoints"),
+    (89, "Хаос-инженерия и нагрузочное тестирование на Go", "089-khaos-inzheneriya-i-nagruzochnoe-testirovanie-na-go.html", len(ch89_exercises), True, "Инъекция сбоев Toxiproxy, открытая модель нагрузки, HdrHistogram, p99.9 задержки"),
+    (90, "Контракт-ориентированные API-шлюзы: gRPC-Gateway, gRPC-Web и OpenAPI", "090-kontrakt-orientirovannye-api-shlyuzy-grpc-gateway-grpc-web-i-openapi.html", len(ch90_exercises), True, "Contract-First, buf, gRPC-Gateway, gRPC-Web, OpenAPI v3, protovalidate"),
+    (91, "Разработка собственных Kubernetes Operators и CRD на Go", "091-razrabotka-sobstvennykh-kubernetes-operators-i-crd-na-go.html", len(ch91_exercises), True, "Kubebuilder, Custom Resources, Reconcile Loop, Informers, Workqueues, Webhooks, SSA"),
+    (92, "Расширяемость систем: Plugins, IPC и WebAssembly (Wazero)", "092-rasshiryaemost-sistem-plugins-ipc-i-webassembly-wazero.html", len(ch92_exercises), True, "plugin.Open, HashiCorp go-plugin (gRPC IPC), Wazero Wasm песочницы, Fuel metering"),
+    (93, "Высокопроизводительные API Gateway и Reverse Proxy на чистом Go", "093-vysokoproizvoditelnye-api-gateway-i-reverse-proxy-na-chistom-go.html", len(ch93_exercises), True, "httputil.ReverseProxy, динамическая маршрутизация, Peak-EWMA, Request Hedging"),
+    (94, "Enterprise Release Engineering: Feature Flags, динамический конфиг и Canary Routing", "094-enterprise-release-engineering-feature-flags-dinamicheskiy-konfig-i-canary-routing.html", len(ch94_exercises), True, "OpenFeature SDK, Canary rollouts, Kill Switch за 50 мс, fsnotify Hot Reload"),
+    (95, "Распределенная координация и хранилище метаданных etcd v3", "095-raspredelennaya-koordinatsiya-i-khranilishche-metadannykh-etcd-v3.html", len(ch95_exercises), True, "clientv3 Watchers, Leases с автопродлением, атомарные транзакции Txn, Service Discovery"),
+    (96, "Zero-Downtime миграции баз данных и паттерн Expand-Contract на Go", "096-zero-downtime-migratsii-baz-dannykh-i-pattern-expand-contract-na-go.html", len(ch96_exercises), True, "Expand/Migrate/Contract, Shadow Writing, Backfill воркеры, защита от AccessExclusiveLock"),
+    (97, "Time-Series СУБД, сжатие Gorilla и IoT-телеметрия на Go", "097-time-series-subd-szhatie-gorilla-i-iot-telemetriya-na-go.html", len(ch97_exercises), True, "Прием сотен тысяч метрик/сек, Gorilla Delta-of-Delta и XOR компрессия, TimescaleDB"),
+    (98, "Архитектурный контроль: Разработка корпоративных линтеров для golangci-lint", "098-arkhitekturnyy-kontrol-razrabotka-korporativnykh-linterov-dlya-golangci-lint.html", len(ch98_exercises), True, "go/analysis фреймворк, семантика типов go/types, AST-инспекция, Suggested Fixes"),
+    (99, "Интеграция с ИИ, LLM-оркестрация и векторный поиск на Go", "099-integratsiya-s-ii-llm-orkestratsiya-i-vektornyy-poisk-na-go.html", len(ch99_exercises), True, "Ollama, OpenAI SDK, SSE токены, Function Calling, pgvector, Qdrant, RAG конвейер"),
+    (100, "Архитектурный Capstone: Проектирование и сквозной запуск отказоустойчивой HighLoad-платформы", "100-arkhitekturnyy-capstone-proektirovanie-i-skvoznoy-zapusk-otkazoustoychivoy-highload-platformy.html", len(ch100_exercises), True, "Финальный проект: gRPC-Gateway, DDD, Event Sourcing, Temporal, L1/L2 кэш, OTel, Seccomp, AI")
 ]
 
 learning_paths = [
@@ -6213,7 +6213,7 @@ learning_paths = [
         "desc": "Синтаксис, система модулей, структуры данных, полиморфизм интерфейсов, дженерики, идиоматичная обработка ошибок и файловые операции.",
         "tags": ["go.mod", "slices", "maps", "interfaces", "generics", "errors", "slog"],
         "chapters": list(range(1, 20)),
-        "start_url": "chapter1.html"
+        "start_url": "001-pakety-i-moduli.html"
     },
     {
         "id": "concurrency-network",
@@ -6224,7 +6224,7 @@ learning_paths = [
         "desc": "Многопоточность без гонок данных, каналы и select, context, низкоуровневые сокеты TCP/UDP, event-loop gnet, lock-free и DoS-защита.",
         "tags": ["goroutines", "channels", "sync", "TCP/UDP", "gnet", "lock-free", "SO_REUSEPORT"],
         "chapters": [20, 21, 22, 23, 24, 25, 26, 74, 75, 76, 77, 82],
-        "start_url": "chapter20.html"
+        "start_url": "020-gorutiny-i-sinkhronizatsiya.html"
     },
     {
         "id": "storage-consistency",
@@ -6235,7 +6235,7 @@ learning_paths = [
         "desc": "Реляционные и NoSQL хранилища: пул pgx, Redis, ClickHouse, Mongo, CDC репликация, двухуровневый L1/L2 кэш с XFetch и Zero-Downtime миграции.",
         "tags": ["PostgreSQL", "pgx", "Redis", "ClickHouse", "Elasticsearch", "CDC", "XFetch"],
         "chapters": [27, 28, 61, 62, 63, 64, 85, 96, 97],
-        "start_url": "chapter27.html"
+        "start_url": "027-relyatsionnye-bazy-dannykh-sql-i-postgresql.html"
     },
     {
         "id": "distributed-systems",
@@ -6246,7 +6246,7 @@ learning_paths = [
         "desc": "Распределенные платформы: gRPC, Kafka, RabbitMQ, Saga, Outbox, консенсус Raft, etcd, CQRS/ES, очереди River/Asynq и Temporal.io.",
         "tags": ["gRPC", "Kafka", "RabbitMQ", "NATS", "Raft", "Temporal", "etcd", "CQRS"],
         "chapters": [32, 33, 34, 35, 36, 37, 38, 68, 69, 70, 71, 72, 73, 84, 86, 87, 95],
-        "start_url": "chapter32.html"
+        "start_url": "032-protocol-buffers-i-grpc.html"
     },
     {
         "id": "observability-reliability",
@@ -6257,7 +6257,7 @@ learning_paths = [
         "desc": "Полный стек надежности: Testcontainers, фаззинг, метрики Prometheus, OTel трассировка, pprof профилирование, Чистая архитектура, хаос-инженерия Toxiproxy.",
         "tags": ["testcontainers", "fuzzing", "Prometheus", "OpenTelemetry", "pprof", "Toxiproxy", "OpenFeature"],
         "chapters": [29, 30, 31, 39, 40, 41, 42, 43, 44, 80, 89, 94],
-        "start_url": "chapter29.html"
+        "start_url": "029-modulnoe-testirovanie-unit-testing-i-assertions.html"
     },
     {
         "id": "cloud-platform",
@@ -6268,7 +6268,7 @@ learning_paths = [
         "desc": "Инфраструктура и безопасность: Docker, Kubernetes, K8s Operators/CRD, Service Mesh, gRPC-Gateway, Reverse Proxy, Cloud KMS, SBOM, Seccomp.",
         "tags": ["Docker", "Kubernetes", "Kubebuilder", "Service Mesh", "KMS", "SBOM", "Seccomp"],
         "chapters": [45, 46, 47, 78, 79, 81, 83, 90, 91, 93],
-        "start_url": "chapter45.html"
+        "start_url": "045-konteynerizatsiya-i-docker.html"
     },
     {
         "id": "internals-ai",
@@ -6279,7 +6279,7 @@ learning_paths = [
         "desc": "Элитный рантайм: планировщик GMP, аллокатор mcache/mheap, GC, unsafe, CGO, AST, WebAssembly Wazero, корпоративные линтеры `go/analysis`, LLM RAG и Capstone.",
         "tags": ["GMP", "Heap Allocator", "GC", "unsafe", "AST", "Wazero Wasm", "go/analysis", "Ollama/pgvector"],
         "chapters": [48, 49, 50, 51, 52, 53, 54, 55, 56, 92, 98, 99, 100],
-        "start_url": "chapter48.html"
+        "start_url": "048-planirovshchik-gmp.html"
     }
 ]
 
@@ -6329,7 +6329,7 @@ def build_portal_html(chapters):
 
         <!-- Quick CTA Buttons -->
         <div style="display: flex; gap: 14px; flex-wrap: wrap;">
-            <a href="chapter1.html" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #0284c7, #00ADD8); color: #fff; font-weight: 700; padding: 12px 24px; border-radius: 10px; text-decoration: none; box-shadow: 0 4px 14px rgba(2, 132, 199, 0.4); transition: transform 0.2s;">
+            <a href="001-pakety-i-moduli.html" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #0284c7, #00ADD8); color: #fff; font-weight: 700; padding: 12px 24px; border-radius: 10px; text-decoration: none; box-shadow: 0 4px 14px rgba(2, 132, 199, 0.4); transition: transform 0.2s;">
                 <span>🚀 Начать обучение (Глава 01)</span> →
             </a>
             <a href="#learning-paths" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #f8fafc; font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; border: 1px solid #334155;">
@@ -6508,110 +6508,118 @@ if __name__ == '__main__':
             import shutil
             shutil.copy2(src_fav, dst_fav)
 
+    # Clean up legacy chapter*.html in dist/
+    import glob
+    for old_file in glob.glob(os.path.join(DIST_DIR, "chapter*.html")):
+        try:
+            os.remove(old_file)
+        except OSError:
+            pass
+
     chapters = get_all_chapters()
     
     pages = [
         ('index.html', build_portal_html),
-        ('chapter1.html', build_chapter1_html),
-        ('chapter2.html', build_chapter2_html),
-        ('chapter3.html', build_chapter3_html),
-        ('chapter4.html', build_chapter4_html),
-        ('chapter5.html', build_chapter5_html),
-        ('chapter6.html', build_chapter6_html),
-        ('chapter7.html', build_chapter7_html),
-        ('chapter8.html', build_chapter8_html),
-        ('chapter9.html', build_chapter9_html),
-        ('chapter10.html', build_chapter10_html),
-        ('chapter11.html', build_chapter11_html),
-        ('chapter12.html', build_chapter12_html),
-        ('chapter13.html', build_chapter13_html),
-        ('chapter14.html', build_chapter14_html),
-        ('chapter15.html', build_chapter15_html),
-        ('chapter16.html', build_chapter16_html),
-        ('chapter17.html', build_chapter17_html),
-        ('chapter18.html', build_chapter18_html),
-        ('chapter19.html', build_chapter19_html),
-        ('chapter20.html', build_chapter20_html),
-        ('chapter21.html', build_chapter21_html),
-        ('chapter22.html', build_chapter22_html),
-        ('chapter23.html', build_chapter23_html),
-        ('chapter24.html', build_chapter24_html),
-        ('chapter25.html', build_chapter25_html),
-        ('chapter26.html', build_chapter26_html),
-        ('chapter27.html', build_chapter27_html),
-        ('chapter28.html', build_chapter28_html),
-        ('chapter29.html', build_chapter29_html),
-        ('chapter30.html', build_chapter30_html),
-        ('chapter31.html', build_chapter31_html),
-        ('chapter32.html', build_chapter32_html),
-        ('chapter33.html', build_chapter33_html),
-        ('chapter34.html', build_chapter34_html),
-        ('chapter35.html', build_chapter35_html),
-        ('chapter36.html', build_chapter36_html),
-        ('chapter37.html', build_chapter37_html),
-        ('chapter38.html', build_chapter38_html),
-        ('chapter39.html', build_chapter39_html),
-        ('chapter40.html', build_chapter40_html),
-        ('chapter41.html', build_chapter41_html),
-        ('chapter42.html', build_chapter42_html),
-        ('chapter43.html', build_chapter43_html),
-        ('chapter44.html', build_chapter44_html),
-        ('chapter45.html', build_chapter45_html),
-        ('chapter46.html', build_chapter46_html),
-        ('chapter47.html', build_chapter47_html),
-        ('chapter48.html', build_chapter48_html),
-        ('chapter49.html', build_chapter49_html),
-        ('chapter50.html', build_chapter50_html),
-        ('chapter51.html', build_chapter51_html),
-        ('chapter52.html', build_chapter52_html),
-        ('chapter53.html', build_chapter53_html),
-        ('chapter54.html', build_chapter54_html),
-        ('chapter55.html', build_chapter55_html),
-        ('chapter56.html', build_chapter56_html),
-        ('chapter57.html', build_chapter57_html),
-        ('chapter58.html', build_chapter58_html),
-        ('chapter59.html', build_chapter59_html),
-        ('chapter60.html', build_chapter60_html),
-        ('chapter61.html', build_chapter61_html),
-        ('chapter62.html', build_chapter62_html),
-        ('chapter63.html', build_chapter63_html),
-        ('chapter64.html', build_chapter64_html),
-        ('chapter65.html', build_chapter65_html),
-        ('chapter66.html', build_chapter66_html),
-        ('chapter67.html', build_chapter67_html),
-        ('chapter68.html', build_chapter68_html),
-        ('chapter69.html', build_chapter69_html),
-        ('chapter70.html', build_chapter70_html),
-        ('chapter71.html', build_chapter71_html),
-        ('chapter72.html', build_chapter72_html),
-        ('chapter73.html', build_chapter73_html),
-        ('chapter74.html', build_chapter74_html),
-        ('chapter75.html', build_chapter75_html),
-        ('chapter76.html', build_chapter76_html),
-        ('chapter77.html', build_chapter77_html),
-        ('chapter78.html', build_chapter78_html),
-        ('chapter79.html', build_chapter79_html),
-        ('chapter80.html', build_chapter80_html),
-        ('chapter81.html', build_chapter81_html),
-        ('chapter82.html', build_chapter82_html),
-        ('chapter83.html', build_chapter83_html),
-        ('chapter84.html', build_chapter84_html),
-        ('chapter85.html', build_chapter85_html),
-        ('chapter86.html', build_chapter86_html),
-        ('chapter87.html', build_chapter87_html),
-        ('chapter88.html', build_chapter88_html),
-        ('chapter89.html', build_chapter89_html),
-        ('chapter90.html', build_chapter90_html),
-        ('chapter91.html', build_chapter91_html),
-        ('chapter92.html', build_chapter92_html),
-        ('chapter93.html', build_chapter93_html),
-        ('chapter94.html', build_chapter94_html),
-        ('chapter95.html', build_chapter95_html),
-        ('chapter96.html', build_chapter96_html),
-        ('chapter97.html', build_chapter97_html),
-        ('chapter98.html', build_chapter98_html),
-        ('chapter99.html', build_chapter99_html),
-        ('chapter100.html', build_chapter100_html),
+        ('001-pakety-i-moduli.html', build_chapter1_html),
+        ('002-kompilyatsiya-sborka-i-zapusk.html', build_chapter2_html),
+        ('003-paket-fmt-i-konsolnyy-vvod-vyvod.html', build_chapter3_html),
+        ('004-bazovye-tipy-peremennye-i-konstanty.html', build_chapter4_html),
+        ('005-uslovnye-konstruktsii.html', build_chapter5_html),
+        ('006-tsikly.html', build_chapter6_html),
+        ('007-massivy.html', build_chapter7_html),
+        ('008-slaysy.html', build_chapter8_html),
+        ('009-mapy.html', build_chapter9_html),
+        ('010-funktsii.html', build_chapter10_html),
+        ('011-ukazateli.html', build_chapter11_html),
+        ('012-peredacha-argumentov.html', build_chapter12_html),
+        ('013-struktury.html', build_chapter13_html),
+        ('014-interfeysy.html', build_chapter14_html),
+        ('015-oop-v-go.html', build_chapter15_html),
+        ('016-dzheneriki.html', build_chapter16_html),
+        ('017-obrabotka-oshibok.html', build_chapter17_html),
+        ('018-rabota-s-faylami.html', build_chapter18_html),
+        ('019-logirovanie.html', build_chapter19_html),
+        ('020-gorutiny-i-sinkhronizatsiya.html', build_chapter20_html),
+        ('021-kanaly-i-select.html', build_chapter21_html),
+        ('022-paket-context.html', build_chapter22_html),
+        ('023-patterny-i-kaverznye-sluchai-konkurentnosti.html', build_chapter23_html),
+        ('024-nizkourovnevaya-set-tcp-i-udp.html', build_chapter24_html),
+        ('025-http-klient.html', build_chapter25_html),
+        ('026-http-server-rest-api-i-middleware.html', build_chapter26_html),
+        ('027-relyatsionnye-bazy-dannykh-sql-i-postgresql.html', build_chapter27_html),
+        ('028-bazy-dannykh-nosql-i-keshirovanie-redis.html', build_chapter28_html),
+        ('029-modulnoe-testirovanie-unit-testing-i-assertions.html', build_chapter29_html),
+        ('030-mokirovanie-i-integratsionnoe-testirovanie.html', build_chapter30_html),
+        ('031-benchmarki-fazzing-i-prodvinutye-metody-testirovaniya.html', build_chapter31_html),
+        ('032-protocol-buffers-i-grpc.html', build_chapter32_html),
+        ('033-mikroservisnaya-arkhitektura-i-patterny.html', build_chapter33_html),
+        ('034-graphql.html', build_chapter34_html),
+        ('035-websockets-i-real-time.html', build_chapter35_html),
+        ('036-rabbitmq.html', build_chapter36_html),
+        ('037-apache-kafka.html', build_chapter37_html),
+        ('038-nats-i-nats-jetstream.html', build_chapter38_html),
+        ('039-metriki-i-monitoring-prometheus.html', build_chapter39_html),
+        ('040-raspredelennaya-trassirovka-opentelemetry.html', build_chapter40_html),
+        ('041-profilirovanie-i-rantaym-diagnostika.html', build_chapter41_html),
+        ('042-proektirovanie-chistoy-arkhitektury-i-ddd.html', build_chapter42_html),
+        ('043-shablony-proektirovaniya-raspredelennykh-i-enterprise-sistem.html', build_chapter43_html),
+        ('044-proektirovanie-vysokonagruzhennykh-i-otkazoustoychivykh-sistem.html', build_chapter44_html),
+        ('045-konteynerizatsiya-i-docker.html', build_chapter45_html),
+        ('046-avtomatizatsiya-ci-cd.html', build_chapter46_html),
+        ('047-orkestratsiya-v-kubernetes.html', build_chapter47_html),
+        ('048-planirovshchik-gmp.html', build_chapter48_html),
+        ('049-allokator-kuchi-i-upravlenie-pamyatyu.html', build_chapter49_html),
+        ('050-garbage-collector-i-tyuning-pamyati.html', build_chapter50_html),
+        ('051-rabota-s-unsafe-i-nizkourovnevoy-pamyatyu.html', build_chapter51_html),
+        ('052-integratsiya-s-c-kodom-cherez-cgo.html', build_chapter52_html),
+        ('053-sistemnye-vyzovy-i-vzaimodeystvie-s-os.html', build_chapter53_html),
+        ('054-prodvinutaya-refleksiya-reflect.html', build_chapter54_html),
+        ('055-analiz-ast-i-staticheskiy-analiz-koda.html', build_chapter55_html),
+        ('056-kodogeneratsiya-i-shablonizatsiya.html', build_chapter56_html),
+        ('057-simmetrichnoe-i-asimmetrichnoe-shifrovanie.html', build_chapter57_html),
+        ('058-kheshirovanie-paroley-i-kriptograficheskaya-stoykost.html', build_chapter58_html),
+        ('059-tokeny-autentifikatsii-i-avtorizatsiya.html', build_chapter59_html),
+        ('060-bezopasnost-veb-prilozheniy-i-zashchita-api.html', build_chapter60_html),
+        ('061-dokumentoorientirovannaya-baza-dannykh-mongodb.html', build_chapter61_html),
+        ('062-analiticheskaya-subd-clickhouse.html', build_chapter62_html),
+        ('063-poiskovye-dvizhki-elasticsearch-i-opensearch.html', build_chapter63_html),
+        ('064-logicheskaya-replikatsiya-i-change-data-capture.html', build_chapter64_html),
+        ('065-vebkhuki-i-platformy-obratnykh-vyzovov.html', build_chapter65_html),
+        ('066-server-sent-events.html', build_chapter66_html),
+        ('067-alternativnye-rpc-protokoly.html', build_chapter67_html),
+        ('068-pattern-saga-i-kompensatsionnye-tranzaktsii.html', build_chapter68_html),
+        ('069-patterny-outbox-i-inbox-dlya-nadezhnoy-dostavki-soobshcheniy.html', build_chapter69_html),
+        ('070-proektirovanie-idempotentnykh-api.html', build_chapter70_html),
+        ('071-vybory-lidera-leader-election-v-raspredelennykh-sistemakh.html', build_chapter71_html),
+        ('072-protokol-konsensusa-raft.html', build_chapter72_html),
+        ('073-raspredelennye-blokirovki-i-fencing-tokens.html', build_chapter73_html),
+        ('074-cache-friendly-struktury-dannykh-i-vyravnivanie-pamyati.html', build_chapter74_html),
+        ('075-lock-free-struktury-dannykh.html', build_chapter75_html),
+        ('076-assembler-go-plan-9-assembly-i-simd.html', build_chapter76_html),
+        ('077-vysokoproizvoditelnye-setevye-freymvorki-gnet-evio.html', build_chapter77_html),
+        ('078-oblachnye-khranilishcha-envelope-encryption-i-kms.html', build_chapter78_html),
+        ('079-integratsiya-s-service-mesh-istio-linkerd-i-mtls.html', build_chapter79_html),
+        ('080-kontekst-trassirovki-w3c-trace-context-b3-i-grpc-keepalive.html', build_chapter80_html),
+        ('081-bezopasnost-tsepochki-postavok-supply-chain-security-i-sbom.html', build_chapter81_html),
+        ('082-zashchita-setevykh-soketov-i-protivodeystvie-dos-atakam.html', build_chapter82_html),
+        ('083-sistemnaya-izolyatsiya-seccomp-i-linux-capabilities.html', build_chapter83_html),
+        ('084-cqrs-i-event-sourcing-na-go.html', build_chapter84_html),
+        ('085-mnogourovnevoe-keshirovanie-l1-l2-i-raspredelennaya-kogerentnost.html', build_chapter85_html),
+        ('086-masshtabiruemye-raspredelennye-planirovshchiki-i-ocheredi-zadach.html', build_chapter86_html),
+        ('087-orkestratsiya-raspredelennykh-protsessov-durable-execution-na-temporal-io.html', build_chapter87_html),
+        ('088-potokovaya-obrabotka-dannykh-v-realnom-vremeni-stream-processing.html', build_chapter88_html),
+        ('089-khaos-inzheneriya-i-nagruzochnoe-testirovanie-na-go.html', build_chapter89_html),
+        ('090-kontrakt-orientirovannye-api-shlyuzy-grpc-gateway-grpc-web-i-openapi.html', build_chapter90_html),
+        ('091-razrabotka-sobstvennykh-kubernetes-operators-i-crd-na-go.html', build_chapter91_html),
+        ('092-rasshiryaemost-sistem-plugins-ipc-i-webassembly-wazero.html', build_chapter92_html),
+        ('093-vysokoproizvoditelnye-api-gateway-i-reverse-proxy-na-chistom-go.html', build_chapter93_html),
+        ('094-enterprise-release-engineering-feature-flags-dinamicheskiy-konfig-i-canary-routing.html', build_chapter94_html),
+        ('095-raspredelennaya-koordinatsiya-i-khranilishche-metadannykh-etcd-v3.html', build_chapter95_html),
+        ('096-zero-downtime-migratsii-baz-dannykh-i-pattern-expand-contract-na-go.html', build_chapter96_html),
+        ('097-time-series-subd-szhatie-gorilla-i-iot-telemetriya-na-go.html', build_chapter97_html),
+        ('098-arkhitekturnyy-kontrol-razrabotka-korporativnykh-linterov-dlya-golangci-lint.html', build_chapter98_html),
+        ('099-integratsiya-s-ii-llm-orkestratsiya-i-vektornyy-poisk-na-go.html', build_chapter99_html),
+        ('100-arkhitekturnyy-capstone-proektirovanie-i-skvoznoy-zapusk-otkazoustoychivoy-highload-platformy.html', build_chapter100_html),
     ]
     
     for filename, builder_fn in pages:

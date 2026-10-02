@@ -22,8 +22,8 @@
 
 ### 🧭 Архитектура навигации: Портал + Главы курса (`dist/`)
 * **`dist/index.html` — Главный портал курса и навигация по Learning Paths:** Визитная карточка проекта, сводные метрики, 7 сквозных специализаций (Learning Paths), 22 тематических кластера и интерактивный поиск по всем 100 главам.
-* **`dist/chapter1.html` — Глава 01 «Пакеты и модули»:** Полноценная страница первой главы со всеми 91 упражнениями.
-* **`dist/chapter2.html` .. `dist/chapter100.html` — Последовательные страницы глав курса.**
+* **`dist/001-pakety-i-moduli.html` — Глава 01 «Пакеты и модули»:** Полноценная страница первой главы со всеми 91 упражнениями.
+* **`dist/002-kompilyatsiya-sborka-i-zapusk.html` .. `dist/100-arkhitekturnyy-capstone-proektirovanie-i-skvoznoy-zapusk-otkazoustoychivoy-highload-platformy.html` — Последовательные страницы глав курса.**
 
 ---
 
@@ -127,106 +127,106 @@
 
 | № | Название главы | Markdown файл | HTML страница | Кол-во упр. | Статус |
 | :-: | :--- | :--- | :--- | :-: | :-: |
-| **01** | Пакеты и модули | `1. Пакеты и модули.md` | `chapter1.html` | 91 | ✅ Готово (91/91) |
-| **02** | Компиляция, сборка и запуск | `2. Компиляция, сборка и запуск.md` | `chapter2.html` | 25 | ✅ Готово (25/25) |
-| **03** | Пакет fmt и консольный ввод-вывод | `3. Пакет fmt и консольный ввод-вывод.md` | `chapter3.html` | 65 | ✅ Готово (65/65) |
-| **04** | Базовые типы, переменные и константы | `4. Базовые типы, переменные и константы.md` | `chapter4.html` | 111 | ✅ Готово (111/111) |
-| **05** | Условные конструкции | `5. Условные конструкции.md` | `chapter5.html` | 64 | ✅ Готово (64/64) |
-| **06** | Циклы | `6. Циклы.md` | `chapter6.html` | 64 | ✅ Готово (64/64) |
-| **07** | Массивы | `7. Массивы.md` | `chapter7.html` | 32 | ✅ Готово (32/32) |
-| **08** | Слайсы | `8. Слайсы.md` | `chapter8.html` | 74 | ✅ Готово (74/74) |
-| **09** | Мапы | `9. Мапы.md` | `chapter9.html` | 62 | ✅ Готово (62/62) |
-| **10** | Функции | `10. Функции.md` | `chapter10.html` | 100 | ✅ Готово (100/100) |
-| **11** | Указатели | `11. Указатели.md` | `chapter11.html` | 49 | ✅ Готово (49/49) |
-| **12** | Передача аргументов | `12. Передача аргументов.md` | `chapter12.html` | 67 | ✅ Готово (67/67) |
-| **13** | Структуры | `13. Структуры.md` | `chapter13.html` | 71 | ✅ Готово (71/71) |
-| **14** | Интерфейсы | `14. Интерфейсы.md` | `chapter14.html` | 77 | ✅ Готово (77/77) |
-| **15** | ООП в Go | `15. ООП в Go.md` | `chapter15.html` | 127 | ✅ Готово (127/127) |
-| **16** | Дженерики | `16. Дженерики.md` | `chapter16.html` | 131 | ✅ Готово (131/131) |
-| **17** | Обработка ошибок | `17. Обработка ошибок.md` | `chapter17.html` | 58 | ✅ Готово (58/58) |
-| **18** | Работа с файлами | `18. Работа с файлами.md` | `chapter18.html` | 100 | ✅ Готово (100/100) |
-| **19** | Логирование | `19. Логирование.md` | `chapter19.html` | 84 | ✅ Готово (84/84) |
-| **20** | Горутины и синхронизация | `20. Горутины и синхронизация.md` | `chapter20.html` | 124 | ✅ Готово (124/124) |
-| **21** | Каналы и select | `21. Каналы и select.md` | `chapter21.html` | 95 | ✅ Готово (95/95) |
-| **22** | Контекст | `22. Контекст.md` | `chapter22.html` | 52 | ✅ Готово (52/52) |
-| **23** | Паттерны конкурентности | `23. Паттерны конкурентности.md` | `chapter23.html` | 132 | ✅ Готово (132/132) |
-| **24** | Низкоуровневая сеть | `24. Низкоуровневая сеть.md` | `chapter24.html` | 63 | ✅ Готово (63/63) |
-| **25** | HTTP-клиент | `25. HTTP-клиент.md` | `chapter25.html` | 45 | ✅ Готово (45/45) |
-| **26** | HTTP-сервер, REST API и Middleware | `26. HTTP-сервер, REST API и Middleware.md` | `chapter26.html` | 158 | ✅ Готово (158/158) |
-| **27** | Реляционные базы данных (SQL и PostgreSQL) | `27. Реляционные базы данных (SQL и PostgreSQL).md` | `chapter27.html` | 163 | ✅ Готово (163/163) |
-| **28** | Базы данных NoSQL и кэширование (Redis) | `28. Базы данных NoSQL и кэширование (Redis).md` | `chapter28.html` | 115 | ✅ Готово (115/115) |
-| **29** | Модульное тестирование (Unit Testing) и Assertions | `29. Модульное тестирование (Unit Testing) и Assertions.md` | `chapter29.html` | 96 | ✅ Готово (96/96) |
-| **30** | Мокирование и интеграционное тестирование | `30. Мокирование и интеграционное тестирование.md` | `chapter30.html` | 107 | ✅ Готово (107/107) |
-| **31** | Бенчмарки, фаззинг и продвинутые методы тестирования | `31. Бенчмарки, фаззинг и продвинутые методы тестирования.md` | `chapter31.html` | 120 | ✅ Готово (120/120) |
-| **32** | Protocol Buffers и gRPC | `32. Protocol Buffers и gRPC.md` | `chapter32.html` | 189 | ✅ Готово (189/189) |
-| **33** | Микросервисная архитектура и паттерны | `33. Микросервисная архитектура и паттерны.md` | `chapter33.html` | 89 | ✅ Готово (89/89) |
-| **34** | GraphQL | `34. GraphQL.md` | `chapter34.html` | 78 | ✅ Готово (78/78) |
-| **35** | WebSockets и Real-time | `35. WebSockets и Real-time.md` | `chapter35.html` | 78 | ✅ Готово (78/78) |
-| **36** | RabbitMQ | `36. RabbitMQ.md` | `chapter36.html` | 130 | ✅ Готово (130/130) |
-| **37** | Apache Kafka | `37. Apache Kafka.md` | `chapter37.html` | 88 | ✅ Готово (88/88) |
-| **38** | NATS и NATS JetStream | `38. NATS и NATS JetStream.md` | `chapter38.html` | 77 | ✅ Готово (77/77) |
-| **39** | Метрики и мониторинг (Prometheus) | `39. Метрики и мониторинг (Prometheus).md` | `chapter39.html` | 114 | ✅ Готово (114/114) |
-| **40** | Распределенная трассировка (OpenTelemetry) | `40. Распределенная трассировка (OpenTelemetry).md` | `chapter40.html` | 79 | ✅ Готово (79/79) |
-| **41** | Профилирование и рантайм-диагностика | `41. Профилирование и рантайм-диагностика.md` | `chapter41.html` | 24 | ✅ Готово (24/24) |
-| **42** | Проектирование чистой архитектуры и DDD | `42. Проектирование чистой архитектуры и DDD.md` | `chapter42.html` | 98 | ✅ Готово (98/98) |
-| **43** | Шаблоны проектирования распределенных и enterprise-систем | `43. Шаблоны проектирования распределенных и enterprise-систем.md` | `chapter43.html` | 112 | ✅ Готово (112/112) |
-| **44** | Проектирование высоконагруженных и отказоустойчивых систем | `44. Проектирование высоконагруженных и отказоустойчивых систем.md` | `chapter44.html` | 64 | ✅ Готово (64/64) |
-| **45** | Контейнеризация и Docker | `45. Контейнеризация и Docker.md` | `chapter45.html` | 75 | ✅ Готово (75/75) |
-| **46** | Автоматизация CI-CD | `46. Автоматизация CI-CD.md` | `chapter46.html` | 57 | ✅ Готово (57/57) |
-| **47** | Оркестрация в Kubernetes | `47. Оркестрация в Kubernetes.md` | `chapter47.html` | 180 | ✅ Готово (180/180) |
-| **48** | Планировщик GMP | `48. Планировщик GMP.md` | `chapter48.html` | 93 | ✅ Готово (93/93) |
-| **49** | Аллокатор кучи и управление памятью | `49. Аллокатор кучи и управление памятью.md` | `chapter49.html` | 66 | ✅ Готово (66/66) |
-| **50** | Garbage Collector и тюнинг памяти | `50. Garbage Collector и тюнинг памяти.md` | `chapter50.html` | 87 | ✅ Готово (87/87) |
-| **51** | Работа с unsafe и низкоуровневой памятью | `51. Работа с unsafe и низкоуровневой памятью.md` | `chapter51.html` | 85 | ✅ Готово (85/85) |
-| **52** | Интеграция с C-кодом через CGO | `52. Интеграция с C-кодом через CGO.md` | `chapter52.html` | 70 | ✅ Готово (70/70) |
-| **53** | Системные вызовы и взаимодействие с ОС | `53. Системные вызовы и взаимодействие с ОС.md` | `chapter53.html` | 75 | ✅ Готово (75/75) |
-| **54** | Продвинутая рефлексия (reflect) | `54. Продвинутая рефлексия (reflect).md` | `chapter54.html` | 114 | ✅ Готово (114/114) |
-| **55** | Анализ AST и статический анализ кода | `55. Анализ AST и статический анализ кода.md` | `chapter55.html` | 85 | ✅ Готово (85/85) |
-| **56** | Кодогенерация и шаблонизация | `56. Кодогенерация и шаблонизация.md` | `chapter56.html` | 77 | ✅ Готово (77/77) |
-| **57** | Симметричное и асимметричное шифрование | `57. Симметричное и асимметричное шифрование.md` | `chapter57.html` | 100 | ✅ Готово (100/100) |
-| **58** | Хеширование паролей и криптографическая стойкость | `58. Хеширование паролей и криптографическая стойкость.md` | `chapter58.html` | 56 | ✅ Готово (56/56) |
-| **59** | Токены аутентификации и авторизация | `59. Токены аутентификации и авторизация.md` | `chapter59.html` | 66 | ✅ Готово (66/66) |
-| **60** | Безопасность веб-приложений и защита API | `60. Безопасность веб-приложений и защита API.md` | `chapter60.html` | 63 | ✅ Готово (63/63) |
-| **61** | Документоориентированная база данных MongoDB | `61. Документоориентированная база данных MongoDB.md` | `chapter61.html` | 113 | ✅ Готово (113/113) |
-| **62** | Аналитическая СУБД ClickHouse | `62. Аналитическая СУБД ClickHouse.md` | `chapter62.html` | 71 | ✅ Готово (71/71) |
-| **63** | Поисковые движки Elasticsearch и OpenSearch | `63. Поисковые движки Elasticsearch и OpenSearch.md` | `chapter63.html` | 60 | ✅ Готово (60/60) |
-| **64** | Логическая репликация и Change Data Capture | `64. Логическая репликация и Change Data Capture.md` | `chapter64.html` | 57 | ✅ Готово (57/57) |
-| **65** | Вебхуки и платформы обратных вызовов | `65. Вебхуки и платформы обратных вызовов.md` | `chapter65.html` | 116 | ✅ Готово (116/116) |
-| **66** | Server-Sent Events | `66. Server-Sent Events.md` | `chapter66.html` | 69 | ✅ Готово (69/69) |
-| **67** | Альтернативные RPC-протоколы | `67. Альтернативные RPC-протоколы.md` | `chapter67.html` | 92 | ✅ Готово (92/92) |
-| **68** | Паттерн Saga и компенсационные транзакции | `68. Паттерн Saga и компенсационные транзакции.md` | `chapter68.html` | 104 | ✅ Готово (104/104) |
-| **69** | Паттерны Outbox и Inbox для надежной доставки сообщений | `69. Паттерны Outbox и Inbox для надежной доставки сообщений.md` | `chapter69.html` | 72 | ✅ Готово (72/72) |
-| **70** | Проектирование идемпотентных API | `70. Проектирование идемпотентных API.md` | `chapter70.html` | 74 | ✅ Готово (74/74) |
-| **71** | Выборы лидера (Leader Election) в распределенных системах | `71. Выборы лидера (Leader Election) в распределенных системах.md` | `chapter71.html` | 90 | ✅ Готово (90/90) |
-| **72** | Протокол консенсуса Raft | `72. Протокол консенсуса Raft.md` | `chapter72.html` | 83 | ✅ Готово (83/83) |
-| **73** | Распределенные блокировки и Fencing Tokens | `73. Распределенные блокировки и Fencing Tokens.md` | `chapter73.html` | 68 | ✅ Готово (68/68) |
-| **74** | Cache-friendly структуры данных и выравнивание памяти | `74. Cache-friendly структуры данных и выравнивание памяти.md` | `chapter74.html` | 99 | ✅ Готово (99/99) |
-| **75** | Lock-free структуры данных | `75. Lock-free структуры данных.md` | `chapter75.html` | 75 | ✅ Готово (75/75) |
-| **76** | Ассемблер Go (Plan 9 Assembly) и SIMD | `76. Ассемблер Go (Plan 9 Assembly) и SIMD.md` | `chapter76.html` | 35 | ✅ Готово (35/35) |
-| **77** | Высокопроизводительные сетевые фреймворки (gnet, evio) | `77. Высокопроизводительные сетевые фреймворки (gnet, evio).md` | `chapter77.html` | 32 | ✅ Готово (32/32) |
-| **78** | Облачные хранилища, Envelope Encryption и KMS | `78. Облачные хранилища, Envelope Encryption и KMS.md` | `chapter78.html` | 95 | ✅ Готово (95/95) |
-| **79** | Интеграция с Service Mesh (Istio, Linkerd) и mTLS | `79. Интеграция с Service Mesh (Istio, Linkerd) и mTLS.md` | `chapter79.html` | 80 | ✅ Готово (80/80) |
-| **80** | Контекст трассировки (W3C Trace Context, B3) и gRPC Keepalive | `80. Контекст трассировки (W3C Trace Context, B3) и gRPC Keepalive.md` | `chapter80.html` | 76 | ✅ Готово (76/76) |
-| **81** | Безопасность цепочки поставок (Supply Chain Security) и SBOM | `81. Безопасность цепочки поставок (Supply Chain Security) и SBOM.md` | `chapter81.html` | 136 | ✅ Готово (136/136) |
-| **82** | Защита сетевых сокетов и противодействие DoS-атакам | `82. Защита сетевых сокетов и противодействие DoS-атакам.md` | `chapter82.html` | 55 | ✅ Готово (55/55) |
-| **83** | Системная изоляция, Seccomp и Linux Capabilities | `83. Системная изоляция, Seccomp и Linux Capabilities.md` | `chapter83.html` | 28 | ✅ Готово (28/28) |
-| **84** | CQRS и Event Sourcing на Go | `84. CQRS и Event Sourcing на Go.md` | `chapter84.html` | 45 | ✅ Готово (45/45) |
-| **85** | Многоуровневое кэширование (L1-L2) и распределенная когерентность | `85. Многоуровневое кэширование (L1-L2) и распределенная когерентность.md` | `chapter85.html` | 30 | ✅ Готово (30/30) |
-| **86** | Масштабируемые распределенные планировщики и очереди задач | `86. Масштабируемые распределенные планировщики и очереди задач.md` | `chapter86.html` | 30 | ✅ Готово (30/30) |
-| **87** | Оркестрация распределенных процессов (Durable Execution) на Temporal.io | `87. Оркестрация распределенных процессов (Durable Execution) на Temporal.io.md` | `chapter87.html` | 50 | ✅ Готово (50/50) |
-| **88** | Потоковая обработка данных в реальном времени (Stream Processing) | `88. Потоковая обработка данных в реальном времени (Stream Processing).md` | `chapter88.html` | 30 | ✅ Готово (30/30) |
-| **89** | Хаос-инженерия и нагрузочное тестирование на Go | `89. Хаос-инженерия и нагрузочное тестирование на Go.md` | `chapter89.html` | 30 | ✅ Готово (30/30) |
-| **90** | Контракт-ориентированные API-шлюзы: gRPC-Gateway, gRPC-Web и OpenAPI | `90. Контракт-ориентированные API-шлюзы. gRPC-Gateway, gRPC-Web и OpenAPI.md` | `chapter90.html` | 30 | ✅ Готово (30/30) |
-| **91** | Разработка собственных Kubernetes Operators и CRD на Go | `91. Разработка собственных Kubernetes Operators и CRD на Go.md` | `chapter91.html` | 45 | ✅ Готово (45/45) |
-| **92** | Расширяемость систем: Plugins, IPC и WebAssembly (Wazero) | `92. Расширяемость систем. Plugins, IPC и WebAssembly (Wazero).md` | `chapter92.html` | 30 | ✅ Готово (30/30) |
-| **93** | Высокопроизводительные API Gateway и Reverse Proxy на чистом Go | `93. Высокопроизводительные API Gateway и Reverse Proxy на чистом Go.md` | `chapter93.html` | 30 | ✅ Готово (30/30) |
-| **94** | Enterprise Release Engineering: Feature Flags, динамический конфиг и Canary Routing | `94. Enterprise Release Engineering. Feature Flags, динамический конфиг и Canary Routing.md` | `chapter94.html` | 30 | ✅ Готово (30/30) |
-| **95** | Распределенная координация и хранилище метаданных etcd v3 | `95. Распределенная координация и хранилище метаданных etcd v3.md` | `chapter95.html` | 30 | ✅ Готово (30/30) |
-| **96** | Zero-Downtime миграции баз данных и паттерн Expand-Contract на Go | `96. Zero-Downtime миграции баз данных и паттерн Expand-Contract на Go.md` | `chapter96.html` | 30 | ✅ Готово (30/30) |
-| **97** | Time-Series СУБД, сжатие Gorilla и IoT-телеметрия на Go | `97. Time-Series СУБД, сжатие Gorilla и IoT-телеметрия на Go.md` | `chapter97.html` | 30 | ✅ Готово (30/30) |
-| **98** | Архитектурный контроль: Разработка корпоративных линтеров для golangci-lint | `98. Архитектурный контроль. Разработка корпоративных линтеров для golangci-lint.md` | `chapter98.html` | 30 | ✅ Готово (30/30) |
-| **99** | Интеграция с ИИ, LLM-оркестрация и векторный поиск на Go | `99. Интеграция с ИИ, LLM-оркестрация и векторный поиск на Go.md` | `chapter99.html` | 45 | ✅ Готово (45/45) |
-| **100** | Архитектурный Capstone: Проектирование и сквозной запуск отказоустойчивой HighLoad-платформы | `100. Архитектурный Capstone. Проектирование и сквозной запуск отказоустойчивой HighLoad-платформы.md` | `chapter100.html` | 50 | ✅ Готово (50/50) |
+| **01** | Пакеты и модули | `1. Пакеты и модули.md` | `001-pakety-i-moduli.html` | 91 | ✅ Готово (91/91) |
+| **02** | Компиляция, сборка и запуск | `2. Компиляция, сборка и запуск.md` | `002-kompilyatsiya-sborka-i-zapusk.html` | 25 | ✅ Готово (25/25) |
+| **03** | Пакет fmt и консольный ввод-вывод | `3. Пакет fmt и консольный ввод-вывод.md` | `003-paket-fmt-i-konsolnyy-vvod-vyvod.html` | 65 | ✅ Готово (65/65) |
+| **04** | Базовые типы, переменные и константы | `4. Базовые типы, переменные и константы.md` | `004-bazovye-tipy-peremennye-i-konstanty.html` | 111 | ✅ Готово (111/111) |
+| **05** | Условные конструкции | `5. Условные конструкции.md` | `005-uslovnye-konstruktsii.html` | 64 | ✅ Готово (64/64) |
+| **06** | Циклы | `6. Циклы.md` | `006-tsikly.html` | 64 | ✅ Готово (64/64) |
+| **07** | Массивы | `7. Массивы.md` | `007-massivy.html` | 32 | ✅ Готово (32/32) |
+| **08** | Слайсы | `8. Слайсы.md` | `008-slaysy.html` | 74 | ✅ Готово (74/74) |
+| **09** | Мапы | `9. Мапы.md` | `009-mapy.html` | 62 | ✅ Готово (62/62) |
+| **10** | Функции | `10. Функции.md` | `010-funktsii.html` | 100 | ✅ Готово (100/100) |
+| **11** | Указатели | `11. Указатели.md` | `011-ukazateli.html` | 49 | ✅ Готово (49/49) |
+| **12** | Передача аргументов | `12. Передача аргументов.md` | `012-peredacha-argumentov.html` | 67 | ✅ Готово (67/67) |
+| **13** | Структуры | `13. Структуры.md` | `013-struktury.html` | 71 | ✅ Готово (71/71) |
+| **14** | Интерфейсы | `14. Интерфейсы.md` | `014-interfeysy.html` | 77 | ✅ Готово (77/77) |
+| **15** | ООП в Go | `15. ООП в Go.md` | `015-oop-v-go.html` | 127 | ✅ Готово (127/127) |
+| **16** | Дженерики | `16. Дженерики.md` | `016-dzheneriki.html` | 131 | ✅ Готово (131/131) |
+| **17** | Обработка ошибок | `17. Обработка ошибок.md` | `017-obrabotka-oshibok.html` | 58 | ✅ Готово (58/58) |
+| **18** | Работа с файлами | `18. Работа с файлами.md` | `018-rabota-s-faylami.html` | 100 | ✅ Готово (100/100) |
+| **19** | Логирование | `19. Логирование.md` | `019-logirovanie.html` | 84 | ✅ Готово (84/84) |
+| **20** | Горутины и синхронизация | `20. Горутины и синхронизация.md` | `020-gorutiny-i-sinkhronizatsiya.html` | 124 | ✅ Готово (124/124) |
+| **21** | Каналы и select | `21. Каналы и select.md` | `021-kanaly-i-select.html` | 95 | ✅ Готово (95/95) |
+| **22** | Контекст | `22. Контекст.md` | `022-paket-context.html` | 52 | ✅ Готово (52/52) |
+| **23** | Паттерны конкурентности | `23. Паттерны конкурентности.md` | `023-patterny-i-kaverznye-sluchai-konkurentnosti.html` | 132 | ✅ Готово (132/132) |
+| **24** | Низкоуровневая сеть | `24. Низкоуровневая сеть.md` | `024-nizkourovnevaya-set-tcp-i-udp.html` | 63 | ✅ Готово (63/63) |
+| **25** | HTTP-клиент | `25. HTTP-клиент.md` | `025-http-klient.html` | 45 | ✅ Готово (45/45) |
+| **26** | HTTP-сервер, REST API и Middleware | `26. HTTP-сервер, REST API и Middleware.md` | `026-http-server-rest-api-i-middleware.html` | 158 | ✅ Готово (158/158) |
+| **27** | Реляционные базы данных (SQL и PostgreSQL) | `27. Реляционные базы данных (SQL и PostgreSQL).md` | `027-relyatsionnye-bazy-dannykh-sql-i-postgresql.html` | 163 | ✅ Готово (163/163) |
+| **28** | Базы данных NoSQL и кэширование (Redis) | `28. Базы данных NoSQL и кэширование (Redis).md` | `028-bazy-dannykh-nosql-i-keshirovanie-redis.html` | 115 | ✅ Готово (115/115) |
+| **29** | Модульное тестирование (Unit Testing) и Assertions | `29. Модульное тестирование (Unit Testing) и Assertions.md` | `029-modulnoe-testirovanie-unit-testing-i-assertions.html` | 96 | ✅ Готово (96/96) |
+| **30** | Мокирование и интеграционное тестирование | `30. Мокирование и интеграционное тестирование.md` | `030-mokirovanie-i-integratsionnoe-testirovanie.html` | 107 | ✅ Готово (107/107) |
+| **31** | Бенчмарки, фаззинг и продвинутые методы тестирования | `31. Бенчмарки, фаззинг и продвинутые методы тестирования.md` | `031-benchmarki-fazzing-i-prodvinutye-metody-testirovaniya.html` | 120 | ✅ Готово (120/120) |
+| **32** | Protocol Buffers и gRPC | `32. Protocol Buffers и gRPC.md` | `032-protocol-buffers-i-grpc.html` | 189 | ✅ Готово (189/189) |
+| **33** | Микросервисная архитектура и паттерны | `33. Микросервисная архитектура и паттерны.md` | `033-mikroservisnaya-arkhitektura-i-patterny.html` | 89 | ✅ Готово (89/89) |
+| **34** | GraphQL | `34. GraphQL.md` | `034-graphql.html` | 78 | ✅ Готово (78/78) |
+| **35** | WebSockets и Real-time | `35. WebSockets и Real-time.md` | `035-websockets-i-real-time.html` | 78 | ✅ Готово (78/78) |
+| **36** | RabbitMQ | `36. RabbitMQ.md` | `036-rabbitmq.html` | 130 | ✅ Готово (130/130) |
+| **37** | Apache Kafka | `37. Apache Kafka.md` | `037-apache-kafka.html` | 88 | ✅ Готово (88/88) |
+| **38** | NATS и NATS JetStream | `38. NATS и NATS JetStream.md` | `038-nats-i-nats-jetstream.html` | 77 | ✅ Готово (77/77) |
+| **39** | Метрики и мониторинг (Prometheus) | `39. Метрики и мониторинг (Prometheus).md` | `039-metriki-i-monitoring-prometheus.html` | 114 | ✅ Готово (114/114) |
+| **40** | Распределенная трассировка (OpenTelemetry) | `40. Распределенная трассировка (OpenTelemetry).md` | `040-raspredelennaya-trassirovka-opentelemetry.html` | 79 | ✅ Готово (79/79) |
+| **41** | Профилирование и рантайм-диагностика | `41. Профилирование и рантайм-диагностика.md` | `041-profilirovanie-i-rantaym-diagnostika.html` | 24 | ✅ Готово (24/24) |
+| **42** | Проектирование чистой архитектуры и DDD | `42. Проектирование чистой архитектуры и DDD.md` | `042-proektirovanie-chistoy-arkhitektury-i-ddd.html` | 98 | ✅ Готово (98/98) |
+| **43** | Шаблоны проектирования распределенных и enterprise-систем | `43. Шаблоны проектирования распределенных и enterprise-систем.md` | `043-shablony-proektirovaniya-raspredelennykh-i-enterprise-sistem.html` | 112 | ✅ Готово (112/112) |
+| **44** | Проектирование высоконагруженных и отказоустойчивых систем | `44. Проектирование высоконагруженных и отказоустойчивых систем.md` | `044-proektirovanie-vysokonagruzhennykh-i-otkazoustoychivykh-sistem.html` | 64 | ✅ Готово (64/64) |
+| **45** | Контейнеризация и Docker | `45. Контейнеризация и Docker.md` | `045-konteynerizatsiya-i-docker.html` | 75 | ✅ Готово (75/75) |
+| **46** | Автоматизация CI-CD | `46. Автоматизация CI-CD.md` | `046-avtomatizatsiya-ci-cd.html` | 57 | ✅ Готово (57/57) |
+| **47** | Оркестрация в Kubernetes | `47. Оркестрация в Kubernetes.md` | `047-orkestratsiya-v-kubernetes.html` | 180 | ✅ Готово (180/180) |
+| **48** | Планировщик GMP | `48. Планировщик GMP.md` | `048-planirovshchik-gmp.html` | 93 | ✅ Готово (93/93) |
+| **49** | Аллокатор кучи и управление памятью | `49. Аллокатор кучи и управление памятью.md` | `049-allokator-kuchi-i-upravlenie-pamyatyu.html` | 66 | ✅ Готово (66/66) |
+| **50** | Garbage Collector и тюнинг памяти | `50. Garbage Collector и тюнинг памяти.md` | `050-garbage-collector-i-tyuning-pamyati.html` | 87 | ✅ Готово (87/87) |
+| **51** | Работа с unsafe и низкоуровневой памятью | `51. Работа с unsafe и низкоуровневой памятью.md` | `051-rabota-s-unsafe-i-nizkourovnevoy-pamyatyu.html` | 85 | ✅ Готово (85/85) |
+| **52** | Интеграция с C-кодом через CGO | `52. Интеграция с C-кодом через CGO.md` | `052-integratsiya-s-c-kodom-cherez-cgo.html` | 70 | ✅ Готово (70/70) |
+| **53** | Системные вызовы и взаимодействие с ОС | `53. Системные вызовы и взаимодействие с ОС.md` | `053-sistemnye-vyzovy-i-vzaimodeystvie-s-os.html` | 75 | ✅ Готово (75/75) |
+| **54** | Продвинутая рефлексия (reflect) | `54. Продвинутая рефлексия (reflect).md` | `054-prodvinutaya-refleksiya-reflect.html` | 114 | ✅ Готово (114/114) |
+| **55** | Анализ AST и статический анализ кода | `55. Анализ AST и статический анализ кода.md` | `055-analiz-ast-i-staticheskiy-analiz-koda.html` | 85 | ✅ Готово (85/85) |
+| **56** | Кодогенерация и шаблонизация | `56. Кодогенерация и шаблонизация.md` | `056-kodogeneratsiya-i-shablonizatsiya.html` | 77 | ✅ Готово (77/77) |
+| **57** | Симметричное и асимметричное шифрование | `57. Симметричное и асимметричное шифрование.md` | `057-simmetrichnoe-i-asimmetrichnoe-shifrovanie.html` | 100 | ✅ Готово (100/100) |
+| **58** | Хеширование паролей и криптографическая стойкость | `58. Хеширование паролей и криптографическая стойкость.md` | `058-kheshirovanie-paroley-i-kriptograficheskaya-stoykost.html` | 56 | ✅ Готово (56/56) |
+| **59** | Токены аутентификации и авторизация | `59. Токены аутентификации и авторизация.md` | `059-tokeny-autentifikatsii-i-avtorizatsiya.html` | 66 | ✅ Готово (66/66) |
+| **60** | Безопасность веб-приложений и защита API | `60. Безопасность веб-приложений и защита API.md` | `060-bezopasnost-veb-prilozheniy-i-zashchita-api.html` | 63 | ✅ Готово (63/63) |
+| **61** | Документоориентированная база данных MongoDB | `61. Документоориентированная база данных MongoDB.md` | `061-dokumentoorientirovannaya-baza-dannykh-mongodb.html` | 113 | ✅ Готово (113/113) |
+| **62** | Аналитическая СУБД ClickHouse | `62. Аналитическая СУБД ClickHouse.md` | `062-analiticheskaya-subd-clickhouse.html` | 71 | ✅ Готово (71/71) |
+| **63** | Поисковые движки Elasticsearch и OpenSearch | `63. Поисковые движки Elasticsearch и OpenSearch.md` | `063-poiskovye-dvizhki-elasticsearch-i-opensearch.html` | 60 | ✅ Готово (60/60) |
+| **64** | Логическая репликация и Change Data Capture | `64. Логическая репликация и Change Data Capture.md` | `064-logicheskaya-replikatsiya-i-change-data-capture.html` | 57 | ✅ Готово (57/57) |
+| **65** | Вебхуки и платформы обратных вызовов | `65. Вебхуки и платформы обратных вызовов.md` | `065-vebkhuki-i-platformy-obratnykh-vyzovov.html` | 116 | ✅ Готово (116/116) |
+| **66** | Server-Sent Events | `66. Server-Sent Events.md` | `066-server-sent-events.html` | 69 | ✅ Готово (69/69) |
+| **67** | Альтернативные RPC-протоколы | `67. Альтернативные RPC-протоколы.md` | `067-alternativnye-rpc-protokoly.html` | 92 | ✅ Готово (92/92) |
+| **68** | Паттерн Saga и компенсационные транзакции | `68. Паттерн Saga и компенсационные транзакции.md` | `068-pattern-saga-i-kompensatsionnye-tranzaktsii.html` | 104 | ✅ Готово (104/104) |
+| **69** | Паттерны Outbox и Inbox для надежной доставки сообщений | `69. Паттерны Outbox и Inbox для надежной доставки сообщений.md` | `069-patterny-outbox-i-inbox-dlya-nadezhnoy-dostavki-soobshcheniy.html` | 72 | ✅ Готово (72/72) |
+| **70** | Проектирование идемпотентных API | `70. Проектирование идемпотентных API.md` | `070-proektirovanie-idempotentnykh-api.html` | 74 | ✅ Готово (74/74) |
+| **71** | Выборы лидера (Leader Election) в распределенных системах | `71. Выборы лидера (Leader Election) в распределенных системах.md` | `071-vybory-lidera-leader-election-v-raspredelennykh-sistemakh.html` | 90 | ✅ Готово (90/90) |
+| **72** | Протокол консенсуса Raft | `72. Протокол консенсуса Raft.md` | `072-protokol-konsensusa-raft.html` | 83 | ✅ Готово (83/83) |
+| **73** | Распределенные блокировки и Fencing Tokens | `73. Распределенные блокировки и Fencing Tokens.md` | `073-raspredelennye-blokirovki-i-fencing-tokens.html` | 68 | ✅ Готово (68/68) |
+| **74** | Cache-friendly структуры данных и выравнивание памяти | `74. Cache-friendly структуры данных и выравнивание памяти.md` | `074-cache-friendly-struktury-dannykh-i-vyravnivanie-pamyati.html` | 99 | ✅ Готово (99/99) |
+| **75** | Lock-free структуры данных | `75. Lock-free структуры данных.md` | `075-lock-free-struktury-dannykh.html` | 75 | ✅ Готово (75/75) |
+| **76** | Ассемблер Go (Plan 9 Assembly) и SIMD | `76. Ассемблер Go (Plan 9 Assembly) и SIMD.md` | `076-assembler-go-plan-9-assembly-i-simd.html` | 35 | ✅ Готово (35/35) |
+| **77** | Высокопроизводительные сетевые фреймворки (gnet, evio) | `77. Высокопроизводительные сетевые фреймворки (gnet, evio).md` | `077-vysokoproizvoditelnye-setevye-freymvorki-gnet-evio.html` | 32 | ✅ Готово (32/32) |
+| **78** | Облачные хранилища, Envelope Encryption и KMS | `78. Облачные хранилища, Envelope Encryption и KMS.md` | `078-oblachnye-khranilishcha-envelope-encryption-i-kms.html` | 95 | ✅ Готово (95/95) |
+| **79** | Интеграция с Service Mesh (Istio, Linkerd) и mTLS | `79. Интеграция с Service Mesh (Istio, Linkerd) и mTLS.md` | `079-integratsiya-s-service-mesh-istio-linkerd-i-mtls.html` | 80 | ✅ Готово (80/80) |
+| **80** | Контекст трассировки (W3C Trace Context, B3) и gRPC Keepalive | `80. Контекст трассировки (W3C Trace Context, B3) и gRPC Keepalive.md` | `080-kontekst-trassirovki-w3c-trace-context-b3-i-grpc-keepalive.html` | 76 | ✅ Готово (76/76) |
+| **81** | Безопасность цепочки поставок (Supply Chain Security) и SBOM | `81. Безопасность цепочки поставок (Supply Chain Security) и SBOM.md` | `081-bezopasnost-tsepochki-postavok-supply-chain-security-i-sbom.html` | 136 | ✅ Готово (136/136) |
+| **82** | Защита сетевых сокетов и противодействие DoS-атакам | `82. Защита сетевых сокетов и противодействие DoS-атакам.md` | `082-zashchita-setevykh-soketov-i-protivodeystvie-dos-atakam.html` | 55 | ✅ Готово (55/55) |
+| **83** | Системная изоляция, Seccomp и Linux Capabilities | `83. Системная изоляция, Seccomp и Linux Capabilities.md` | `083-sistemnaya-izolyatsiya-seccomp-i-linux-capabilities.html` | 28 | ✅ Готово (28/28) |
+| **84** | CQRS и Event Sourcing на Go | `84. CQRS и Event Sourcing на Go.md` | `084-cqrs-i-event-sourcing-na-go.html` | 45 | ✅ Готово (45/45) |
+| **85** | Многоуровневое кэширование (L1-L2) и распределенная когерентность | `85. Многоуровневое кэширование (L1-L2) и распределенная когерентность.md` | `085-mnogourovnevoe-keshirovanie-l1-l2-i-raspredelennaya-kogerentnost.html` | 30 | ✅ Готово (30/30) |
+| **86** | Масштабируемые распределенные планировщики и очереди задач | `86. Масштабируемые распределенные планировщики и очереди задач.md` | `086-masshtabiruemye-raspredelennye-planirovshchiki-i-ocheredi-zadach.html` | 30 | ✅ Готово (30/30) |
+| **87** | Оркестрация распределенных процессов (Durable Execution) на Temporal.io | `87. Оркестрация распределенных процессов (Durable Execution) на Temporal.io.md` | `087-orkestratsiya-raspredelennykh-protsessov-durable-execution-na-temporal-io.html` | 50 | ✅ Готово (50/50) |
+| **88** | Потоковая обработка данных в реальном времени (Stream Processing) | `88. Потоковая обработка данных в реальном времени (Stream Processing).md` | `088-potokovaya-obrabotka-dannykh-v-realnom-vremeni-stream-processing.html` | 30 | ✅ Готово (30/30) |
+| **89** | Хаос-инженерия и нагрузочное тестирование на Go | `89. Хаос-инженерия и нагрузочное тестирование на Go.md` | `089-khaos-inzheneriya-i-nagruzochnoe-testirovanie-na-go.html` | 30 | ✅ Готово (30/30) |
+| **90** | Контракт-ориентированные API-шлюзы: gRPC-Gateway, gRPC-Web и OpenAPI | `90. Контракт-ориентированные API-шлюзы. gRPC-Gateway, gRPC-Web и OpenAPI.md` | `090-kontrakt-orientirovannye-api-shlyuzy-grpc-gateway-grpc-web-i-openapi.html` | 30 | ✅ Готово (30/30) |
+| **91** | Разработка собственных Kubernetes Operators и CRD на Go | `91. Разработка собственных Kubernetes Operators и CRD на Go.md` | `091-razrabotka-sobstvennykh-kubernetes-operators-i-crd-na-go.html` | 45 | ✅ Готово (45/45) |
+| **92** | Расширяемость систем: Plugins, IPC и WebAssembly (Wazero) | `92. Расширяемость систем. Plugins, IPC и WebAssembly (Wazero).md` | `092-rasshiryaemost-sistem-plugins-ipc-i-webassembly-wazero.html` | 30 | ✅ Готово (30/30) |
+| **93** | Высокопроизводительные API Gateway и Reverse Proxy на чистом Go | `93. Высокопроизводительные API Gateway и Reverse Proxy на чистом Go.md` | `093-vysokoproizvoditelnye-api-gateway-i-reverse-proxy-na-chistom-go.html` | 30 | ✅ Готово (30/30) |
+| **94** | Enterprise Release Engineering: Feature Flags, динамический конфиг и Canary Routing | `94. Enterprise Release Engineering. Feature Flags, динамический конфиг и Canary Routing.md` | `094-enterprise-release-engineering-feature-flags-dinamicheskiy-konfig-i-canary-routing.html` | 30 | ✅ Готово (30/30) |
+| **95** | Распределенная координация и хранилище метаданных etcd v3 | `95. Распределенная координация и хранилище метаданных etcd v3.md` | `095-raspredelennaya-koordinatsiya-i-khranilishche-metadannykh-etcd-v3.html` | 30 | ✅ Готово (30/30) |
+| **96** | Zero-Downtime миграции баз данных и паттерн Expand-Contract на Go | `96. Zero-Downtime миграции баз данных и паттерн Expand-Contract на Go.md` | `096-zero-downtime-migratsii-baz-dannykh-i-pattern-expand-contract-na-go.html` | 30 | ✅ Готово (30/30) |
+| **97** | Time-Series СУБД, сжатие Gorilla и IoT-телеметрия на Go | `97. Time-Series СУБД, сжатие Gorilla и IoT-телеметрия на Go.md` | `097-time-series-subd-szhatie-gorilla-i-iot-telemetriya-na-go.html` | 30 | ✅ Готово (30/30) |
+| **98** | Архитектурный контроль: Разработка корпоративных линтеров для golangci-lint | `98. Архитектурный контроль. Разработка корпоративных линтеров для golangci-lint.md` | `098-arkhitekturnyy-kontrol-razrabotka-korporativnykh-linterov-dlya-golangci-lint.html` | 30 | ✅ Готово (30/30) |
+| **99** | Интеграция с ИИ, LLM-оркестрация и векторный поиск на Go | `99. Интеграция с ИИ, LLM-оркестрация и векторный поиск на Go.md` | `099-integratsiya-s-ii-llm-orkestratsiya-i-vektornyy-poisk-na-go.html` | 45 | ✅ Готово (45/45) |
+| **100** | Архитектурный Capstone: Проектирование и сквозной запуск отказоустойчивой HighLoad-платформы | `100. Архитектурный Capstone. Проектирование и сквозной запуск отказоустойчивой HighLoad-платформы.md` | `100-arkhitekturnyy-capstone-proektirovanie-i-skvoznoy-zapusk-otkazoustoychivoy-highload-platformy.html` | 50 | ✅ Готово (50/50) |
 
 ---
 
@@ -238,10 +238,10 @@
 /home/ut/work/go-workout/
 ├── dist/                             # Скомпилированный статический веб-сайт курса
 │   ├── index.html                    # Главный портал курса и Learning Paths
-│   ├── chapter1.html                 # Глава 01 (Пакеты и модули — 91 упр.)
-│   ├── chapter2.html                 # Глава 02 (25 упр.)
+│   ├── 001-pakety-i-moduli.html      # Глава 01 (Пакеты и модули — 91 упр.)
+│   ├── 002-kompilyatsiya-sborka-i-zapusk.html # Глава 02 (25 упр.)
 │   ├── ...
-│   ├── chapter100.html               # Глава 100 (Capstone — 50 упр.)
+│   ├── 100-arkhitekturnyy-capstone-proektirovanie-i-skvoznoy-zapusk-otkazoustoychivoy-highload-platformy.html # Глава 100 (Capstone — 50 упр.)
 │   ├── favicon.ico                   # Фавикон ICO
 │   └── favicon.svg                   # Фавикон SVG
 ├── sources/                          # Исходные задачники глав (Markdown)
@@ -361,19 +361,19 @@ print(f"✅ chapterN_data.json готов ({len(all_ex)} упр.)")
 
 ### Шаг 4: Обновление `builder/build_all.py` и компиляция всех HTML страниц
 1. Загрузить `chapterN_data.json` в `build_all.py`.
-2. Добавить `N: ('chapterN.html', 'K/K')` в `known_pages` внутри `build_sidebar()`.
+2. Добавить `N: ('NNN-slug.html', 'K/K')` в `status_map` внутри `build_sidebar()`.
 3. Обновить ссылку в футере главы $N-1$ с `(Скоро)` на активную ссылку `Глава N Название →` (стиль фона `#00ADD8`, цвет текста `#000`, жирный шрифт, **без скобок в названии**).
 4. Создать функцию `build_chapterN_html(chapters)`:
    - **Hero-блок:** `hero-tag`, `hero-title`, `hero-desc` (лаконичное введение на полную ширину, **без блока hero-stats**).
    - **Секционные группы:** 3–4 логических раздела с разделителями `section-separator`.
    - **Карточки упражнений:** вызов `build_exercise_card(ex)`.
    - **Футер:** блок поздравления с кнопкой возврата на главу $N-1$ (`← Глава N-1 Название`) и ссылкой на следующую главу $N+1$ (`Глава N+1 Название (Скоро) →`). **Никаких круглых скобок вокруг названий глав в ссылках!**
-5. Добавить `('chapterN.html', build_chapterN_html)` в список `pages` в `main()`.
-6. Запустить `python3 builder/build_all.py` — это пересоберет **все страницы** (`index.html` ... `chapterN.html`), обеспечив 100% синхронизацию сайдбаров и ссылок.
+5. Добавить `('NNN-slug.html', build_chapterN_html)` в список `pages` в `main()`.
+6. Запустить `python3 builder/build_all.py` — это пересоберет **все страницы** (`index.html` и все `NNN-slug.html`), обеспечив 100% синхронизацию сайдбаров и ссылок.
 
 ### Шаг 5: Финальный технический аудит (`builder/audit_all.py`)
 1. Добавить `chapterN_data.json` в `builder/audit_all.py`.
-2. Добавить `('chapterN.html', N, len(all_chN))` в список `html_files`.
+2. Добавить `('NNN-slug.html', N, len(all_chN))` в список `html_files`.
 3. Запустить `python3 builder/audit_all.py` и убедиться в выводе:
    ```text
    ✅ ИДЕАЛЬНО: Все M упражнений в N главах успешно прошли синтаксический, структурный и HTML-аудит!
@@ -433,7 +433,7 @@ print(f"✅ chapterN_data.json готов ({len(all_ex)} упр.)")
 | **Создавать канал сигналов без буфера `make(chan os.Signal)`** | Всегда создавать `make(chan os.Signal, 1)`. | Небуферизированный канал может потерять сигнал ОС (`SIGINT`/`SIGTERM`), если горутина не успела встать на чтение. |
 | **Копировать `sync.Mutex` по значению** | Всегда использовать Pointer Receiver `(s *SafeStruct)` или указатель `*sync.Mutex`. | Копирование структуры с мьютексом копирует его внутреннее битовое состояние, вызывая Data Race и дедлоки (`go vet copylocks`). |
 | **Возвращать типизированный `nil` в интерфейсе `error`** | Всегда явно возвращать `return nil`, если ошибки нет. | `(*MyError)(nil)` внутри интерфейса `error` имеет ненулевой тип `itab`, из-за чего проверка `if err != nil` ошибочно возвращает `true`. |
-| **Генерировать только HTML новой главы без пересборки старых** | Запускать `build_all.py` для пересборки **всех страниц** (`index.html` ... `chapterN.html`). | Обеспечивает единую синхронизацию сайдбара, счетчиков и ссылок навигации во всем учебнике. |
+| **Генерировать только HTML новой главы без пересборки старых** | Запускать `build_all.py` для пересборки **всех страниц** (`index.html` и всех глав курса). | Обеспечивает единую синхронизацию сайдбара, счетчиков и ссылок навигации во всем учебнике. |
 
 ---
 
@@ -446,7 +446,7 @@ print(f"✅ chapterN_data.json готов ({len(all_ex)} упр.)")
 1. Прочитай файл "N. <Название>.md" и извлеки все упражнения без исключения (номера 1..K).
 2. Создай builder/gen_chN_p1.py и builder/gen_chN_p2.py со всеми обязательными блоками для каждого упражнения через r"""...""".
 3. Слей части в builder/chapterN_data.json и выполни валидацию синтаксиса через gofmt -e.
-4. Обнови builder/build_all.py (добавь chapterN_data.json, build_chapterN_html, обнови сайдбар и футеры) и пересобери все страницы (index.html ... chapterN.html).
+4. Обнови builder/build_all.py (добавь chapterN_data.json, build_chapterN_html, обнови сайдбар и футеры) и пересобери все страницы.
 5. Обнови builder/audit_all.py и запусти финальный аудит всех глав (синтаксис Go, якоря #ex-*, структура).
 6. Закоммить результат с сообщением "Module N".
 ```
