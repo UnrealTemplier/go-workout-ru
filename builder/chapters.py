@@ -2,8 +2,11 @@ import os
 import glob
 import re
 
+REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+SOURCES_DIR = os.path.join(REPO_ROOT, "sources")
+
 def get_all_chapters():
-    files = glob.glob('/home/ut/work/go-workout/*.md')
+    files = glob.glob(os.path.join(SOURCES_DIR, "*.md"))
     chapters = []
     for f in files:
         base = os.path.basename(f)

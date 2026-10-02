@@ -843,11 +843,15 @@ html_files = [
     ('chapter100.html', 100, len(all_ch100)),
 ]
 
+REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+DIST_DIR = os.path.join(REPO_ROOT, "dist")
+
 for fname, ch_num, count in html_files:
-    if not os.path.exists(fname):
-        issues.append(f"Файл {fname} не найден на диске!")
+    fpath = os.path.join(DIST_DIR, fname)
+    if not os.path.exists(fpath):
+        issues.append(f"Файл {fpath} не найден на диске!")
         continue
-    with open(fname, 'r', encoding='utf-8') as f:
+    with open(fpath, 'r', encoding='utf-8') as f:
         content = f.read()
     
     # Check all anchors
@@ -869,11 +873,12 @@ for fname, ch_num, count in html_files:
     if not content.endswith('</html>\n') and not content.endswith('</html>'):
         issues.append(f"Файл {fname} некорректно завершен (нет </html>)!")
 
-# Check portal page index.html
-if not os.path.exists('index.html'):
-    issues.append("Файл портала index.html не найден на диске!")
+# Check portal page index.html in dist
+portal_path = os.path.join(DIST_DIR, 'index.html')
+if not os.path.exists(portal_path):
+    issues.append("Файл портала dist/index.html не найден на диске!")
 else:
-    with open('index.html', 'r', encoding='utf-8') as f:
+    with open(portal_path, 'r', encoding='utf-8') as f:
         portal_content = f.read()
     if 'chapter1.html' not in portal_content:
         issues.append("В файле портала index.html отсутствует ссылка на chapter1.html!")

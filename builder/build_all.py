@@ -6496,6 +6496,18 @@ def build_portal_html(chapters):
 
 
 if __name__ == '__main__':
+    REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+    DIST_DIR = os.path.join(REPO_ROOT, "dist")
+    os.makedirs(DIST_DIR, exist_ok=True)
+
+    # Sync favicons into dist/
+    for fav in ['favicon.ico', 'favicon.svg']:
+        src_fav = os.path.join(REPO_ROOT, fav)
+        dst_fav = os.path.join(DIST_DIR, fav)
+        if os.path.exists(src_fav):
+            import shutil
+            shutil.copy2(src_fav, dst_fav)
+
     chapters = get_all_chapters()
     
     pages = [
@@ -6603,7 +6615,7 @@ if __name__ == '__main__':
     ]
     
     for filename, builder_fn in pages:
-        path = os.path.join('/home/ut/work/go-workout', filename)
+        path = os.path.join(DIST_DIR, filename)
         content = builder_fn(chapters)
         with open(path, 'w', encoding='utf-8') as f:
             f.write(content)
