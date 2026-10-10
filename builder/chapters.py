@@ -3,7 +3,7 @@ import glob
 import re
 
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-SOURCES_DIR = os.path.join(REPO_ROOT, "sources")
+SOURCES_DIR = os.path.join(REPO_ROOT, "builder", "legacy_sources")  # краткие формулировки задач старого генератора
 
 TRANSLIT_MAP = {
     'а': 'a', 'б': 'b', 'в': 'v', 'г': 'g', 'д': 'd', 'е': 'e', 'ё': 'yo',
