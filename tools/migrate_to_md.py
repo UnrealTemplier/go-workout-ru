@@ -28,6 +28,7 @@ import json
 import os
 import re
 import sys
+import textwrap
 
 LEGACY_SOURCES = os.path.join("builder", "legacy_sources")
 TEXT_FIELDS = [
@@ -97,7 +98,9 @@ def load_meta(repo, tasks):
                 if isinstance(txt, str) and "Поздравляем" in txt and "<h3" in txt:
                     h3 = re.search(r"<h3[^>]*>(.*?)</h3>", txt, re.S)
                     paras = [_text(x) for x in re.findall(r"<p[^>]*>(.*?)</p>", txt, re.S)]
-                    footer = {"title": _text(h3.group(1)) if h3 else "", "paras": [p for p in paras if p]}
+                    badge = re.search(r"<div[^>]*>([^<]+)</div>\s*<h3", txt)   # «Глава 84 завершена!» (главы 83–100)
+                    footer = {"badge": _text(badge.group(1)) if badge else "",
+                              "title": _text(h3.group(1)) if h3 else "", "paras": [p for p in paras if p]}
                     break
         sections = None
         for node in ast.walk(fn):
@@ -156,16 +159,21 @@ def load_statements(repo, folder=LEGACY_SOURCES):
             text = fp.read()
         intro, body = text.split("\n---\n", 1) if "\n---\n" in text else ("", text)
         items, cur, buf = {}, None, []
+
+        def item_text(buf):
+            # продолжение пункта «N. …» сдвинуто под текст пункта: без номера сдвиг снимается,
+            # иначе ограда с отступом 4 после абзаца стала бы текстом
+            return (buf[0] + "\n" + textwrap.dedent("\n".join(buf[1:]))).strip()
         for line in body.split("\n"):
             mm = re.match(r"^(\d+)\.\s+(.*)$", line)
             if mm and (cur is None or int(mm.group(1)) == cur + 1):
                 if cur is not None:
-                    items[cur] = "\n".join(buf).strip()
+                    items[cur] = item_text(buf)
                 cur, buf = int(mm.group(1)), [mm.group(2)]
             elif cur is not None:
                 buf.append(line)
         if cur is not None:
-            items[cur] = "\n".join(buf).strip()
+            items[cur] = item_text(buf)
         out[n] = {"title": m.group(2), "intro": intro.strip(), "items": items}
     return out
 
@@ -210,7 +218,7 @@ def short_name(title, limit=NAME_MAX):
             t = cut[:sp] if sp >= 20 else t[:limit]
     while True:
         before = t
-        t = t.rstrip(" .,;:-–—&+(")
+        t = t.rstrip(" .,;:-–—&+(~")       # «…~» — шаблон *~ в .gitignore скрыл бы файл
         words = t.split(" ")
         if len(words) > 1 and words[-1].lower() in DANGLING:
             t = " ".join(words[:-1])
@@ -241,7 +249,8 @@ def plan_names(tasks, meta, statements):
 
 ESCAPABLE = set("\\`*_{}[]()>#+-.!")
 CTRL = {"\r": "r", "\t": "t", "\x07": "a", "\x08": "b", "\x0c": "f", "\x0b": "v"}
-SHELL_DOLLAR = re.compile(r"\$(?=\([a-z]|\{[A-Za-z_])")   # $(команда), ${VAR} — подстановки shell, не формулы
+# $(команда …), ${VAR} — подстановки shell, не формулы; $(r, s)$ — формула (после имени запятая)
+SHELL_DOLLAR = re.compile(r"\$(?=\([a-z][\w.-]+[\s)]|\{[A-Za-z_])")
 LATEXISH = re.compile(r"\\[A-Za-z]+|[\^_{}]|\\[,;!|%$&#]")
 MATHISH = re.compile(r"^[\sA-Za-z0-9+\-*/=<>()|.,!'′≤≥≈×·∞%\[\]:]+$")
 
@@ -289,6 +298,8 @@ def escape_text(seg, stats):
     seg = re.sub(r"\\(?=[\\`*_{}\[\]()>#+\-.!])", lambda m: (stats.update(["\\ перед спецсимволом"]), "\\\\")[1], seg)
     seg = re.sub(r"&(?=#?[A-Za-z0-9]+;)", lambda m: (stats.update(["&сущность;"]), "&amp;")[1], seg)
     seg = re.sub(r"<(?=[A-Za-z/!?])", lambda m: (stats.update(["< тег"]), "&lt;")[1], seg)
+    # Max[T any](a, b T) — сигнатура Go, а не ссылка Markdown; настоящие ссылки ведут на http(s)
+    seg = re.sub(r"\[(?=(?:[^\[\]\n]|\[[^\[\]\n]*\])*\]\((?!https?://))", lambda m: (stats.update(["[…](…) не ссылка"]), "\\[")[1], seg)
     return seg
 
 
@@ -410,8 +421,38 @@ def restore_crlf_code(text, stats, log):
     return re.sub(r"`[^`]*\r\n[^`]*`", fix, text)
 
 
+LIST_ITEM = re.compile(r"^\s*(?:[-*+]|\d+[.)])\s")
+
+
+def dedent_orphan_fences(text, stats):
+    """Ограда с отступом ≥ 4 не в пункте списка: в Markdown это продолжение абзаца, старый сайт показывал код."""
+    lines = text.split("\n")
+    i = 0
+    while i < len(lines):
+        m = re.match(r"^( {4,})```", lines[i])
+        if m:
+            ind = len(m.group(1))
+            j = i - 1
+            while j >= 0 and (not lines[j].strip() or len(lines[j]) - len(lines[j].lstrip()) >= ind):
+                j -= 1
+            end = next((k for k in range(i + 1, len(lines)) if lines[k].strip().startswith("```")), None)
+            if end is not None and not (j >= 0 and LIST_ITEM.match(lines[j])):
+                for k in range(i, end + 1):
+                    lines[k] = lines[k][ind:] if lines[k][:ind].strip() == "" else lines[k].lstrip()
+                stats["ограда с отступом вне списка выровнена"] += 1
+                i = end
+            elif end is not None:
+                i = end
+        elif lines[i].strip().startswith("```"):
+            end = next((k for k in range(i + 1, len(lines)) if lines[k].strip().startswith("```")), len(lines))
+            i = end
+        i += 1
+    return "\n".join(lines)
+
+
 def field_md(v, stats, ctrl_log):
     text = close_fence(restore_lf(restore_crlf_code(field_text(v), stats, ctrl_log), stats, ctrl_log), stats)
+    text = dedent_orphan_fences(text, stats)
     lines = text.split("\n")
     out, fence, fence_mark = [], False, ""
     i = 0
@@ -511,12 +552,12 @@ def task_md(t, statement, stats, ctrl_log):
     if statement is not None:
         statement = close_fence(statement, stats)
     if statement is not None and norm_compare(task_text) == norm_compare(statement):
-        out.append(statement)
+        out.append(field_md(statement, stats, ctrl_log))
         stats["U15: условие совпало, взят текст sources"] += 1
     else:
         out.append(field_md(t["task"], stats, ctrl_log))
         if statement is not None:
-            out += ["", "### Исходная формулировка", "", statement]
+            out += ["", "### Исходная формулировка", "", field_md(statement, stats, ctrl_log)]
             stats["U15: добавлена исходная формулировка"] += 1
     for f, title in TEXT_FIELDS[1:]:
         v = t.get(f)
@@ -543,16 +584,19 @@ def chapter_md(n, meta, topics, statements, stats, ctrl_log):
     intro = statements[n]["intro"]
     if intro:
         lines = intro.split("\n")
+        head = ""
         if lines and lines[0].startswith("# "):
             head = lines[0][2:].strip()
             lines = lines[1:]
-            if head != m["hero_title"]:
-                lines = [f"**{head}**", ""] + lines
         body = "\n".join(lines).strip()
+        if head and head != m["hero_title"]:
+            body = f"**{head}**\n\n{body}".strip()
         if body:
             out += ["", "## Об упражнениях главы", "", body]
     if m["footer"]:
         out += ["", "## Итог главы", ""]
+        if m["footer"]["badge"]:
+            out += [f"*{convert_line(m['footer']['badge'], stats, ctrl_log)}*", ""]
         if m["footer"]["title"]:
             out += [f"**{convert_line(m['footer']['title'], stats, ctrl_log)}**", ""]
         out += [convert_line(p, stats, ctrl_log) + "\n" for p in m["footer"]["paras"]]

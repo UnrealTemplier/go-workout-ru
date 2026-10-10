@@ -4,7 +4,7 @@ tools/verify_migration.py — проверка полноты миграции g
 Сравнивает дерево Markdown (sources/) с исходными данными старого генератора, не доверяя мигратору:
   1. Структура: 100 глав, 369 разделов, 369 «00. О разделе.md», 100 «000. О главе.md», 7 666 задач;
      состав задач каждого раздела равен его диапазону.
-  2. Данные: H1 раздела равен исходному названию; описания разделов, hero глав на месте; каждый
+  2. Данные: H1 раздела равен исходному названию; описания разделов, hero и итоговый блок глав на месте; каждый
      code_blocks[].code (без обрамляющих переводов строк) встречается в Markdown побайтно; каждое непустое
      поле задачи перенесено (по словам, после снятия экранирования).
   3. Условие (U15): ни одно предложение из task и из краткой формулировки не потеряно.
@@ -118,6 +118,10 @@ def main(argv=None):
         for key in ("hero_title", "hero_tag", "hero_desc"):
             if meta[n][key] not in hero_plain:
                 problems.append(f"глава {n}: нет {key}")
+        foot = meta[n]["footer"] or {}
+        for part in [foot.get("badge", ""), foot.get("title", "")] + foot.get("paras", []):
+            if part and not contains_words(words(hero), words(part)):
+                problems.append(f"глава {n}: итоговый блок перенесён не полностью: {part[:40]}")
         for t in tasks[n]:
             path = files_by_chapter[n].get(t["num"])
             if not path:
