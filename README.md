@@ -2,11 +2,11 @@
 
 > *«Практика без теории слепа, теория без практики мертва. Единственный способ стать высококлассным инженером — писать много качественного, идиоматичного кода».*
 
-[![Status](https://img.shields.io/badge/Status-100%25_Completed-10b981?style=for-the-badge&logo=git)](dist/index.html)
-[![Chapters](https://img.shields.io/badge/Chapters-100_из_100-6366f1?style=for-the-badge)](dist/index.html)
-[![Exercises](https://img.shields.io/badge/Exercises-7_666_задач-f59e0b?style=for-the-badge)](dist/index.html)
+[![Status](https://img.shields.io/badge/Status-100%25_Completed-10b981?style=for-the-badge&logo=git)](sources/)
+[![Chapters](https://img.shields.io/badge/Chapters-100_из_100-6366f1?style=for-the-badge)](sources/)
+[![Exercises](https://img.shields.io/badge/Exercises-7_666_задач-f59e0b?style=for-the-badge)](sources/)
 [![Go Versions](https://img.shields.io/badge/Go_Versions-1.22_--_1.24+-00ADD8?style=for-the-badge&logo=go)](https://go.dev/)
-[![Offline First](https://img.shields.io/badge/Offline_First-100%25_Static-10b981?style=for-the-badge&logo=html5)](dist/index.html)
+[![Offline First](https://img.shields.io/badge/Offline_First-100%25_Static-10b981?style=for-the-badge&logo=html5)](sources/)
 
 Интерактивный веб-тренажер и исчерпывающий задачник на русском языке, охватывающий **100 глав** и **7 666 детально разобранных упражнений** с теорией, пошаговыми действиями, компилируемым кодом, разбором низкоуровневой механики (GMP, аллокатор mcache/mcentral/mheap, GC триколор, epoll/netpoller), частыми ловушками и вопросами с реальных собеседований в BigTech (**Яндекс, Ozon, Авито, Т-Банк, VK, Wildberries, Lamoda, Касперский**).
 
@@ -14,7 +14,7 @@
 
 ## 🧭 Архитектура проекта
 
-> Идёт перенос на движок [html-textbook-engine](https://github.com/UnrealTemplier/html-textbook-engine) (трек Б). Контент уже в Markdown в `sources/`; опубликованный сайт пока собран старым генератором — его заменит сборка в CI после слияния ветки `track-b/ci-and-legacy-removal`. Подробности — `AGENTS.md`, § 0.
+Контент хранится в Markdown в `sources/`, сайт собирает движок [html-textbook-engine](https://github.com/UnrealTemplier/html-textbook-engine) в GitHub Actions и публикует на GitHub Pages только после успешного аудита. Подробности — `AGENTS.md`.
 
 ```text
 go-workout/
@@ -30,11 +30,10 @@ go-workout/
 ├── engine/                           # Копия ядра html-textbook-engine (не редактируется)
 ├── book.toml                         # Настройки книги для движка: траектории, тексты главной, формулы
 ├── book/hooks.py                     # Хук аудита: gofmt -e по всем блокам Go
-├── tools/                            # Разовые инструменты переноса и их отчёты
-├── builder/                          # Старый генератор и данные (заморожены, удаляются в B5)
-├── dist/                             # Старый сайт, пока публикуемый GitHub Pages
+├── tools/                            # Отчёты разового переноса в Markdown
 ├── factcheck/                        # Отчёты фактчека по главам
-├── .github/workflows/pages.yml       # Деплой dist/ на GitHub Pages
+├── .github/workflows/pages.yml       # CI: сборка → аудит → GitHub Pages
+├── requirements.txt                  # markdown>=3.10,<3.11
 ├── AGENTS.md                         # Инструкции для разработчиков и ИИ-агентов
 └── README.md
 ```
@@ -69,10 +68,11 @@ go-workout/
 
 ### Сборка и аудит
 ```bash
-python3 -m engine.build --all --strict --dist /tmp/gw-dist
-python3 -m engine.audit --dist /tmp/gw-dist --repo-root . --strict
+pip install -r requirements.txt
+python3 -m engine.build --all --strict
+python3 -m engine.audit --strict
 ```
-Пока не слита ветка B5, собирайте во временный каталог: в закоммиченном `dist/` лежит старый сайт. Аудит проверяет ссылки и якоря всех 8 136 страниц, отсутствие обращений к внешней сети, совместимость имён файлов и синтаксис всех блоков Go (`gofmt -e`).
+Сборка занимает ~16 секунд и кладёт 8 136 страниц в `dist/` (в Git не хранится). Аудит проверяет ссылки и якоря всех страниц, отсутствие обращений к внешней сети, совместимость имён файлов и синтаксис всех блоков Go (`gofmt -e`).
 
 ### Локальный просмотр
-Откройте `/tmp/gw-dist/index.html` прямо в браузере: сайт работает по `file:///` без веб-сервера и без сети.
+Откройте `dist/index.html` прямо в браузере: сайт работает по `file:///` без веб-сервера и без сети.
