@@ -902,7 +902,7 @@ summary:focus-visible,
 /* Контейнер статьи + TOC: оглавление прижато к правому краю окна */
 .content-wrapper {
   margin: 0;
-  padding: 36px 0 36px 32px;
+  padding: 36px 16px 36px 32px;
   display: flex;
   gap: 40px;
   width: 100%;
