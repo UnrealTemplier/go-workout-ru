@@ -899,10 +899,10 @@ summary:focus-visible,
   font-weight: 500;
 }
 
-/* Контейнер статьи + TOC: оглавление прижато к правому краю окна */
+/* Контейнер статьи + TOC */
 .content-wrapper {
-  margin: 0;
-  padding: 36px 16px 36px 32px;
+  margin: 0 auto;
+  padding: 36px 32px;
   display: flex;
   gap: 40px;
   width: 100%;
