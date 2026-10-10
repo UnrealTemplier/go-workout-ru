@@ -1523,6 +1523,7 @@ tr:hover {
 /* Оглавление статьи (TOC) справа */
 .article-toc {
   width: max-content;
+  margin-left: auto;
   position: sticky;
   top: 80px;
   align-self: flex-start;
