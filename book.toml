@@ -46,8 +46,6 @@ static_module_list = false
 
 [features]
 conditional_scripts = true
-# Оглавление «На этой странице» — у правого края окна
-toc_at_viewport_edge = true
 
 [branding]
 logo_title_text = "Backend Workout"
