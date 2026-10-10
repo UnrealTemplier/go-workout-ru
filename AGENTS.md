@@ -30,6 +30,7 @@ go-workout/
 ├── tools/                   # Отчёты разового переноса (migration-report.md, visible-text-report.md, short-names.tsv, legacy-statement-notes.md)
 ├── fact-checks/             # Отчёты фактчека: fact-checks/<N>/<N>-<модель>-<роль>.md (§ 8)
 ├── .github/workflows/pages.yml  # CI: сборка → аудит → публикация на GitHub Pages
+├── scripts/                 # Скрипты запуска всех команд одним щелчком (*.sh / *.bat, меню menu.*), см. scripts/README.md
 ├── requirements.txt         # markdown>=3.10,<3.11
 ├── favicon.ico / favicon.svg
 ├── AGENTS.md / README.md
@@ -96,6 +97,8 @@ package main
 ## ⚙️ 4. Сборка, аудит и публикация
 
 Нужны Python ≥ 3.11 с `pip install -r requirements.txt`, Go (для `gofmt`) и, по желанию, Firefox (рантайм-проверки).
+
+Каждая команда есть готовым скриптом в `scripts/` (`scripts/check.sh` — строгая сборка и аудит перед коммитом, `build`, `build-clean`, `build-chapter`, `audit-*`, `runtime-projection`, `tests`, `engine-sync`, `open-site`; `*.sh` для Linux и macOS, `*.bat` для Windows); `scripts/menu.sh` / `scripts/menu.bat` — меню со всеми командами.
 
 ```bash
 python3 -m engine.build --all --strict      # ~16 с: 8 136 страниц в dist/

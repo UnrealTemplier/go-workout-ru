@@ -34,6 +34,7 @@ go-workout/
 ├── fact-checks/                      # Отчёты фактчека: fact-checks/<номер главы>/
 ├── .github/workflows/pages.yml       # CI: сборка → аудит → GitHub Pages
 ├── requirements.txt                  # markdown>=3.10,<3.11
+├── scripts/                          # Скрипты запуска команд одним щелчком (*.sh, *.bat, меню menu.*)
 ├── AGENTS.md                         # Инструкции для разработчиков и ИИ-агентов
 └── README.md
 ```
@@ -73,6 +74,8 @@ python3 -m engine.build --all --strict
 python3 -m engine.audit --strict
 ```
 Сборка занимает ~16 секунд и кладёт 8 136 страниц в `dist/` (в Git не хранится). Аудит проверяет ссылки и якоря всех страниц, отсутствие обращений к внешней сети, совместимость имён файлов и синтаксис всех блоков Go (`gofmt -e`).
+
+Те же команды одним щелчком — `scripts/check.sh`, `scripts/build.sh`, `scripts/open-site.sh` (в Windows — `.bat`); меню всех команд — `scripts/menu.sh` / `scripts/menu.bat`.
 
 ### Локальный просмотр
 Откройте `dist/index.html` прямо в браузере: сайт работает по `file:///` без веб-сервера и без сети.
