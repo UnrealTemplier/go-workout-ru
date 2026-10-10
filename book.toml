@@ -1,0 +1,118 @@
+# book.toml — конфигурация go-workout для движка html-textbook-engine (engine/config.py).
+# Спецификация — go-textbook/engine-extraction/html-engine-extracting-analysis-final.md, § 7.4.
+# Тексты главной перенесены со старого портала (builder/build_all.py).
+
+# Оверлеи навигации: 7 сквозных траекторий старого портала (learning_paths), номера — главы
+overlays = [
+  { title = "🔷 Junior → Middle: Core Go & Idiomatic Engineering", modules = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19] },
+  { title = "⚡ Middle+ → Senior: High-Concurrency & Low-Latency Network", modules = [20, 21, 22, 23, 24, 25, 26, 74, 75, 76, 77, 82] },
+  { title = "💾 Middle+ → Senior+: Storage, Caching & Data Consistency", modules = [27, 28, 61, 62, 63, 64, 85, 96, 97] },
+  { title = "🌐 Senior → Staff/Principal: Distributed Systems & Event-Driven Architecture", modules = [32, 33, 34, 35, 36, 37, 38, 68, 69, 70, 71, 72, 73, 84, 86, 87, 95] },
+  { title = "📊 Senior → Tech Lead: Enterprise Observability & Reliability Engineering", modules = [29, 30, 31, 39, 40, 41, 42, 43, 44, 80, 89, 94] },
+  { title = "🛡️ Senior → Platform Lead: Cloud-Native, DevOps & Platform Security", modules = [45, 46, 47, 78, 79, 81, 83, 90, 91, 93] },
+  { title = "🧠 Staff / Principal Engineer: Go Internals, Compilers, Tooling & AI", modules = [48, 49, 50, 51, 52, 53, 54, 55, 56, 92, 98, 99, 100] },
+]
+
+[project]
+version = "1.0.0"
+# Префикс ключей localStorage: книги на одном origin GitHub Pages делят хранилище
+storage_prefix = "go_workout_"
+
+[content]
+root = "sources"
+# Короткие имена файлов — для редактора; полное название страницы — первый «# …»
+title_source = "h1"
+# «000. О главе.md» и «00. О разделе.md» — заглавные страницы глав и разделов
+index_file = '^0+\. '
+# Двойные квадратные скобки в задачах — код и данные, а не ссылки
+wikilinks = false
+clean_cliches = []
+
+[markdown]
+obsidian_lists = true
+indented_fences = true
+
+[math]
+# Мигратор переводит формулы $…$ в \(…\): одиночный $ в тексте задач — переменные shell и суммы
+delimiters = [
+  { left = "$$", right = "$$", display = true },
+  { left = '\(', right = '\)', display = false },
+]
+protect = ['\(', "$$"]
+
+[navigation]
+mode = "hybrid"
+static_module_list = false
+
+[features]
+conditional_scripts = true
+
+[branding]
+logo_title_text = "Backend Workout"
+logo_sub = "Go-тренажёр"
+logo_aria_label = "На главную: Go Backend Workout"
+favicon_ico = "favicon.ico"
+favicon_svg = "favicon.svg"
+
+[article_page]
+title_suffix_html = " | Go Backend Workout"
+meta_description_html = "{title} — задача тренажёра Go Backend Workout."
+footer_html = [
+  "Go Backend Workout • Русскоязычный тренажёр для бэкенд-инженеров на Go",
+  "Собрано движком html-textbook-engine без внешних зависимостей. Работает офлайн и по file:///.",
+]
+
+# Подстановки: {modules}, {articles}, {articles_grouped}, {mermaid}
+[index_page]
+title_html = "Go Backend Engineering Workout — тренажёр бэкенд-инженера на Go"
+meta_description_html = "Русскоязычный учебник-тренажёр для бэкенд-инженеров на Go: {modules} глав, {articles_grouped} задач с эталонными решениями."
+hero_badge_html = "Go Backend Engineering Workout"
+hero_title_html = "Тренажёр бэкенд-инженера на Go: от синтаксиса до Staff Capstone"
+quote_html = "Интерактивный русскоязычный учебник-тренажёр для бэкенд-инженеров, нацеленных на позиции Middle, Senior и Staff Go Developer в ведущих технологических компаниях (Яндекс, Ozon, Авито, Т-Банк, VK, Wildberries). Глубокое практическое погружение в компилятор, рантайм Go (GMP, GC триколор, epoll/netpoller), распределенные протоколы (Raft, Saga, Outbox, CDC), сетевую оптимизацию сокетов и системную изоляцию Linux."
+quote_author_html = ""
+search_placeholder = "Поиск по {articles_grouped} страницам (например: GMP, pgx, Raft, Outbox, epoll)..."
+stats = [
+  { value = "{modules}", label = "Глав курса" },
+  { value = "{articles}", label = "Страниц с задачами" },
+  { value = "7", label = "Сквозных образовательных траекторий" },
+  { value = "100%", label = "Offline &amp; file:///" },
+]
+catalog_title_html = "Полный каталог курса"
+catalog_sub_html = "{modules} глав от синтаксиса до Staff Capstone"
+roadmap_title_html = "Сквозные образовательные траектории (Learning Paths)"
+roadmap_steps = [
+  { badge = "🔷 Junior → Middle", title_html = "Core Go &amp; Idiomatic Engineering (главы 1–19)", text_html = "Синтаксис, система модулей, структуры данных, полиморфизм интерфейсов, дженерики, идиоматичная обработка ошибок и файловые операции." },
+  { badge = "⚡ Middle+ → Senior", title_html = "High-Concurrency &amp; Low-Latency Network (главы 20–26, 74–77, 82)", text_html = "Многопоточность без гонок данных, каналы и select, context, низкоуровневые сокеты TCP/UDP, event-loop gnet, lock-free и DoS-защита." },
+  { badge = "💾 Middle+ → Senior+", title_html = "Storage, Caching &amp; Data Consistency (главы 27, 28, 61–64, 85, 96, 97)", text_html = "Реляционные и NoSQL хранилища: пул pgx, Redis, ClickHouse, Mongo, CDC репликация, двухуровневый L1/L2 кэш с XFetch и Zero-Downtime миграции." },
+  { badge = "🌐 Senior → Staff/Principal", title_html = "Distributed Systems &amp; Event-Driven Architecture (главы 32–38, 68–73, 84, 86, 87, 95)", text_html = "Распределенные платформы: gRPC, Kafka, RabbitMQ, Saga, Outbox, консенсус Raft, etcd, CQRS/ES, очереди River/Asynq и Temporal.io." },
+  { badge = "📊 Senior → Tech Lead", title_html = "Enterprise Observability &amp; Reliability Engineering (главы 29–31, 39–44, 80, 89, 94)", text_html = "Полный стек надежности: Testcontainers, фаззинг, метрики Prometheus, OTel трассировка, pprof профилирование, Чистая архитектура, хаос-инженерия Toxiproxy." },
+  { badge = "🛡️ Senior → Platform Lead", title_html = "Cloud-Native, DevOps &amp; Platform Security (главы 45–47, 78, 79, 81, 83, 90, 91, 93)", text_html = "Инфраструктура и безопасность: Docker, Kubernetes, K8s Operators/CRD, Service Mesh, gRPC-Gateway, Reverse Proxy, Cloud KMS, SBOM, Seccomp." },
+  { badge = "🧠 Staff / Principal Engineer", title_html = "Go Internals, Compilers, Tooling &amp; AI (главы 48–56, 92, 98–100)", text_html = "Элитный рантайм: планировщик GMP, аллокатор mcache/mheap, GC, unsafe, CGO, AST, WebAssembly Wazero, корпоративные линтеры <code>go/analysis</code>, LLM RAG и Capstone." },
+]
+footer_html = [
+  "Go Backend Workout • Русскоязычный тренажёр для бэкенд-инженеров на Go",
+  "Полностью автономная сборка. Никаких трекеров, рекламы и внешних серверов.",
+]
+
+[audit]
+path_max = 180
+
+# Строки интерфейса движка (engine/strings/ru.toml): в тренажёре — главы и задачи
+[strings.sidebar]
+filter_label = "Фильтр по задачам"
+filter_placeholder = "Фильтр по задачам..."
+filter_aria = "Фильтр по задачам"
+content_aria = "Содержание тренажёра"
+articles_count = "Страниц:"
+
+[strings.article]
+module_tag = "Глава {n}"
+prev = "← Предыдущая страница"
+next = "Следующая страница →"
+
+[strings.index]
+search_label = "Поиск по задачам"
+search_aria = "Поиск по задачам"
+card_articles = "{n} страниц"
+card_sections = "📁 {n} разделов"
+card_start = "Начать главу →"
