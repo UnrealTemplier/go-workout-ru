@@ -117,6 +117,7 @@ python3 engine/tools/runtime_projection.py dist --out /tmp/gw-runtime.json   # K
 
 * `engine/` — копия ядра; источник правды — репозиторий `/home/ut/work/html-textbook-engine` (`github.com/UnrealTemplier/html-textbook-engine`). Здесь `engine/` **не редактируется**: исправление вносится в движок, выпускается версией и приходит командой `python3 -m engine.sync --from /home/ut/work/html-textbook-engine` (отдельный коммит `chore(engine): sync to vX.Y.Z`). Сборка сверяет `engine/.checksums.json` и предупреждает о локальных правках.
 * Всё, что относится к этой книге, — в `book.toml` и `book/`. Ключи и значения по умолчанию — `engine/config.py`, строки интерфейса — `engine/strings/ru.toml` (книга переопределяет их в `[strings]`).
+* Оглавление страницы «На этой странице» включено по наведению: `[toc] autohide = true` в `book.toml` (ядро 1.7.0). Блок скрыт, в шапке справа полупрозрачный значок; открывается по наведению на значок (зона 5% ширины окна), прячется, когда курсор уходит дальше зоны. Включено по команде владельца (2026-10-11).
 
 ---
 
