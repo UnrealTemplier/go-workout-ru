@@ -593,7 +593,7 @@ def render_article_page(
         {breadcrumbs_html}
       </header>
 
-      <main class="content-wrapper{' toc-at-edge' if config.features.toc_at_viewport_edge else ''}" id="main-content">
+      <main class="content-wrapper" id="main-content">
         <article class="article-body">
           {partial("article_header", config, ctx)}
 

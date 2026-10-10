@@ -84,13 +84,6 @@ class BookLayerTest(unittest.TestCase):
         self.assertEqual(read(dist, "assets/main.js"), "// свой main.js\n")
         self.assertEqual(read(dist, "assets/extra.css"), "body{}\n")
 
-    def test_toc_at_viewport_edge_is_opt_in(self):
-        _, dist = self.build()
-        self.assertIn('<main class="content-wrapper" id="main-content">', read(dist, "docs/01-modul/1-statya.html"))
-        write(self.root, "book.toml", BOOK_TOML + "\n[features]\ntoc_at_viewport_edge = true\n")
-        _, dist = self.build()
-        self.assertIn('<main class="content-wrapper toc-at-edge" id="main-content">', read(dist, "docs/01-modul/1-statya.html"))
-
     def test_hooks(self):
         write(self.root, "book/hooks.py", HOOKS)
         cfg, dist = self.build()

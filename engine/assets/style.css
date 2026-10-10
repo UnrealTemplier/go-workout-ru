@@ -899,20 +899,13 @@ summary:focus-visible,
   font-weight: 500;
 }
 
-/* Контейнер статьи + TOC */
+/* Контейнер статьи + TOC: оглавление прижато к правому краю окна */
 .content-wrapper {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 36px 32px;
+  margin: 0;
+  padding: 36px 0 36px 32px;
   display: flex;
   gap: 40px;
   width: 100%;
-}
-
-/* [features] toc_at_viewport_edge: оглавление прижато к правому краю окна */
-.content-wrapper.toc-at-edge {
-  max-width: none;
-  padding-right: 0;
 }
 
 .article-body {
@@ -1529,7 +1522,7 @@ tr:hover {
 
 /* Оглавление статьи (TOC) справа */
 .article-toc {
-  width: 240px;
+  width: max-content;
   position: sticky;
   top: 80px;
   align-self: flex-start;
