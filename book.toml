@@ -47,6 +47,10 @@ static_module_list = false
 [features]
 conditional_scripts = true
 
+# Оглавление «На этой странице» по наведению (ядро 1.7.0): блок скрыт, значок в шапке справа открывает его
+[toc]
+autohide = true
+
 [branding]
 logo_title_text = "Backend Workout"
 logo_sub = "Go-тренажёр"
