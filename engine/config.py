@@ -107,6 +107,8 @@ class MathConfig:
 class FeaturesConfig:
     # Подключать Mermaid, KaTeX и Prism только на страницах, где они нужны (анализ § 4.8.3)
     conditional_scripts: bool = True
+    # Оглавление страницы («На этой странице») прижимается к правому краю окна, а не стоит у текста статьи
+    toc_at_viewport_edge: bool = False
 
 
 @dataclass

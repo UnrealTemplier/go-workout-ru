@@ -909,6 +909,12 @@ summary:focus-visible,
   width: 100%;
 }
 
+/* [features] toc_at_viewport_edge: оглавление прижато к правому краю окна */
+.content-wrapper.toc-at-edge {
+  max-width: none;
+  padding-right: 0;
+}
+
 .article-body {
   flex: 1;
   min-width: 0;
