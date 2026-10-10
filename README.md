@@ -31,7 +31,7 @@ go-workout/
 ├── book.toml                         # Настройки книги для движка: траектории, тексты главной, формулы
 ├── book/hooks.py                     # Хук аудита: gofmt -e по всем блокам Go
 ├── tools/                            # Отчёты разового переноса в Markdown
-├── factcheck/                        # Отчёты фактчека по главам
+├── fact-checks/                      # Отчёты фактчека: fact-checks/<номер главы>/
 ├── .github/workflows/pages.yml       # CI: сборка → аудит → GitHub Pages
 ├── requirements.txt                  # markdown>=3.10,<3.11
 ├── AGENTS.md                         # Инструкции для разработчиков и ИИ-агентов

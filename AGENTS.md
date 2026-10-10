@@ -27,8 +27,8 @@ go-workout/
 ├── engine/                  # Копия ядра html-textbook-engine (не редактируется, § 5)
 ├── book.toml                # Настройки книги: заголовки из H1, индексные файлы, формулы, траектории, тексты главной
 ├── book/hooks.py            # Хук аудита: gofmt -e по всем блокам Go собранного сайта
-├── tools/                   # Отчёты разового переноса (migration-report.md, visible-text-report.md, short-names.tsv)
-├── factcheck/               # Отчёты фактчека по главам (NNN-gemini-scout.md)
+├── tools/                   # Отчёты разового переноса (migration-report.md, visible-text-report.md, short-names.tsv, legacy-statement-notes.md)
+├── fact-checks/             # Отчёты фактчека: fact-checks/<N>/<N>-<модель>-<роль>.md (§ 8)
 ├── .github/workflows/pages.yml  # CI: сборка → аудит → публикация на GitHub Pages
 ├── requirements.txt         # markdown>=3.10,<3.11
 ├── favicon.ico / favicon.svg
@@ -142,3 +142,14 @@ python3 engine/tools/runtime_projection.py dist --out /tmp/gw-runtime.json   # K
 * восстановленные испорченные команды LaTeX (U25: CR вместо `\r` и т. п.) и закрытые ограды (U23) — `tools/migration-report.md`.
 
 Впервые показаны поля, которых старый сайт не выводил: «Лучшие практики», «Самопроверка», «Тест-кейсы» (главы 78, 87, 88) и вопросы с собеседований у 80 задач. Короткие имена файлов (`tools/short-names.tsv`) сгенерированы инструментом и ждут проверки владельцем.
+
+---
+
+## 🔎 8. Фактчек
+
+Фактическая точность глав проверяется многоролевым конвейером моделей (Scout, Alt, Judge, Blind spot, Fact check, Arbiter, Editor, Review). Каждая роль пишет отчёт `fact-checks/<N>/<N>-<модель>-<роль>.md`, где `N` — номер главы без ведущих нулей (`fact-checks/7/7-gemini-scout.md`). Промпты ролей в репозитории не хранятся (их держит владелец; версия от 2026-10-10 рассчитана на запуск из корня этого репозитория).
+
+* Готовы скаут-отчёты глав 1–20. Они написаны до переноса в Markdown и несут блок «📌 Статус на 2026-10-10»: где теперь лежат задачи главы, во что превратились поля данных и что перенос уже исправил (пометки «✅ Статус на 2026-10-10» у кандидатов — например, испорченные формулы LaTeX).
+* Отчёты — рабочие материалы, а не источник правды: правки вносит только редактор, в `sources/`, по проверенным находкам. Порядок коммитов главы: `docs(fact-check): add chapter N <роль> report` → `fix(chapter-NNN): apply fact-check corrections` (в теле — ID находок).
+* Проверка после правок — `python3 -m engine.build --all --strict` и `python3 -m engine.audit --strict`; исправленный код собирается и запускается во временном каталоге.
+
