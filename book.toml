@@ -48,25 +48,28 @@ static_module_list = false
 conditional_scripts = true
 
 [branding]
-logo_title_text = "Backend Workout"
-logo_sub = "Go-тренажёр"
-logo_aria_label = "На главную: Go Backend Workout"
+# Логотип как в go-textbook: Go-вордмарк + BACKEND; иконка — гаечный ключ (стили — book/assets/extra.css)
+logo_icon_svg_file = "book/assets/logo-icon.svg"
+logo_title_svg_file = "book/assets/logo-go.svg"
+logo_title_text = " BACKEND"
+logo_sub = "Тренажёр"
+logo_aria_label = "На главную: Go Backend Тренажёр"
 favicon_ico = "favicon.ico"
 favicon_svg = "favicon.svg"
 
 [article_page]
-title_suffix_html = " | Go Backend Workout"
-meta_description_html = "{title} — задача тренажёра Go Backend Workout."
+title_suffix_html = " | Go Backend Тренажёр"
+meta_description_html = "{title} — задача Go Backend Тренажёра."
 footer_html = [
-  "Go Backend Workout • Русскоязычный тренажёр для бэкенд-инженеров на Go",
+  "Go Backend Тренажёр • Русскоязычная практика для бэкенд-инженеров на Go",
   "Собрано движком html-textbook-engine без внешних зависимостей. Работает офлайн и по file:///.",
 ]
 
 # Подстановки: {modules}, {articles}, {articles_grouped}, {mermaid}
 [index_page]
-title_html = "Go Backend Engineering Workout — тренажёр бэкенд-инженера на Go"
+title_html = "Go Backend Тренажёр — практика бэкенд-инженера на Go"
 meta_description_html = "Русскоязычный учебник-тренажёр для бэкенд-инженеров на Go: {modules} глав, {articles_grouped} задач с эталонными решениями."
-hero_badge_html = "Go Backend Engineering Workout"
+hero_badge_html = "Go Backend Тренажёр"
 hero_title_html = "Тренажёр бэкенд-инженера на Go: от синтаксиса до Staff Capstone"
 quote_html = "Интерактивный русскоязычный учебник-тренажёр для бэкенд-инженеров, нацеленных на позиции Middle, Senior и Staff Go Developer в ведущих технологических компаниях (Яндекс, Ozon, Авито, Т-Банк, VK, Wildberries). Глубокое практическое погружение в компилятор, рантайм Go (GMP, GC триколор, epoll/netpoller), распределенные протоколы (Raft, Saga, Outbox, CDC), сетевую оптимизацию сокетов и системную изоляцию Linux."
 quote_author_html = ""
@@ -90,7 +93,7 @@ roadmap_steps = [
   { badge = "🧠 Staff / Principal Engineer", title_html = "Go Internals, Compilers, Tooling &amp; AI (главы 48–56, 92, 98–100)", text_html = "Элитный рантайм: планировщик GMP, аллокатор mcache/mheap, GC, unsafe, CGO, AST, WebAssembly Wazero, корпоративные линтеры <code>go/analysis</code>, LLM RAG и Capstone." },
 ]
 footer_html = [
-  "Go Backend Workout • Русскоязычный тренажёр для бэкенд-инженеров на Go",
+  "Go Backend Тренажёр • Русскоязычная практика для бэкенд-инженеров на Go",
   "Полностью автономная сборка. Никаких трекеров, рекламы и внешних серверов.",
 ]
 
