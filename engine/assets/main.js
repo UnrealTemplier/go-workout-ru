@@ -502,6 +502,71 @@
     return Math.hypot(dx, dy);
   }
 
+  // Полоса прокрутки дерева — свой бегунок (.sidebar-thumb), нативную полосу скрываем: её цвет в браузерах
+  // меняется без перехода, и гасла она резко. Бегунок видим, пока идёт прокрутка или его тянут, и гаснет
+  // через 0.7 с без прокрутки (переход прозрачности 0.5 с). Тянется мышью и касанием.
+  function initSidebarScrollbar(sidebar, nav) {
+    const thumb = document.createElement('div');
+    thumb.className = 'sidebar-thumb';
+    thumb.setAttribute('aria-hidden', 'true');
+    sidebar.appendChild(thumb);
+
+    let hideTimer = null;
+    let drag = null;
+
+    function update() {
+      const max = nav.scrollHeight - nav.clientHeight;
+      if (max <= 0) {
+        thumb.style.display = 'none';
+        return;
+      }
+      thumb.style.display = '';
+      const height = Math.max(32, nav.clientHeight * nav.clientHeight / nav.scrollHeight);
+      const travel = nav.clientHeight - height;
+      thumb.style.height = height + 'px';
+      thumb.style.top = (nav.offsetTop + travel * nav.scrollTop / max) + 'px';
+    }
+
+    function show() {
+      sidebar.classList.add('is-scrolling');
+      clearTimeout(hideTimer);
+      hideTimer = setTimeout(function () {
+        if (!drag) sidebar.classList.remove('is-scrolling');
+      }, 700);
+    }
+
+    nav.addEventListener('scroll', function () {
+      update();
+      show();
+    }, { passive: true });
+    nav.addEventListener('toggle', update, true);
+    window.addEventListener('resize', update);
+    const filter = document.getElementById('sidebar-filter');
+    if (filter) filter.addEventListener('input', function () { setTimeout(update, 0); });
+
+    thumb.addEventListener('pointerdown', function (e) {
+      if (e.button !== 0) return;
+      drag = { y: e.clientY, top: nav.scrollTop };
+      sidebar.classList.add('is-scrolling');
+      e.preventDefault();
+    });
+    document.addEventListener('pointermove', function (e) {
+      if (!drag) return;
+      const max = nav.scrollHeight - nav.clientHeight;
+      const travel = nav.clientHeight - thumb.offsetHeight;
+      if (travel > 0) nav.scrollTop = drag.top + (e.clientY - drag.y) * max / travel;
+    });
+    function endDrag() {
+      if (!drag) return;
+      drag = null;
+      show();
+    }
+    document.addEventListener('pointerup', endDrag);
+    document.addEventListener('pointercancel', endDrag);
+
+    update();
+  }
+
   function initSidebar() {
     const sidebar = document.getElementById('app-sidebar');
     const toggleBtn = document.getElementById('toggle-sidebar');
@@ -522,6 +587,9 @@
     // панель открывалась бы до click и накрывала кнопку, а click уходил бы в ссылку «Главная» в её шапке.
     document.addEventListener('pointermove', function (e) {
       if (e.pointerType !== 'mouse') return;
+      // Узкий экран (≤768px): наведения нет, панель открывает и закрывает только кнопка. Иначе курсор
+      // у кнопки (она в левой зоне) открывал бы панель, и клик по кнопке сразу её закрывал бы.
+      if (window.matchMedia('(max-width: 768px)').matches) return;
       const radius = window.innerWidth * 0.05;
       if (isOpen()) {
         const focusInside = sidebar.contains(document.activeElement);
@@ -563,18 +631,8 @@
       if (e.key === 'Escape') setOpen(false);
     });
 
-    // Полоса прокрутки дерева видна только во время прокрутки (стили: .sidebar-content.is-scrolling)
     const nav = document.getElementById('sidebar-content');
-    if (nav) {
-      let hideTimer = null;
-      nav.addEventListener('scroll', function () {
-        nav.classList.add('is-scrolling');
-        clearTimeout(hideTimer);
-        hideTimer = setTimeout(function () {
-          nav.classList.remove('is-scrolling');
-        }, 700);
-      }, { passive: true });
-    }
+    if (nav) initSidebarScrollbar(sidebar, nav);
   }
 
   // -------------------------------------------------------------------------
@@ -986,7 +1044,7 @@
   }
 
   // -------------------------------------------------------------------------
-  // 11. Оглавление по наведению ([toc] autohide): значок в шапке открывает блок, уход мыши прячет.
+  // 11. Оглавление по наведению: значок в шапке открывает блок, уход мыши прячет.
   //     Зона отклика — 5% ширины окна: расстояние от курсора до прямоугольника значка или блока.
   //     Пока блок открыт, «содержимое» — блок и значок вместе. Без значка на странице ничего не делает.
   // -------------------------------------------------------------------------

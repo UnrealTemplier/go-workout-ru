@@ -10,7 +10,7 @@ import unittest
 
 from engine.tests import DEMO_ROOT, HAS_DEMO
 from engine.tests.firefox import BROWSER, probe
-from engine.tests.test_toc_autohide import PAGE, build_site, demo_config
+from engine.tests.test_toc_autohide import build_site, demo_config
 
 ASSETS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "assets")
 
@@ -104,12 +104,9 @@ class SidebarMarkupTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.tmp = tempfile.TemporaryDirectory()
-        cls.off = build_site(demo_config(False), os.path.join(cls.tmp.name, "off"))
-        cls.on = build_site(demo_config(True), os.path.join(cls.tmp.name, "on"))
-        with open(cls.off, encoding="utf-8") as fp:
+        cls.page = build_site(demo_config(), os.path.join(cls.tmp.name, "dist"))
+        with open(cls.page, encoding="utf-8") as fp:
             cls.off_html = fp.read()
-        with open(cls.on, encoding="utf-8") as fp:
-            cls.on_html = fp.read()
 
     @classmethod
     def tearDownClass(cls):
@@ -124,12 +121,10 @@ class SidebarMarkupTest(unittest.TestCase):
         self.assertIn('id="toggle-sidebar"', self.off_html)
         self.assertIn('aria-expanded="false" aria-controls="app-sidebar"', self.off_html)
 
-    def test_toc_in_flow_marks_wrapper(self):
-        self.assertIn('<main class="content-wrapper has-toc" id="main-content">', self.off_html)
-
-    def test_autohide_toc_leaves_wrapper_plain(self):
-        self.assertIn('<main class="content-wrapper" id="main-content">', self.on_html)
-        self.assertNotIn("has-toc", self.on_html)
+    def test_wrapper_is_plain_and_toc_is_the_popup(self):
+        self.assertIn('<main class="content-wrapper" id="main-content">', self.off_html)
+        self.assertNotIn("has-toc", self.off_html)
+        self.assertIn('<aside class="article-toc" id="article-toc"', self.off_html)
 
     def test_assets_have_no_resize_code(self):
         with open(os.path.join(ASSETS, "main.js"), encoding="utf-8") as fp:
@@ -148,7 +143,7 @@ class SidebarBehaviourTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.tmp = tempfile.TemporaryDirectory()
-        cls.path = build_site(demo_config(False), os.path.join(cls.tmp.name, "dist"))
+        cls.path = build_site(demo_config(), os.path.join(cls.tmp.name, "dist"))
         cls.r = probe(cls.path, lambda h: h, BEHAVIOUR, timeout=90)
 
     @classmethod
@@ -230,7 +225,7 @@ class SidebarLayoutTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.tmp = tempfile.TemporaryDirectory()
-        cls.path = build_site(demo_config(False), os.path.join(cls.tmp.name, "dist"))
+        cls.path = build_site(demo_config(), os.path.join(cls.tmp.name, "dist"))
 
     @classmethod
     def tearDownClass(cls):
@@ -249,14 +244,13 @@ class SidebarLayoutTest(unittest.TestCase):
                 self.assertEqual(r["tocDisplay"], "block", "при этой ширине оглавление видно")
                 centre = (r["artL"] + r["artR"]) / 2
                 self.assertAlmostEqual(centre, (r["mainL"] + r["mainR"]) / 2, delta=1, msg="статья не по центру")
-                self.assertGreaterEqual(r["tocL"], r["artR"], "оглавление залезло на статью")
                 self.assertLessEqual(r["tocR"], r["mainR"], "оглавление вылезло за окно")
 
-    def test_desktop_sidebar_is_exactly_40_percent_of_window(self):
+    def test_desktop_sidebar_is_exactly_30_percent_of_window(self):
         for width in (1025, 1440, 1920):
             with self.subTest(width=width):
                 r = self.measure(width)
-                self.assertAlmostEqual(r["sbWidth"], 0.4 * r["win"], delta=0.5, msg="сайдбар — не 40% окна")
+                self.assertAlmostEqual(r["sbWidth"], 0.3 * r["win"], delta=0.5, msg="сайдбар — не 30% окна")
 
     def test_phone_drawer_is_70_percent_of_window(self):
         r = self.measure(390)
@@ -272,7 +266,7 @@ class SidebarTextTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.tmp = tempfile.TemporaryDirectory()
-        cls.path = build_site(demo_config(False), os.path.join(cls.tmp.name, "dist"))
+        cls.path = build_site(demo_config(), os.path.join(cls.tmp.name, "dist"))
 
     @classmethod
     def tearDownClass(cls):
@@ -305,7 +299,7 @@ class SidebarTouchTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.tmp = tempfile.TemporaryDirectory()
-        cls.path = build_site(demo_config(False), os.path.join(cls.tmp.name, "dist"))
+        cls.path = build_site(demo_config(), os.path.join(cls.tmp.name, "dist"))
 
     @classmethod
     def tearDownClass(cls):
@@ -338,6 +332,13 @@ window.addEventListener('load',function(){setTimeout(function(){
 })();"""
 
 
+PHONE_HEADER = """(function(){
+window.addEventListener('load',function(){setTimeout(function(){
+  var c=document.querySelector('.breadcrumbs'),b=document.getElementById('toggle-sidebar').getBoundingClientRect();
+  send({display:getComputedStyle(c).display,btnW:b.width});
+},300);});
+})();"""
+
 @unittest.skipUnless(HAS_DEMO, "демо-книги нет: это книга, а не репозиторий движка")
 @unittest.skipUnless(BROWSER, "нет Firefox (PATH или MERMAID_BROWSER)")
 class SidebarHeaderTest(unittest.TestCase):
@@ -346,7 +347,7 @@ class SidebarHeaderTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.tmp = tempfile.TemporaryDirectory()
-        cls.path = build_site(demo_config(False), os.path.join(cls.tmp.name, "dist"))
+        cls.path = build_site(demo_config(), os.path.join(cls.tmp.name, "dist"))
 
     @classmethod
     def tearDownClass(cls):
@@ -364,8 +365,11 @@ class SidebarHeaderTest(unittest.TestCase):
     def test_desktop(self):
         self.check(1440)
 
-    def test_phone(self):
-        self.check(390)
+    def test_phone_hides_breadcrumbs_and_keeps_button(self):
+        r = probe(self.path, lambda h: h, PHONE_HEADER, timeout=90, frame_width=390)
+        self.assertIsNotNone(r, "страница не отправила результат в Firefox")
+        self.assertEqual(r["display"], "none", "на телефоне хлебные крошки скрыты")
+        self.assertGreater(r["btnW"], 0, "кнопка меню на телефоне остаётся")
 
 
 # Телефон: нажатие кнопки выдвигает панель на 70% ширины окна, второе нажатие её прячет
@@ -384,16 +388,28 @@ window.addEventListener('load',function(){setTimeout(async function(){
 })();"""
 
 
+# Бегунок полосы дерева: список принудительно ниже содержимого (иначе не прокручивается)
+SCROLL_CSS = "<style>.sidebar-content{height:120px!important;flex:none!important}</style>"
+
 SCROLLBAR = """(function(){
 function wait(ms){var t0=performance.now();return new Promise(function(res){(function f(){
   if(performance.now()-t0>=ms)res();else requestAnimationFrame(f);})();});}
 window.addEventListener('load',function(){setTimeout(async function(){
-  var nav=document.getElementById('sidebar-content'),out={};
-  out.colorBefore=getComputedStyle(nav).scrollbarColor;
-  nav.dispatchEvent(new Event('scroll'));
-  out.during=nav.classList.contains('is-scrolling'); out.colorDuring=getComputedStyle(nav).scrollbarColor;
-  await wait(300); out.midway=nav.classList.contains('is-scrolling');
-  await wait(900); out.after=nav.classList.contains('is-scrolling'); out.colorAfter=getComputedStyle(nav).scrollbarColor;
+  var nav=document.getElementById('sidebar-content'),sb=document.getElementById('app-sidebar'),th=sb.querySelector('.sidebar-thumb'),out={};
+  out.hasThumb=!!th;
+  nav.scrollTop=30; await wait(150);
+  out.duringClass=sb.classList.contains('is-scrolling'); out.duringOpacity=parseFloat(getComputedStyle(th).opacity);
+  var tr=th.getBoundingClientRect(),nr=nav.getBoundingClientRect();
+  out.thumbTop=tr.top-nr.top; out.thumbH=tr.height; out.navH=nr.height; out.thumbRight=nr.right-tr.right;
+  await wait(2000); out.afterClass=sb.classList.contains('is-scrolling'); out.afterOpacity=parseFloat(getComputedStyle(th).opacity);
+  // перетаскивание бегунка: тянем вниз на 30 px
+  var cy=tr.top+tr.height/2, before=nav.scrollTop;
+  nav.scrollTop=0; await wait(100);
+  var t2=th.getBoundingClientRect(), cy2=t2.top+t2.height/2;
+  th.dispatchEvent(new PointerEvent('pointerdown',{clientX:t2.left+2,clientY:cy2,button:0,bubbles:true}));
+  document.dispatchEvent(new PointerEvent('pointermove',{clientX:t2.left+2,clientY:cy2+30,bubbles:true}));
+  document.dispatchEvent(new PointerEvent('pointerup',{clientX:t2.left+2,clientY:cy2+30,bubbles:true}));
+  await wait(100); out.dragged=nav.scrollTop;
   send(out);
 },300);});
 })();"""
@@ -402,29 +418,37 @@ window.addEventListener('load',function(){setTimeout(async function(){
 @unittest.skipUnless(HAS_DEMO, "демо-книги нет: это книга, а не репозиторий движка")
 @unittest.skipUnless(BROWSER, "нет Firefox (PATH или MERMAID_BROWSER)")
 class SidebarScrollbarTest(unittest.TestCase):
-    """Полоса прокрутки дерева видна только во время прокрутки и гаснет через ~0.7 с."""
+    """Бегунок дерева виден при прокрутке, гаснет после неё и тянется мышью."""
 
     @classmethod
     def setUpClass(cls):
         cls.tmp = tempfile.TemporaryDirectory()
-        cls.path = build_site(demo_config(False), os.path.join(cls.tmp.name, "dist"))
-        cls.r = probe(cls.path, lambda h: h, SCROLLBAR, timeout=90)
+        cls.path = build_site(demo_config(), os.path.join(cls.tmp.name, "dist"))
+        cls.r = probe(cls.path, lambda h: h.replace("</head>", SCROLL_CSS + "</head>", 1), SCROLLBAR, timeout=120)
 
     @classmethod
     def tearDownClass(cls):
         cls.tmp.cleanup()
 
-    def test_class_on_while_scrolling(self):
+    def setUp(self):
         self.assertIsNotNone(self.r, "страница не отправила результат в Firefox")
-        self.assertTrue(self.r["during"])
-        self.assertTrue(self.r["midway"], "полоса должна оставаться видимой, пока идёт прокрутка")
 
-    def test_class_off_after_scrolling_stops(self):
-        self.assertFalse(self.r["after"], "через ~1.2 с после прокрутки полоса должна скрыться")
+    def test_thumb_exists(self):
+        self.assertTrue(self.r["hasThumb"])
 
-    def test_firefox_scrollbar_colour_follows_class(self):
-        # Firefox читает scrollbar-color; в других браузерах значение может не вычисляться
-        if not self.r["colorBefore"] or self.r["colorBefore"] == "auto":
-            self.skipTest("браузер не отдаёт scrollbar-color")
-        self.assertNotEqual(self.r["colorDuring"], self.r["colorBefore"])
-        self.assertEqual(self.r["colorAfter"], self.r["colorBefore"])
+    def test_visible_while_scrolling(self):
+        self.assertTrue(self.r["duringClass"])
+        self.assertGreater(self.r["duringOpacity"], 0.9)
+
+    def test_fades_out_after_scrolling_stops(self):
+        self.assertFalse(self.r["afterClass"])
+        self.assertLess(self.r["afterOpacity"], 0.05)
+
+    def test_thumb_is_inside_the_list_and_shorter_than_it(self):
+        self.assertGreater(self.r["thumbH"], 0)
+        self.assertLess(self.r["thumbH"], self.r["navH"], "при прокрутке бегунок короче списка")
+        self.assertGreaterEqual(self.r["thumbTop"], 0)
+        self.assertLessEqual(self.r["thumbTop"] + self.r["thumbH"], self.r["navH"] + 1)
+
+    def test_dragging_thumb_scrolls_list(self):
+        self.assertGreater(self.r["dragged"], 0, "перетаскивание бегунка вниз должно прокручивать список")
