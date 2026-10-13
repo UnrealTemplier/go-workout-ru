@@ -34,6 +34,7 @@ go-workout/
 ├── requirements.txt         # markdown>=3.10,<3.11
 ├── favicon.ico / favicon.svg
 ├── AGENTS.md / README.md
+├── CLAUDE.md / GEMINI.md    # Одна строка `@AGENTS.md`: ссылка на регламент для Claude Code и Gemini CLI
 └── dist/                    # Локальная сборка (в .gitignore; в Git не хранится)
 ```
 
