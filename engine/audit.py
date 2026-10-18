@@ -13,7 +13,8 @@ engine/audit.py
    (внешние <a href> в тексте допустимы).
 9. Мёртвые wikilinks и ошибки рантайма KaTeX/Mermaid относительно базы книги (audit.baseline):
    рост или новые места — ошибка (--write-baseline перезаписывает базу).
-10. --strict: предупреждения сборки (неоднозначные wikilinks, неизвестные выноски) — ошибки.
+10. --strict: предупреждения сборки (неоднозначные wikilinks, неизвестные выноски) и замечания
+    по диаграммам Mermaid (классы узлов: ':::класс' в метке, класс без classDef) — ошибки.
 11. --katex-runtime: рантайм-проекция в headless Firefox (.katex-error, ошибки Mermaid, JS).
 """
 
@@ -60,6 +61,13 @@ CSS_URL_RE = re.compile(r"url\(\s*[\"']?([^\"')]+)")
 CSS_IMPORT_RE = re.compile(r"@import\s+[\"']([^\"']+)")     # форму @import url(…) ловит CSS_URL_RE
 STYLE_BLOCK_RE = re.compile(r"<style\b[^>]*>(.*?)</style>", re.S | re.I)
 UNRESOLVED_RE = re.compile(r'<span class="wikilink-unresolved"[^>]*>(.*?)</span>', re.S)
+
+# Классы Mermaid: метка в кавычках (бывает многострочной), применение A:::cls, директивы classDef и class
+MERMAID_QUOTED_RE = re.compile(r'"[^"]*"')
+MERMAID_CLASS_USE_RE = re.compile(r":::(\w+)")
+MERMAID_CLASSDEF_RE = re.compile(r"^\s*classDef\s+([\w,-]+)", re.M)
+MERMAID_CLASS_STMT_RE = re.compile(r"^\s*class\s+[^\n;]+?\s(\w+)\s*;?\s*$", re.M)
+CSS_NODE_CLASS_RE = re.compile(r"\.node\.([\w-]+)")
 
 
 def code_mask(text: str) -> bytearray:
@@ -110,6 +118,29 @@ def formula_spans(text: str, mask: bytearray) -> List[Tuple[int, int]]:
     return spans
 
 
+def mermaid_class_issues(code: str, styled: Set[str] = frozenset()) -> List[str]:
+    """
+    Классы узлов, которые Mermaid разберёт без ошибки, но читатель увидит не то:
+    ':::cls' внутри метки в кавычках выводится текстом (A["Текст:::entry<br>…"] вместо
+    A["Текст"]:::entry), а класс без classDef в блоке и без правила темы (.node.cls в CSS)
+    не окрашивает узел (A["[]"]:::processbyte вместо A["[]byte"]:::process).
+    """
+    issues = []
+    for m in MERMAID_QUOTED_RE.finditer(code):
+        for c in MERMAID_CLASS_USE_RE.findall(m.group(0)):
+            label = " ".join(m.group(0).split())
+            issues.append(f"':::{c}' внутри метки {label[:70]}{'…' if len(label) > 70 else ''} (будет выведен текстом)")
+    outside = MERMAID_QUOTED_RE.sub('""', code)
+    defined = {n for d in MERMAID_CLASSDEF_RE.findall(outside) for n in d.split(",")}
+    used = MERMAID_CLASS_USE_RE.findall(outside)
+    if not outside.lstrip().lower().startswith("classdiagram"):   # там «class A» объявляет класс UML
+        used += MERMAID_CLASS_STMT_RE.findall(outside)
+    for c in dict.fromkeys(used):
+        if c not in defined and c not in styled and c != "default":
+            issues.append(f"класс '{c}' не объявлен в classDef блока и не задан темой (узел не окрасится)")
+    return issues
+
+
 class SiteAuditor:
     def __init__(self, dist_dir: str = "./dist", repo_root: str = ".", mermaid_runtime: bool = True,
                  config=None, strict: bool = False, katex_runtime: bool = False, write_baseline: bool = False):
@@ -131,6 +162,7 @@ class SiteAuditor:
         # (страница, порядковый номер блока на странице, исходный код) — для рантайм-разбора
         self.mermaid_blocks: List[Tuple[str, int, str]] = []
         self.mermaid_warnings: List[Dict[str, str]] = []
+        self.mermaid_styled_classes: Set[str] = set()      # классы узлов с правилом в CSS сайта (.node.cls)
         self.dist_dir = os.path.abspath(dist_dir)
         self.repo_root = os.path.abspath(repo_root)
         self.html_files: List[str] = []
@@ -185,6 +217,7 @@ class SiteAuditor:
         
         # Кэш известных id для каждого файла
         file_ids_cache: Dict[str, Set[str]] = {}
+        self._collect_mermaid_styled_classes()
 
         for page_path in self.html_files:
             self._audit_single_page(page_path, file_ids_cache)
@@ -289,10 +322,16 @@ class SiteAuditor:
                 print(f"  В файле: {os.path.relpath(item['source'], self.dist_dir)} -> {item['raw_href']}")
 
         if self.mermaid_warnings:
-            print(f"\n⚠️ Замечания по диаграммам Mermaid: {len(self.mermaid_warnings)} штук.")
-            for w in self.mermaid_warnings[:5]:
+            if self.strict:
+                success = False
+                print(f"\n❌ ЗАМЕЧАНИЯ ПО ДИАГРАММАМ MERMAID (--strict): {len(self.mermaid_warnings)}")
+            else:
+                print(f"\n⚠️ Замечания по диаграммам Mermaid: {len(self.mermaid_warnings)} штук.")
+            for w in self.mermaid_warnings[:15]:
                 print(f"  В файле: {os.path.relpath(w['file'], self.dist_dir)}")
                 print(f"  Причина: {w['reason']}")
+            if len(self.mermaid_warnings) > 15:
+                print(f"  ... и еще {len(self.mermaid_warnings) - 15}.")
 
         if self.mermaid_errors:
             success = False
@@ -492,13 +531,12 @@ class SiteAuditor:
                 })
                 continue
 
-            # ":::class" внутри квотированной метки не падает при разборе, но выводится текстом
-            # в узле: A["Текст:::entry"] вместо A["Текст"]:::entry
+            # Классы узлов: разбор не падает, но метка показывает ':::класс' или узел не окрашен
             unescaped_b = html.unescape(clean_b)
-            if re.search(r':::\w+"\]', unescaped_b):
+            for issue in mermaid_class_issues(unescaped_b, self.mermaid_styled_classes):
                 self.mermaid_warnings.append({
                     "file": page_path,
-                    "reason": f"Блок №{block_no}: ':::класс' внутри квотированной метки узла (будет выведен текстом)"
+                    "reason": f"Блок №{block_no}: {issue}"
                 })
 
             self.mermaid_blocks.append((page_path, block_no, unescaped_b))
@@ -541,6 +579,15 @@ class SiteAuditor:
         for url in CSS_IMPORT_RE.findall(css):
             if EXTERNAL_RE.match(url):
                 self.offline_issues.append((where, f"CSS @import из внешней сети: {url}"))
+
+    def _collect_mermaid_styled_classes(self):
+        """Классы узлов Mermaid, которые окрашивает CSS сайта (темы движка, extra.css книги)."""
+        assets = os.path.join(self.dist_dir, "assets")
+        for root, _, files in os.walk(assets):
+            for f in files:
+                if f.endswith(".css"):
+                    with open(os.path.join(root, f), encoding="utf-8", errors="ignore") as fp:
+                        self.mermaid_styled_classes.update(CSS_NODE_CLASS_RE.findall(fp.read()))
 
     def _audit_css_files(self):
         for root, _, files in os.walk(self.dist_dir):
@@ -745,7 +792,8 @@ def main():
                         help="Не запускать рантайм-разбор диаграмм Mermaid в headless Firefox")
     parser.add_argument("--book", default=None, help="Путь к book.toml (по умолчанию ./book.toml): хук extra_audit_checks")
     parser.add_argument("--strict", action="store_true",
-                        help="Предупреждения сборки (неоднозначные wikilinks, неизвестные выноски) — ошибки")
+                        help="Предупреждения сборки (неоднозначные wikilinks, неизвестные выноски) "
+                             "и замечания по диаграммам Mermaid — ошибки")
     parser.add_argument("--katex-runtime", action="store_true",
                         help="Рантайм-проекция в headless Firefox: ошибки KaTeX/Mermaid не сверх базы, 0 ошибок JS (~100 с)")
     parser.add_argument("--write-baseline", action="store_true",
